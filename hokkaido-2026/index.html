@@ -1,12 +1,1554 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>北海道自駕旅行 2026</title>
-</head>
-<body>
-  <h1>北海道自駕旅行 2026</h1>
-  <p>旅遊網站建置中。</p>
-</body>
-</html>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>北海道八天七夜冬季旅行</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: a dot-grid notebook page. Taped paper cards, a hand-drawn scene at the top of every day,
+     and a vertical dotted route line where drives are dashed and meals get a bowl. */
+  :root{
+    --paper:#FAF8F3; --card:#FFFFFF; --card-2:#F4EFE4;
+    --ink:#2C3442; --ink-soft:#6B7380;
+    --line:#E3DCCB; --line-strong:#CFC6B0; --dot:#DDD5C3;
+    --ice:#A9C9E0; --ice-deep:#4F7FA3; --ice-wash:#E6F0F7;
+    --rose:#F2C9C4; --rose-deep:#B9524A; --rose-wash:#FBEAE7;
+    --leaf:#2F7D62; --leaf-wash:#E1F0E8;
+    --note:#FFF1B8; --note-ink:#6B5A1E;
+    --tape-a:rgba(242,201,196,.9); --tape-b:rgba(169,201,224,.9); --tape-c:rgba(255,255,255,.4);
+    --sky1:#CFE3F1; --sky2:#FBEEE8; --m1:#C9DBEA; --m2:#A9C4DA; --ground:#FFFFFF;
+    --tree:#6F9C8C; --sun:#F6D6B0; --pond:#86BEDD; --lamp:#F2B766; --flake:#FFFFFF;
+    --shadow:0 1px 0 rgba(44,52,66,.05), 0 10px 20px -12px rgba(44,52,66,.35);
+    --f-hand:'Klee One','Zen Maru Gothic','Noto Sans TC',sans-serif;
+    --f-round:'Zen Maru Gothic','Noto Sans TC',sans-serif;
+    --f-body:'Noto Sans TC','Zen Maru Gothic',sans-serif;
+    --f-script:'Caveat','Klee One',cursive;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#141C2A; --card:#1C2638; --card-2:#222E43;
+      --ink:#E9E5DA; --ink-soft:#9AA5B5;
+      --line:#2D3A50; --line-strong:#41516B; --dot:#222E42;
+      --ice:#6E97BA; --ice-deep:#8FB8D8; --ice-wash:#1E3043;
+      --rose:#8E5B5B; --rose-deep:#F0A39A; --rose-wash:#3A2A31;
+      --leaf:#7FD1AF; --leaf-wash:#17332B;
+      --note:#4A4120; --note-ink:#F3E3A0;
+      --tape-a:rgba(190,120,120,.7); --tape-b:rgba(110,151,186,.7); --tape-c:rgba(255,255,255,.12);
+      --sky1:#1B2C4A; --sky2:#3A3556; --m1:#2B3F5E; --m2:#22344F; --ground:#2E3C55;
+      --tree:#3F6B63; --sun:#E9D9B5; --pond:#3E7AA0; --lamp:#F5C06F; --flake:#EAF2FA;
+      --shadow:0 1px 0 rgba(0,0,0,.2), 0 10px 20px -12px rgba(0,0,0,.7);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#141C2A; --card:#1C2638; --card-2:#222E43;
+    --ink:#E9E5DA; --ink-soft:#9AA5B5;
+    --line:#2D3A50; --line-strong:#41516B; --dot:#222E42;
+    --ice:#6E97BA; --ice-deep:#8FB8D8; --ice-wash:#1E3043;
+    --rose:#8E5B5B; --rose-deep:#F0A39A; --rose-wash:#3A2A31;
+    --leaf:#7FD1AF; --leaf-wash:#17332B;
+    --note:#4A4120; --note-ink:#F3E3A0;
+    --tape-a:rgba(190,120,120,.7); --tape-b:rgba(110,151,186,.7); --tape-c:rgba(255,255,255,.12);
+    --sky1:#1B2C4A; --sky2:#3A3556; --m1:#2B3F5E; --m2:#22344F; --ground:#2E3C55;
+    --tree:#3F6B63; --sun:#E9D9B5; --pond:#3E7AA0; --lamp:#F5C06F; --flake:#EAF2FA;
+    --shadow:0 1px 0 rgba(0,0,0,.2), 0 10px 20px -12px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background-color:var(--paper);
+    background-image:radial-gradient(var(--dot) 1.1px, transparent 1.4px);
+    background-size:20px 20px;
+    color:var(--ink);
+    font-family:var(--f-body);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  button{font-family:inherit;}
+  :focus-visible{outline:2px solid var(--ice-deep); outline-offset:2px; border-radius:6px;}
+
+  .g{
+    padding-left:max(16px, env(safe-area-inset-left, 0px));
+    padding-right:max(16px, env(safe-area-inset-right, 0px));
+  }
+  .inner{max-width:720px; margin:0 auto; min-width:0;}
+
+  /* ---------- paper pieces ---------- */
+  .sheet{
+    position:relative;
+    background:var(--card);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+  }
+  .taped::before, .taped-b::before{
+    content:""; position:absolute; top:-11px; left:50%;
+    width:92px; height:22px; margin-left:-46px; transform:rotate(-3deg);
+    background:repeating-linear-gradient(45deg, var(--tape-a) 0 7px, var(--tape-c) 7px 14px);
+    border-radius:2px; z-index:2;
+  }
+  .taped-b::before{
+    background:repeating-linear-gradient(-45deg, var(--tape-b) 0 7px, var(--tape-c) 7px 14px);
+    transform:rotate(2.5deg);
+  }
+
+  /* ---------- hero ---------- */
+  header.hero-wrap{padding-top:28px; padding-bottom:6px;}
+  .hero{padding:30px 22px 0; overflow:visible;}
+  .hero-text{padding-bottom:14px;}
+  .eyebrow{
+    margin:0 0 6px; font-family:var(--f-script); font-size:22px; font-weight:700;
+    color:var(--ice-deep); letter-spacing:.02em; line-height:1.1;
+  }
+  h1.title{
+    margin:0 0 10px; font-family:var(--f-hand); font-weight:600;
+    font-size:clamp(30px, 8.4vw, 42px); line-height:1.3; text-wrap:balance;
+  }
+  .subline{margin:0; font-size:13px; color:var(--ink-soft); letter-spacing:.04em;}
+  .scene-wrap{
+    position:relative; margin:0 -22px; border-radius:0 0 16px 16px; overflow:hidden;
+  }
+  .route-chips{
+    list-style:none; margin:0; padding:4px 0 22px; border-top:1.5px dashed var(--line-strong); padding-top:14px;
+    display:flex; flex-wrap:wrap; gap:6px 4px; align-items:center;
+    font-family:var(--f-round); font-size:12.5px; font-weight:500; color:var(--ink-soft);
+  }
+  .route-chips li{display:flex; align-items:center; gap:4px;}
+  .route-chips li + li::before{content:"→"; color:var(--ice-deep); margin-right:2px;}
+
+  /* ---------- scene svg: layered paper-cut landscape ---------- */
+  .scene{
+    display:block; width:100%; height:auto; aspect-ratio:600/200;
+    --sk-top:hsl(var(--h) 58% 82%); --sk-bot:hsl(var(--w) 85% 91%);
+    --r1:hsl(var(--h) 40% 80%); --r2:hsl(var(--h) 36% 70%); --r3:hsl(var(--h) 34% 58%); --r4:hsl(var(--h) 34% 44%);
+    --snow:hsl(var(--h) 40% 98%); --pine:hsl(var(--h) 40% 22%);
+    --glow:hsl(var(--w) 95% 80%); --orb:hsl(34 100% 92%); --water:hsl(var(--h) 45% 72%);
+    --sc-lamp:hsl(36 100% 68%); --plane:#FFFFFF; --cabin:hsl(8 65% 58%); --mist:hsl(var(--w) 80% 96%);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .scene{
+      --sk-top:hsl(var(--h) 55% 11%); --sk-bot:hsl(var(--w) 38% 27%);
+      --r1:hsl(var(--h) 34% 24%); --r2:hsl(var(--h) 32% 19%); --r3:hsl(var(--h) 30% 15%); --r4:hsl(var(--h) 30% 11%);
+      --snow:hsl(var(--h) 28% 30%); --pine:hsl(var(--h) 40% 6%);
+      --glow:hsl(var(--w) 55% 38%); --orb:hsl(48 45% 90%); --water:hsl(var(--h) 40% 22%);
+      --sc-lamp:hsl(36 100% 66%); --plane:#CDD8E6; --cabin:hsl(8 55% 50%); --mist:hsl(var(--w) 30% 30%);
+    }
+  }
+  :root[data-theme="dark"] .scene{
+    --sk-top:hsl(var(--h) 55% 11%); --sk-bot:hsl(var(--w) 38% 27%);
+    --r1:hsl(var(--h) 34% 24%); --r2:hsl(var(--h) 32% 19%); --r3:hsl(var(--h) 30% 15%); --r4:hsl(var(--h) 30% 11%);
+    --snow:hsl(var(--h) 28% 30%); --pine:hsl(var(--h) 40% 6%);
+    --glow:hsl(var(--w) 55% 38%); --orb:hsl(48 45% 90%); --water:hsl(var(--h) 40% 22%);
+    --sc-lamp:hsl(36 100% 66%); --plane:#CDD8E6; --cabin:hsl(8 55% 50%); --mist:hsl(var(--w) 30% 30%);
+  }
+  .sc-sk1{stop-color:var(--sk-top);} .sc-sk2{stop-color:var(--sk-bot);}
+  .sc-glow{stop-color:var(--glow);} .sc-mist{stop-color:var(--mist);}
+  .sc-lampstop{stop-color:var(--sc-lamp);} .sc-planestop{stop-color:var(--plane);}
+  .sc-r1{fill:var(--r1);} .sc-r2{fill:var(--r2);} .sc-r3{fill:var(--r3);} .sc-r4{fill:var(--r4);}
+  .sc-snow{fill:var(--snow);} .sc-pine{fill:var(--pine);} .sc-orb{fill:var(--orb);}
+  .sc-water{fill:var(--water);} .sc-lamp{fill:var(--sc-lamp);} .sc-plane{fill:var(--plane);}
+  .sc-cabin{fill:var(--cabin);} .sc-win{fill:var(--sk-bot);}
+  .sc-line{fill:none; stroke:var(--pine); stroke-width:1; opacity:.7;}
+  .sc-trail{fill:none; stroke-linecap:round; stroke-width:1.6;}
+  .sc-shimmer{fill:none; stroke:var(--snow); stroke-width:1.2; stroke-linecap:round; opacity:.55;}
+  .rg{filter:drop-shadow(0 -2px 3px rgba(18,38,70,.16));}
+  .grain{opacity:.16; mix-blend-mode:overlay;}
+
+  .snow{position:absolute; inset:0; overflow:hidden; pointer-events:none;}
+  .flake{
+    position:absolute; top:-8px; border-radius:50%; background:var(--flake); opacity:.9;
+    box-shadow:0 0 0 1px rgba(79,127,163,.22);
+    animation:fall linear infinite;
+  }
+  @keyframes fall{ to{ transform:translate3d(var(--dx), 260px, 0); } }
+
+  /* ---------- day tabs ---------- */
+  nav.days{
+    position:sticky; top:env(safe-area-inset-top, 0px); z-index:20;
+    background:var(--paper);
+    border-bottom:1.5px dashed var(--line-strong);
+    margin-top:18px;
+  }
+  .days-scroll{
+    display:flex; gap:8px; overflow-x:auto; padding-block:10px;
+    scrollbar-width:none; flex:1 1 auto; min-width:0;
+  }
+  .nav-row{display:flex; align-items:center; gap:8px; max-width:720px; margin:0 auto;}
+  .days-scroll::-webkit-scrollbar{display:none;}
+  nav.days button{
+    flex:0 0 auto; min-width:52px; padding:6px 12px 5px;
+    border:1.5px solid var(--line-strong); border-radius:12px;
+    background:var(--card); color:var(--ink-soft); cursor:pointer;
+    display:flex; flex-direction:column; align-items:center; line-height:1.2;
+    transition:transform .2s ease, background .2s ease;
+  }
+  nav.days button b{font-family:var(--f-hand); font-size:14px; font-weight:600;}
+  nav.days button small{font-size:10px; letter-spacing:.06em;}
+  nav.days button:hover{transform:translateY(-1px);}
+  nav.days button.active{
+    background:var(--ink); color:var(--paper); border-color:var(--ink);
+    box-shadow:3px 3px 0 var(--rose);
+  }
+
+  main.g{padding-top:26px; padding-bottom:56px;}
+  section.panel{display:none;}
+  section.panel.active{display:block;}
+
+  /* ---------- overview ---------- */
+  .stamps{display:flex; justify-content:space-between; gap:8px; margin-bottom:28px;}
+  .stamp-round{
+    flex:1 1 0; min-width:0; aspect-ratio:1/1; max-width:92px;
+    border:2px dashed var(--ice-deep); border-radius:50%;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    color:var(--ice-deep); transform:rotate(-4deg);
+    background:var(--card);
+  }
+  .stamp-round:nth-child(even){transform:rotate(3deg); border-color:var(--rose-deep); color:var(--rose-deep);}
+  .stamp-round .n{font-family:var(--f-hand); font-size:28px; font-weight:600; line-height:1.1; font-variant-numeric:tabular-nums;}
+  .stamp-round .l{font-family:var(--f-round); font-size:11px; font-weight:700; letter-spacing:.1em; margin-top:2px;}
+
+  .block{padding:24px 18px 18px; margin-bottom:30px;}
+  .block h3{
+    margin:0 0 14px; display:flex; align-items:center; gap:8px;
+    font-family:var(--f-hand); font-size:18px; font-weight:600;
+  }
+  .block h3 svg{width:20px; height:20px; color:var(--rose-deep); flex:0 0 auto;}
+
+  .ticket{
+    display:flex; align-items:stretch; margin-bottom:10px;
+    border:1.5px solid var(--line-strong); border-radius:12px; overflow:hidden; background:var(--card-2);
+  }
+  .ticket .stub{
+    flex:0 0 64px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:var(--ice-wash); color:var(--ice-deep);
+    border-right:2px dashed var(--line-strong); padding:8px 4px; gap:2px;
+  }
+  .ticket .stub svg{width:20px; height:20px;}
+  .ticket .stub span{font-family:var(--f-round); font-size:12px; font-weight:700; letter-spacing:.1em;}
+  .ticket.rose .stub{background:var(--rose-wash); color:var(--rose-deep);}
+  .ticket .main{padding:10px 14px; font-size:14px; min-width:0;}
+  .ticket .main .big{font-family:var(--f-hand); font-size:16px; font-weight:600; line-height:1.5;}
+  .ticket .main .sm{font-size:12px; color:var(--ink-soft);}
+
+  .hotel-row{
+    display:flex; align-items:center; gap:12px; padding:9px 0;
+    border-bottom:1px dotted var(--line-strong); font-size:14.5px;
+  }
+  .hotel-row:last-child{border-bottom:none;}
+  .hotel-row .when{
+    flex:0 0 auto; min-width:64px; text-align:center;
+    font-family:var(--f-hand); font-weight:600; font-size:13px;
+    background:var(--ice-wash); color:var(--ice-deep); border-radius:8px; padding:3px 8px;
+  }
+  .hotel-row .nm{flex:1 1 auto; min-width:0;}
+  .hotel-row .bf{
+    flex:0 0 auto; font-size:11px; color:var(--rose-deep); font-weight:700;
+    border:1.5px solid var(--rose-deep); border-radius:6px; padding:0 6px; transform:rotate(-3deg);
+  }
+
+
+  .cost-sum{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:2px 0 12px;}
+  .cost-sum .c{background:var(--ice-wash); border-radius:12px; padding:10px 12px; min-width:0;}
+  .cost-sum .c.y{background:var(--note); color:var(--note-ink);}
+  .cost-sum .c small{display:block; font-size:11px; opacity:.8; line-height:1.4;}
+  .cost-sum .c b{display:block; font-family:var(--f-hand); font-size:20px; font-weight:700; line-height:1.3; font-variant-numeric:tabular-nums; overflow-wrap:anywhere;}
+  .cost-sub{font-family:var(--f-hand); font-size:13px; color:var(--ink-soft); margin:10px 0 2px; font-weight:600;}
+  .crow{display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:4px 10px; align-items:start; padding:10px 0; border-bottom:1px dotted var(--line-strong);}
+  .crow:last-child{border-bottom:none;}
+  .crow .when{grid-row:1 / span 2; align-self:start; width:84px; box-sizing:border-box; white-space:nowrap; text-align:center; font-family:var(--f-hand); font-weight:600; font-size:12.5px; background:var(--ice-wash); color:var(--ice-deep); border-radius:8px; padding:3px 4px;}
+  .crow .nm{font-size:14.5px; line-height:1.45; min-width:0; overflow-wrap:anywhere;}
+  .crow .amt{font-family:var(--f-hand); font-weight:700; font-size:16px; text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .crow .tags{grid-column:2 / span 2; display:flex; flex-wrap:wrap; gap:5px;}
+  .crow .tg{font-size:11px; padding:0 7px; border-radius:6px; line-height:1.7; background:var(--card-2); color:var(--ink-soft); border:1px solid var(--line);}
+  .crow .tg.meal{color:var(--rose-deep); border-color:var(--rose-deep); background:transparent; font-weight:700;}
+  .crow .tg.paid{color:var(--leaf); background:var(--leaf-wash); border-color:transparent; font-weight:700;}
+  .crow .tg.unpaid{color:var(--note-ink); background:var(--note); border-color:transparent; font-weight:700;}
+  .cost-foot{font-size:12px; color:var(--ink-soft); margin:10px 0 0; line-height:1.6;}
+  .qbtn.tel{background:var(--rose-wash); color:var(--rose-deep);}
+  .qrow .num{flex:0 0 auto; font-family:var(--f-hand); font-weight:600; font-size:15px; font-variant-numeric:tabular-nums; color:var(--ink); text-decoration:none; white-space:nowrap;}
+  .sos-steps{margin:4px 0 0; padding-left:20px; font-size:13.5px; line-height:1.8;}
+  .sos-steps li + li{margin-top:2px;}
+
+  .qrow{display:flex; align-items:center; gap:8px; padding:9px 0; border-bottom:1px dotted var(--line-strong);}
+  .qrow:last-child{border-bottom:none;}
+  .qmain{flex:1 1 auto; min-width:0; text-decoration:none;}
+  .qmain .nm{display:block; font-family:var(--f-hand); font-weight:600; font-size:14.5px; line-height:1.5;}
+  .qmain .nt{display:block; font-size:11.5px; color:var(--ink-soft);}
+  .qbtn{
+    flex:0 0 auto; width:34px; height:34px; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; text-decoration:none;
+    background:var(--leaf-wash); color:var(--leaf);
+  }
+  .qbtn.web{background:var(--ice-wash); color:var(--ice-deep);}
+  .qbtn svg{width:16px; height:16px;}
+
+  .meal-day{display:flex; gap:12px; padding:10px 0; border-bottom:1px dotted var(--line-strong);}
+  .meal-day:last-child{border-bottom:none;}
+  .meal-day .dl{
+    flex:0 0 56px; font-family:var(--f-hand); font-weight:600; font-size:14px; color:var(--rose-deep);
+    padding-top:1px;
+  }
+  .meal-day ul{list-style:none; margin:0; padding:0; flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:3px; font-size:14px;}
+  .meal-day li .k{
+    display:inline-block; min-width:2.6em; text-align:center; margin-right:6px;
+    font-size:11px; font-weight:700; color:var(--ice-deep); background:var(--ice-wash);
+    border-radius:6px; padding:0 6px;
+  }
+  .meal-day li .tbd{color:var(--ink-soft);}
+
+  .sticky{
+    position:relative; margin-bottom:10px; padding:22px 20px 18px;
+    background:var(--note); color:var(--note-ink); border-radius:4px 4px 14px 4px;
+    box-shadow:var(--shadow); transform:rotate(-.6deg); font-size:13.5px; line-height:1.9;
+  }
+  .sticky::before{
+    content:""; position:absolute; top:-8px; left:50%; margin-left:-9px; width:18px; height:18px; border-radius:50%;
+    background:var(--rose-deep); box-shadow:inset -3px -3px 0 rgba(0,0,0,.18), 0 2px 3px rgba(0,0,0,.25);
+  }
+  .sticky h3{margin:0 0 8px; font-family:var(--f-hand); font-size:17px; font-weight:600;}
+  .sticky ul{margin:0; padding-left:18px;}
+  .sticky li + li{margin-top:4px;}
+
+  /* ---------- day panels ---------- */
+  .day-hero{margin-bottom:28px; overflow:visible;}
+  .day-hero .scene-wrap{margin:0; border-radius:16px 16px 0 0;}
+  .day-no{
+    position:absolute; left:14px; top:12px; z-index:3;
+    font-family:var(--f-round); font-size:11px; font-weight:700; letter-spacing:.14em;
+    background:var(--card); color:var(--ink); border-radius:999px; padding:2px 10px;
+    box-shadow:var(--shadow);
+  }
+  .day-date{
+    position:absolute; right:14px; top:6px; z-index:3;
+    font-family:var(--f-hand); font-weight:600; font-size:34px; line-height:1.1; font-variant-numeric:tabular-nums;
+    color:var(--ink); text-shadow:0 2px 0 var(--card);
+  }
+  .day-body{padding:16px 20px 20px;}
+  .day-body .wk{
+    margin:0 0 2px; font-family:var(--f-round); font-size:12px; font-weight:700;
+    letter-spacing:.14em; color:var(--rose-deep);
+  }
+  .day-body h2{
+    margin:0; font-family:var(--f-hand); font-weight:600;
+    font-size:clamp(22px, 6vw, 28px); line-height:1.4; text-wrap:balance;
+  }
+  .route-btn{
+    display:inline-flex; align-items:center; gap:6px; margin-top:12px;
+    padding:7px 14px; border-radius:999px; text-decoration:none;
+    background:var(--leaf-wash); color:var(--leaf); font-size:12.5px; font-weight:700;
+    border:1.5px solid var(--leaf);
+  }
+  .route-btn svg{width:14px; height:14px;}
+  .live-btn{
+    display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:999px; text-decoration:none;
+    background:var(--ice-deep); color:var(--card); font-size:12.5px; font-weight:700; border:1.5px solid var(--ice-deep);
+  }
+  .live-btn svg{width:14px; height:14px;}
+  .live-grid{display:grid; gap:8px; margin-top:4px;}
+  .live-grid a{
+    display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:14px; text-decoration:none;
+    background:var(--ice-wash); color:var(--ice-deep); font-weight:700; font-size:14px; line-height:1.35;
+  }
+  .live-grid a.main{background:var(--ice-deep); color:var(--card); font-size:15px;}
+  .live-grid a svg{width:20px; height:20px; flex:0 0 auto;}
+  .live-grid a small{display:block; font-weight:500; font-size:12px; opacity:.85;}
+
+  ol.timeline{list-style:none; margin:0; padding:0;}
+  .stop{
+    display:grid; grid-template-columns:76px 28px minmax(0,1fr); column-gap:10px;
+    padding:12px 0;
+    animation:rise .5s ease both; animation-delay:calc(var(--i) * 45ms);
+  }
+  @keyframes rise{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;} }
+  .stop .tm{
+    font-family:var(--f-hand); font-weight:600; font-size:13px; line-height:1.5;
+    color:var(--ice-deep); text-align:right; padding-top:2px; overflow-wrap:anywhere;
+  }
+  .stop.must .tm{color:var(--rose-deep);}
+  .tm .dur{display:block; margin-top:2px; font-family:var(--f-body); font-size:11px; font-weight:500; color:var(--ink-soft); white-space:nowrap;}
+  .rail{position:relative; display:flex; justify-content:center;}
+  .rail::before{
+    content:""; position:absolute; left:50%; top:-12px; bottom:-12px; margin-left:-1px;
+    border-left:2px dotted var(--line-strong);
+  }
+  .stop:first-child .rail::before{top:12px;}
+  .stop:last-child .rail::before{bottom:auto; height:24px;}
+  .stop:only-child .rail::before{display:none;}
+  .stop.drive .rail::before{border-left:3px dashed var(--ice-deep); margin-left:-1.5px;}
+  .node{
+    position:relative; z-index:1; width:26px; height:26px; border-radius:50%;
+    background:var(--card); border:2px solid var(--ice); color:var(--ice-deep);
+    display:grid; place-items:center;
+  }
+  .node svg{width:14px; height:14px;}
+  .node.dot::after{content:""; width:8px; height:8px; border-radius:50%; background:var(--ice-deep);}
+  .stop.meal .node{background:var(--rose-wash); border-color:var(--rose-deep); color:var(--rose-deep);}
+  .stop.drive .node{background:var(--ice-wash); border-color:var(--ice-deep);}
+  .stop.must .node{background:var(--rose-deep); border-color:var(--rose-deep); color:var(--card);}
+  .stop.rec .node{border-style:dashed; border-color:var(--ice-deep);}
+
+  .body{position:relative; min-width:0;}
+  .desc{margin:0; font-size:14.5px; line-height:1.75; overflow-wrap:anywhere;}
+  .stop.must .body{
+    background:var(--rose-wash); border:1.5px dashed var(--rose-deep);
+    border-radius:12px; padding:10px 12px;
+  }
+  .stop.must .desc{font-weight:700;}
+  .stop.rec .body{
+    background:var(--ice-wash); border:1.5px dashed var(--ice-deep);
+    border-radius:12px; padding:14px 12px 10px;
+  }
+  .stamp{
+    position:absolute; top:-11px; right:10px; transform:rotate(4deg);
+    border:2px solid var(--rose-deep); color:var(--rose-deep); background:var(--card);
+    font-family:var(--f-round); font-size:11px; font-weight:700; letter-spacing:.18em;
+    padding:0 8px; border-radius:6px;
+  }
+  .tape-tag{
+    position:absolute; top:-10px; left:12px; transform:rotate(-2deg);
+    background:repeating-linear-gradient(-45deg, var(--tape-b) 0 6px, var(--tape-c) 6px 12px);
+    color:var(--ink); font-family:var(--f-round); font-size:11px; font-weight:700;
+    letter-spacing:.14em; padding:0 12px; border-radius:2px;
+  }
+
+  .maprow{margin-top:8px; display:flex; flex-wrap:wrap; gap:6px;}
+  .maprow a{
+    display:inline-flex; align-items:center; gap:4px; min-height:28px;
+    font-size:12px; font-weight:700; line-height:1.2; text-decoration:none;
+    color:var(--leaf); background:var(--leaf-wash); border-radius:999px; padding:4px 11px 4px 9px;
+  }
+  .maprow a.web{color:var(--ice-deep); background:var(--ice-wash);}
+  .maprow a.book{color:var(--rose-deep); background:var(--rose-wash);}
+  .maprow a.safe{color:var(--card); background:var(--leaf);}
+  .maprow a svg{width:12px; height:12px; flex:0 0 auto;}
+  .maprow a:active{opacity:.7;}
+  .carnav{margin-top:6px; font-size:12px; line-height:1.5; color:var(--ink-soft, #555); user-select:all;}
+  .carnav b{font-weight:700; letter-spacing:.02em; white-space:nowrap;}
+
+  .warn-block{
+    position:relative; margin-top:26px; padding:20px 18px 16px;
+    background:var(--note); color:var(--note-ink); border-radius:4px 4px 14px 4px;
+    font-size:13.5px; line-height:1.8; box-shadow:var(--shadow); transform:rotate(.5deg);
+  }
+  .warn-block::before{
+    content:""; position:absolute; top:-8px; left:22px; width:16px; height:16px; border-radius:50%;
+    background:var(--rose-deep); box-shadow:inset -3px -3px 0 rgba(0,0,0,.18), 0 2px 3px rgba(0,0,0,.25);
+  }
+  .warn-block b{font-family:var(--f-hand); font-size:15px;}
+  .navtip{margin:20px 2px 0; font-size:12px; color:var(--ink-soft); line-height:1.8;}
+
+  /* ---------- notes, highlights, tbd ---------- */
+  .note{
+    margin:7px 0 0; display:flex; gap:6px; align-items:flex-start;
+    font-family:var(--f-hand); font-size:12.8px; line-height:1.75; color:var(--ink-soft);
+  }
+  .note svg{flex:0 0 14px; width:14px; height:14px; margin-top:5px; color:var(--rose-deep);}
+  .note span{min-width:0; overflow-wrap:anywhere;}
+  .stop.tbd .body{
+    background:var(--note); color:var(--note-ink); border:1.5px dashed var(--note-ink);
+    border-radius:12px; padding:12px 12px 10px;
+  }
+  .stop.tbd .note{color:var(--note-ink);}
+  .stop.tbd .tm{color:var(--note-ink);}
+  .stop.tbd .node{background:var(--note); border-color:var(--note-ink); color:var(--note-ink);}
+  .stamp.tbd-s{border-color:var(--note-ink); color:var(--note-ink); transform:rotate(-3deg); background:var(--note);}
+  .day-body .hl{margin:10px 0 0; font-size:14px; line-height:1.8; color:var(--ink-soft); text-wrap:pretty;}
+  .day-actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; align-items:center;}
+  .day-actions .route-btn{margin-top:0;}
+  .chip{
+    display:inline-flex; align-items:center; gap:5px; padding:6px 12px; border-radius:999px;
+    background:var(--ice-wash); color:var(--ice-deep); font-size:12.5px; font-weight:700;
+    border:1.5px solid var(--ice);
+  }
+  .chip svg{width:13px; height:13px;}
+  .tips{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px;}
+  .tips li{display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; font-size:14px; line-height:1.75;}
+  .tips .ic{
+    width:28px; height:28px; border-radius:50%; background:var(--ice-wash); color:var(--ice-deep);
+    display:grid; place-items:center;
+  }
+  .tips .ic svg{width:15px; height:15px;}
+  .tips b{font-family:var(--f-hand); font-weight:600;}
+
+  .legs{display:flex; flex-direction:column;}
+  .leg{
+    display:grid; grid-template-columns:44px minmax(0,1fr) auto; gap:10px; align-items:center;
+    padding:9px 0; border-bottom:1px dotted var(--line-strong); font-size:14px;
+  }
+  .leg:last-child{border-bottom:none;}
+  .leg .d{font-family:var(--f-hand); font-weight:600; font-size:13px; color:var(--rose-deep);}
+  .leg .r{min-width:0; line-height:1.5;}
+  .leg .r small{display:block; font-size:11.5px; color:var(--ink-soft); font-variant-numeric:tabular-nums;}
+  .leg .w{
+    font-family:var(--f-hand); font-weight:600; font-size:13px; white-space:nowrap;
+    background:var(--ice-wash); color:var(--ice-deep); border-radius:8px; padding:3px 9px;
+    font-variant-numeric:tabular-nums;
+  }
+  .legs-note{margin:12px 0 0; font-size:12px; color:var(--ink-soft); line-height:1.8;}
+
+  .pager{display:flex; justify-content:space-between; gap:10px; margin-top:30px;}
+  .pager button{
+    flex:1 1 0; min-width:0; padding:10px 12px; border-radius:12px; cursor:pointer;
+    border:1.5px solid var(--line-strong); background:var(--card); color:var(--ink);
+    font-family:var(--f-hand); font-weight:600; font-size:14px;
+  }
+  .pager button:hover{background:var(--ice-wash);}
+  .pager button[hidden]{display:none;}
+  .pager .sp{flex:1 1 0;}
+
+  /* ---------- 拍攝模式 ---------- */
+  nav.days button.shoot-toggle{flex:0 0 auto;}
+  nav.days button.shoot-toggle[aria-pressed="true"]{background:var(--rose-deep); color:var(--card); border-color:var(--rose-deep); box-shadow:none;}
+  .shots, .shoot-only{display:none;}
+  body.shoot .shots{display:flex;}
+  body.shoot .shoot-only{display:block;}
+  .shots{flex-direction:column; gap:4px; margin-top:9px; padding-top:8px; border-top:1.5px dashed var(--rose);}
+  .shot{display:flex; gap:7px; align-items:flex-start; font-size:12.8px; line-height:1.65; color:var(--ink);}
+  .shot > span:last-child{min-width:0; overflow-wrap:anywhere;}
+  .sm{flex:0 0 auto; display:inline-grid; place-items:center; min-width:20px; height:20px; border-radius:6px; font-size:12px; line-height:1; margin-top:1px;}
+  .sm.must{background:var(--rose-deep); color:var(--card);}
+  .sm.opt{background:var(--card-2); color:var(--rose-deep); border:1px solid var(--rose);}
+  .sm.talk{background:var(--note); color:var(--note-ink);}
+  .sm.cam{background:var(--rose-wash); color:var(--rose-deep);}
+  .sm.cam svg{width:13px; height:13px;}
+  .day-shots{margin-top:14px;}
+  .legend{display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12.5px; color:var(--ink-soft);}
+  .legend > span{display:inline-flex; align-items:center; gap:6px;}
+  .shoot-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; font-size:13.5px; line-height:1.7;}
+  .shoot-list b{font-family:var(--f-hand); font-weight:600;}
+
+  @media (min-width:600px){
+    .stop{grid-template-columns:100px 30px minmax(0,1fr);}
+    .stop .tm{font-size:14px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{animation:none !important; transition:none !important;}
+    .snow{display:none;}
+  }
+</style>
+
+<header class="hero-wrap g">
+  <div class="inner">
+    <div class="hero sheet taped">
+      <div class="hero-text">
+        <p class="eyebrow">Hokkaido Winter Journal</p>
+        <h1 class="title">北海道八天七夜<br>冬季旅行</h1>
+        <p class="subline">夫妻二人・2026 年 12 月 5 日–12 日・自駕五天</p>
+      </div>
+      <ul class="route-chips">
+        <li>新千歲</li><li>富良野</li><li>Tomamu</li><li>小樽</li><li>洞爺湖</li><li>札幌</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<nav class="days g" id="dayNav" aria-label="日期分頁">
+  <div class="nav-row">
+    <div class="days-scroll" id="dayScroll"></div>
+    <button type="button" class="shoot-toggle" id="shootToggle" aria-pressed="false" title="顯示或隱藏拍攝清單"><b>🎬</b><small>拍攝</small></button>
+  </div>
+</nav>
+
+<main class="g">
+  <div class="inner" id="panels">
+    <section class="panel active" data-panel="overview" id="overviewPanel">
+      <div class="block sheet taped-b shoot-only">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"/><path d="M16 11l6-3v9l-6-3"/></svg>拍攝清單</h3>
+        <div class="legend"><span><span class="sm must">★</span>必拍（故事線靠它）</span><span><span class="sm opt">☆</span>有空再拍</span><span><span class="sm talk">🎙</span>可能會講話</span></div>
+        <div class="cost-sub">分集</div>
+        <ul class="shoot-list">
+          <li><b>第 1 集・自駕篇</b>　12/5–12/9，新千歲 → 富良野 → Tomamu → 小樽 → 洞爺湖，結尾是 12/9 札幌還車。</li>
+          <li><b>第 2 集・札幌篇</b>　12/9 晚上–12/12，羊座、燈節、市區、Outlet、回台。開頭可以用第 1 集的精華當前情提要。</li>
+        </ul>
+        <div class="cost-sub">每天固定要拍</div>
+        <ul class="shoot-list">
+          <li><span class="sm must">★</span> 每日開場：飯店窗外或早餐（接每日字卡）</li>
+          <li><span class="sm must">★</span> 每段長途車程：擋風玻璃前的雪路 10–20 秒（接路線圖轉場）</li>
+          <li><span class="sm must">★</span> 每家住宿：進房間第一眼、窗景</li>
+          <li><span class="sm opt">☆</span> 每餐一個上菜鏡頭＋第一口</li>
+          <li><span class="sm talk">🎙</span> 吃飯時的對話：上菜後、第一口的反應最好用</li>
+          <li><span class="sm talk">🎙</span> 自駕沿途：副駕拍窗外時順便聊天，收音避開暖氣出風口</li>
+        </ul>
+        <p class="cost-foot">12 月約 16:00 日落：戶外白天鏡頭集中在 15:30 前，之後切夜景模式（穩定器、慢慢走）。每天的鏡頭已經掛在對應的行程下面。右上角的 🎬 可以隨時關掉拍攝模式。</p>
+      </div>
+
+      <div class="stamps">
+        <div class="stamp-round"><span class="n">8</span><span class="l">天</span></div>
+        <div class="stamp-round"><span class="n">7</span><span class="l">夜</span></div>
+        <div class="stamp-round"><span class="n">5</span><span class="l">自駕</span></div>
+        <div class="stamp-round"><span class="n">6</span><span class="l">住宿</span></div>
+      </div>
+
+      <div class="block sheet taped-b">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15l18-6M8 11l-3-5 3-1 5 4M13 17l-2 4 2 1 4-4"/></svg>交通總覽</h3>
+        <div class="ticket">
+          <div class="stub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 14l9-3V5l2-2 2 2v6l7 3v2l-7-1.5V19l2 1.5V22l-4-1-4 1v-1.5L11 19v-4.5L2 16z"/></svg><span>去程</span></div>
+          <div class="main"><div class="big">07:15 台北 → 12:00 新千歲</div></div>
+        </div>
+        <div class="ticket rose">
+          <div class="stub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 14l9-3V5l2-2 2 2v6l7 3v2l-7-1.5V19l2 1.5V22l-4-1-4 1v-1.5L11 19v-4.5L2 16z"/></svg><span>回程</span></div>
+          <div class="main"><div class="big">14:00 新千歲 → 17:55 台北</div></div>
+        </div>
+        <div class="ticket">
+          <div class="stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V11l2-5h10l2 5v5M3 16h18M7 16v3M17 16v3"/><circle cx="8" cy="13" r="1"/><circle cx="16" cy="13" r="1"/></svg><span>租車</span></div>
+          <div class="main"><div class="big">12/5 13:30 取車</div><div class="sm">Toyota Yaris Cross Hybrid 4WD・新千歲空港店取車，12/9 18:00 前於 Orix Rent-a-car 札幌南6条店還車</div></div>
+        </div>
+      </div>
+
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>緊急資訊</h3>
+        <div id="sosList"></div>
+        <div class="cost-sub">eSIM 不能打電話時</div>
+        <ol class="sos-steps">
+          <li>只有網路的 eSIM 沒有日本電話號碼，110、119 很可能打不出去。建議台灣的實體 SIM 保留著並開漫遊當備用，緊急時用台灣門號打。</li>
+          <li>拜託旁人、飯店櫃檯或便利商店幫忙打，公共電話打 110、119 也不用錢。</li>
+        </ol>
+        <div class="cost-sub">發生車禍時</div>
+        <ol class="sos-steps">
+          <li>安全處停車、打開警示燈，人先移到護欄外。</li>
+          <li>打 <b>110</b> 報警。再小的擦撞都要報警，沒有警察的事故證明，租車保險可能不理賠。</li>
+          <li>在現場打電話給 ORIX 取車的店（新千歲空港店）。</li>
+          <li>不要和對方私下和解，拍照留下現場、車牌與對方聯絡方式。</li>
+        </ol>
+        <p class="cost-foot">ORIX 的事故與故障處理方式取自租車比價網站整理的條款；取車時請再看一次合約上的緊急電話，以合約為準。電池沒電、爆胎、沒油等狀況，ORIX 的緊急服務有包含現場處理。</p>
+      </div>
+
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 00-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></svg>費用與住宿</h3>
+        <div class="cost-sum" id="costSum"></div>
+        <div id="hotelList"></div>
+        <p class="cost-foot">金額為兩人合計，依你的表格填入（表格僅標「$」，這裡以新台幣 NT$ 呈現）。租車費用是日圓，另列，不與台幣相加。</p>
+      </div>
+
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"/><path d="M16 11l6-3v9l-6-3"/></svg>出發前看當地即時畫面</h3>
+        <div class="live-grid">
+          <a class="main" href="https://hokkaidolive.pages.dev/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"/><path d="M16 11l6-3v9l-6-3"/></svg><span>北海道各地即時影像<small>札幌、小樽、新千歲、旭川等地鏡頭＋天氣、穿著建議</small></span></a>
+          <a href="https://northern-road.ceri.go.jp/navi/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"/><path d="M16 11l6-3v9l-6-3"/></svg><span>北の道ナビ（官方）<small>開車當天看封路和路況</small></span></a>
+          <a href="https://www.youtube.com/@the_windsor_hotel/streams" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"/><path d="M16 11l6-3v9l-6-3"/></svg><span>洞爺湖 24 小時直播<small>溫莎飯店 YouTube，12/8–12/9 看湖區天氣</small></span></a>
+          <a href="https://weathernews.jp/onebox/livecam/hokkaido/douou/410001361/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"/><path d="M16 11l6-3v9l-6-3"/></svg><span>札幌電視塔鏡頭<small>Weathernews，看大通公園積雪</small></span></a>
+        </div>
+        <p class="cost-foot">即時影像網站是個人整理，不是官方資訊；封路以 NEXCO 和北の道ナビ為準。</p>
+      </div>
+
+      <div class="block sheet taped-b">
+        <h3><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>快速導航（機場・飯店・租車）</h3>
+        <div id="quickMaps"></div>
+      </div>
+
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v6M8 2v6M10 2v6M6 8c0 1.6 1 2.3 2 2.3s2-.7 2-2.3M8 10.3V22"/><path d="M17.5 2c-2.2 1-3.5 4-3.5 7 0 1.6 1.1 2.7 2.2 2.9V22"/></svg>三餐盤點</h3>
+        <div id="mealList"></div>
+      </div>
+
+      <div class="block sheet taped-b">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6l14.2 12M19.1 6L4.9 18M3 12h18"/></svg>冬季自駕小抄</h3>
+        <ul class="tips">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><span><b>取車要帶</b>　護照、台灣駕照、日文譯本（到監理所申請，每份約 NT$100）、駕駛人本人的信用卡。取車時拍照存證，確認是雪胎、車上有刮雪刷。</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><b>日落很早</b>　12 月北海道約 16:00 日落。盡量在天黑前開完山路，後半段夜路請放慢車速。</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg></span><span><b>開車方式</b>　煞車與方向盤動作都放輕，車距拉大。橋面、路口、隧道出口容易有看不出來的黑冰，過這些地方先減速。</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V8l4-4h6l4 4v13M9 21v-6h6v6"/></svg></span><span><b>加油</b>　多為自助式，先在機器付款再加油，加油時不可使用手機。還車前油箱要加滿，否則可能被多收油錢。</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 4 5 6.5 5 10a5 5 0 01-10 0c0-3.5 2-6 5-10z"/></svg></span><span><b>隨身備品</b>　防滑雪靴或鞋套、手套、帽子、暖暖包、護唇膏與乳液。景點的步道常結冰，鞋底最重要。</span></li>
+        </ul>
+      </div>
+
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-4l2-5h12l2 5v4M3 16h18M7 16v2.5M17 16v2.5"/><circle cx="8" cy="13" r=".8" fill="currentColor"/><circle cx="16" cy="13" r=".8" fill="currentColor"/></svg>主要車程一覽</h3>
+        <div class="legs"><div class="leg"><span class="d">12/5</span><span class="r">Workman → 道央道 → 滝川 → 國道 38 號 → 富良野<small>186 km・Google 3 小時 04 分</small></span><span class="w">3 小時起</span></div><div class="leg"><span class="d">12/6</span><span class="r">Hotel Munin → 美瑛 → 青池<small>約 50 km（估算）</small></span><span class="w">1 小時 10 分</span></div><div class="leg"><span class="d">12/6</span><span class="r">白鬚瀑布 → 美瑛 → 富良野<small>約 55 km（估算）</small></span><span class="w">1 小時 10 分</span></div><div class="leg"><span class="d">12/6</span><span class="r">精靈露台 → 幾寅 → 落合 → Tomamu<small>67.5 km・Google 1 小時 15 分</small></span><span class="w">1 小時 25 分</span></div><div class="leg"><span class="d">12/7</span><span class="r">Tomamu → 道東道 → 手稲 IC → 寿しトリトン<small>159 km・Google 2 小時 12 分</small></span><span class="w">2 小時 50 分</span></div><div class="leg"><span class="d">12/7</span><span class="r">Alpen → 小樽飯店<small>約 30 km（估算）</small></span><span class="w">35 分</span></div><div class="leg"><span class="d">12/8</span><span class="r">小樽 → 道央道 → 有珠山 SA<small>171 km・Google 2 小時 01 分</small></span><span class="w">2 小時 30 分</span></div><div class="leg"><span class="d">12/8</span><span class="r">有珠山 SA → サイロ展望台<small>27.4 km・Google 28 分</small></span><span class="w">30 分</span></div><div class="leg"><span class="d">12/8</span><span class="r">サイロ展望台 → Lake Hill Farm → 乃之風<small>約 20 km（估算）</small></span><span class="w">30 分</span></div><div class="leg"><span class="d">12/9</span><span class="r">乃之風 → 有珠山纜車<small>6 km・無雪 8 分</small></span><span class="w">15 分</span></div><div class="leg"><span class="d">12/9</span><span class="r">有珠山 → 伊達 → 道央道 → かに王<small>58.5 km・Google 1 小時 01 分</small></span><span class="w">1 小時 15 分</span></div><div class="leg"><span class="d">12/9</span><span class="r">かに王 → mother's Plus<small>16 km・無雪 12 分</small></span><span class="w">20 分</span></div><div class="leg"><span class="d">12/9</span><span class="r">mother's Plus → 札幌南 IC → 國道 36 號 → 薄野<small>約 92 km・Google 約 1 小時 25 分</small></span><span class="w">1 小時 45 分</span></div></div>
+        <p class="legs-note">標「Google」的距離和時間是出發前用 Google 地圖查過的無雪時間，標「估算」的是我推估的。右側是冬季預留時間，行程表已用這個時間排好。實際請以出發當天的 Google 地圖與路況為準。</p>
+        <div class="cost-sub">高速公路過路費（普通車 ETC 平日價，ATIS／kosoku.jp 查詢）</div>
+        <p class="legs-note">ETC 過路費（平日價）：12/5 千歲 IC→滝川 IC ¥2,580・12/6 不走高速・12/7 トマム IC→手稲 IC ¥4,060＋手稲 IC→小樽 IC ¥730（從札幌西 IC 上約 ¥820）・12/8 小樽 IC→虻田洞爺湖 IC ¥4,520・12/9 伊達 IC→登別東 IC ¥1,080＋白老 IC→札幌南 IC ¥2,130。合計約 <b>¥15,100</b>。</p>
+        <p class="legs-note"><b>Hokkaido Expressway Pass（HEP）</b>：外國護照旅客限定，5 日（12/5–12/9）普通車 ¥9,600，另加 ETC 卡租借約 ¥330，期間內北海道高速公路不限次數。不買要付約 ¥15,100，買 HEP 加 ETC 卡約 ¥9,930，可省約 ¥5,200，建議加購。只能在取車時申請，<b>出發時要告訴店員要用 Expressway Pass</b>。ORIX 官網寫明只有「北海道以外」的甲地租乙地不能用，這趟新千歲空港店取車、札幌南 6 條店還車都在北海道，可以用。只能在指定店舖申請，新千歲機場店在 ORIX 官網的 HEP 實施店舖名單上。</p>
+      </div>
+
+      <div class="sticky">
+        <h3>出發前確認事項</h3>
+        <ul>
+          <li>自駕路線以「安全為上」重排：避開山路，能走高速公路就走高速公路。每段車程旁綠色的「安全路線導航」按鈕已設好中途點，出發時用它導航，不要用一般的「導航」按鈕</li>
+          <li>4WD 起步和上坡比較穩，但<b>煞車距離跟一般車一樣長</b>，雪地上不會比較好停。車距拉大、提早慢慢踩煞車，不要因為是四驅就開快</li>
+          <li>車上導航：每段行程下方的「🚗 車上導航」列有 MapCode、電話或日文地址，車上導航輸入這些最準。<b>主要還是用手機的綠色「安全路線導航」</b>，它已經設好避開山路的中途點；車上導航只輸入目的地，可能自己選山路。兩邊路線不一樣時，跟著手機走，車上導航當備用（例如山區手機沒訊號時）</li>
+          <li>高速公路過路費五天約 ¥15,100，Hokkaido Expressway Pass 5 日 ¥9,600（加 ETC 卡約 ¥9,930），省約 ¥5,200，建議取車時加購，出發時一定要告訴店員（見「主要車程一覽」下方說明）</li>
+          <li>十勝岳 2026/9/12 曾升到噴火警戒等級 3，10/16 已降回等級 2。白金地區（青池、白鬚瀑布）不在管制範圍，道道 966 號只有白金往上山的白銀～望岳台段冬季封閉，12/6 的路線不會經過。出發前再看一次氣象廳的等級</li>
+          <li>12/5 的順序已改成先吃晚餐、逛完超市，最後才入住 Hotel Munin（約 19:35），請先打電話告知飯店</li>
+          <li>12/10 晚餐逛街時隨意吃，Day 6 附了幾家可以參考的店；12/11、12/12 的午餐還沒決定，頁面上以黃色「待定」標示</li>
+          <li>付款提醒：LAMP LIGHT BOOKS HOTEL（12/10–12）會在出發前自動扣款，記得確認信用卡額度；租車費用 ¥50,380 於 12/5 取車當天刷卡</li>
+          <li>12/8 乃之風是一泊二食，晚餐與隔天早餐都已包含</li>
+          <li>建議先確認訂位：12/10 午餐徳寿 K-place、12/9 晚餐羊座，以及 12/6 Tomamu 的晚餐時段</li>
+          <li>每個項目下方的手寫備註是我查資料後補上的小提醒，營業時間與開放期間以官網或店家當天公告為準</li>
+          <li>標有「推薦」的項目是我另外補充的可選行程，不影響原本時間安排；選了標註「取代」的項目，就把被取代的那一行當作不去</li>
+          <li>每個行程項目旁的「導航」按鈕會直接開啟 Google 地圖並可一路導航；有官方網站可查證的地點另外附上「官網」按鈕，查不到的就沒有附，抵達現場請再核對招牌</li>
+        </ul>
+      </div>
+      <div class="pager" id="pager-overview"></div>
+    </section>
+  </div>
+</main>
+
+<script>
+// ---------- Google Maps / 官網 資料庫 ----------
+// 車上導航用：MapCode／電話／日文地址（來源：hokkaidodo.jp、マピオン、各官網）
+const CARNAV = {
+  hotelMunin:    { addr:"富良野市北の峰町10-23" },
+  bluepond:      { mc:"349 569 844*62" },
+  shirahige:     { mc:"796 182 572*22" },
+  furanoMarche:  { mc:"349 001 717*52", tel:"0167-22-1001" },
+  ningleTerrace: { mc:"919 553 395*88", tel:"0167-22-1111" },
+  tomamuTower:   { mc:"608 511 276*42", tel:"0167-58-1111" },
+  tritonSushi:   { tel:"011-699-5288", addr:"札幌市手稲区前田2条13丁目3-30" },
+  gridsOtaru:    { addr:"小樽市稲穂1-3-13" },
+  siloView:      { mc:"321 726 731*06" },
+  lakeHillFarm:  { mc:"321 694 504*32" },
+  toyaNonokaze:  { mc:"321 519 540" },
+  usuzanRopeway: { mc:"321 433 350*84" },
+  jigokudani:    { mc:"603 288 397*03" },
+  kanio:         { addr:"白老郡白老町竹浦113-13" },
+  orixRentacar:  { tel:"011-531-0543" },
+};
+const PLACES = {
+  airport:        { id:"ChIJ3RpcnUUgdV8R9oH25Xxguho", name:"新千歲機場", web:"https://www.hokkaido-airports.com/new-chitose/" },
+  bluepond:       { id:"ChIJbyoi3mLMDF8RnndLnx8YzQQ", name:"青池", web:"https://www.biei-hokkaido.jp/ja/shirogane-blue-pond" },
+  shirahige:      { id:"ChIJX3VG4K7MDF8RJmYvjz6VBgU", name:"白鬚瀑布" },
+  hotelMunin:     { id:"ChIJ567AjqFSc18RiJGMSfJtxm0", name:"Hotel Munin Furano", web:"https://www.hotelmunin.com/" },
+  furanoMarche:   { id:"ChIJy47IT2RNc18Rj9fZvT1syUM", name:"フラノマルシェ", web:"https://marche.furano.jp/" },
+  cheeseFactory:  { id:"ChIJR0W0-2NSc18R0Q545HM0ANE", name:"富良野起司工坊", web:"https://www.furano-cheese.jp/" },
+  ningleTerrace:  { id:"ChIJPbaM-V5Sc18RLOjzIysMtac", name:"精靈露台 ニングルテラス", web:"https://www.princehotels.co.jp/shinfurano/facility/ningle_terrace/" },
+  moriNoTokei:    { id:"ChIJPbaM-V5Sc18RTOzkjqcJYUU", name:"森之時計咖啡廳" },
+  hopposha:       { id:"ChIJN_3s-V5Sc18RF1W7LvcwAmw", q:"レストラン北峯舎 富良野", name:"レストラン北峯舎 Hopposha" },
+  tokujuKplace:   { id:"ChIJRVtBunUpC18R5NikyscM4Lo", q:"焼肉 徳寿 K-place 札幌", name:"焼肉 徳寿 K-place", book:"https://www.tokuju.com/shop/k-place/" },
+  moiwa:          { id:"ChIJG4fqNwYqC18Rd5EvgpNdRQ8", name:"藻岩山纜車（山麓站）", web:"https://mt-moiwa.jp/" },
+  redBrick:       { id:"ChIJAxSX_p4pC18RpeLC1zEQ6s4", name:"北海道廳舊本廳舍（赤れんが庁舎）" },
+  clockTower:     { id:"ChIJR3JQJ3YpC18R680ES0qomxs", name:"札幌市時計台" },
+  royceWorld:     { id:"ChIJcWIyYkAgdV8RUTJxFOOaGGI", name:"Royce' Chocolate World" },
+  tomamuTower:    { id:"ChIJcw7lj0Vhc18RGuVjEFL_9hY", name:"星野 Tomamu The Tower", web:"https://www.snowtomamu.jp/" },
+  unkaiTerrace:   { id:"ChIJX5GJ6yBhc18R_zmu-H9Ev8M", name:"霧冰テラス", web:"https://www.snowtomamu.jp/" },
+  tritonSushi:    { id:"ChIJpwbmZgknC18RfE2nsqcdtJs", name:"寿しトリトン 手稲店" },
+  alpenOutdoors:  { id:"ChIJ81-n63opC18RG0-CWgzwzq4", name:"Alpen Outdoors 札幌発寒店" },
+  gridsOtaru:     { id:"ChIJXzhr2pXhCl8R1OtIRMrb-x4", name:"グリッズプレミアムホテル小樽" },
+  otaruCanal:     { id:"ChIJ0UxVV2ThCl8RIZdpda0H7gQ", name:"小樽運河", web:"https://otaru.gr.jp/shop/otarucanal" },
+  cafeBaal:       { id:"ChIJJ4YeoFPgCl8RlCri5PZaY1I", name:"cafe BAAL" },
+  sakaimachi:     { id:"ChIJ6XWWhVrgCl8Rf9vktzxsHI0", name:"堺町通商店街", web:"https://otaru.gr.jp/" },
+  kitakaro:       { id:"ChIJb54BmlrgCl8RSSKykITg9MM", name:"北菓楼 小樽本館" },
+  kitaichiGlass:  { id:"ChIJvbtNnFrgCl8RNS-ef4xv_aI", name:"北一硝子館" },
+  musicBox:       { id:"ChIJB2IMXFrgCl8Rx-WS9YJOmbQ", name:"小樽音樂盒堂" },
+  wakadoriJidai:  { q:"若鶏時代 小樽", name:"若鶏時代" },
+  lakeHillFarm:   { id:"ChIJt84zVDJWdV8RiDubucSznAM", name:"Lake Hill Farm", web:"https://www.lake-hill.com/" },
+  toyaNonokaze:   { id:"ChIJtXR_EJjin18RilaFJxpdQp0", name:"洞爺湖乃之風" },
+  usuzanRopeway:  { id:"ChIJ2RnxURPin18R0KiGTOyTWE4", name:"有珠山纜車", web:"https://usuzan.hokkaido.jp/ja/" },
+  kanio:          { id:"ChIJn_a_GLtldV8RsGALYBlElGY", name:"かに王" },
+  mothersPlus:    { id:"ChIJnzuu84BrdV8RrKQZtUwPdww", name:"mother's Plus" },
+  orixRentacar:   { id:"ChIJv2qIwLwpC18RSnfY2B1Mv1E", name:"Orix Rent-a-car 札幌南6条店" },
+  gasNearOrix:    { q:"ガソリンスタンド 札幌市中央区南6条西10丁目", name:"還車點附近的加油站" },
+  vesselHotel:    { id:"ChIJcXx_4_QpC18RHO3qFPXs9OQ", name:"船舶花園薄野飯店（Vessel Hotel Campana すすきの）", web:"https://www.vessel-hotel.jp/campana/susukino/" },
+  odoriPark:      { id:"ChIJKdPFSFEpC18RnuAg7TaybA4", name:"大通公園", web:"https://odori-park.jp/" },
+  youza:          { id:"ChIJZ8Psta4pC18RCIJBq7I-vPA", q:"ジンギスカン 羊座 札幌 南6条", name:"羊座（南六条西5-1-3）", book:"https://tabelog.com/tw/hokkaido/A0101/A010103/1083008/" },
+  hokkaidoJingu:  { id:"ChIJk6jwxNwpC18RCNdmWzXijew", name:"北海道神宮", web:"http://www.hokkaidojingu.or.jp/" },
+  hokkaidoUni:    { id:"ChIJQ5rcxQspC18R1YYLPgKYX0I", name:"北海道大學", web:"https://www.hokudai.ac.jp/" },
+  hokudaiCafe:    { id:"ChIJB0BD1AspC18RFtt-x4Ig3O8", name:"北大 Marche Café & Labo" },
+  lightBooks:     { id:"ChIJgToVsrYpC18Ry1PuoP4abD8", name:"LIGHT BOOKS HOTEL", web:"https://en.lamplightbookshotel.com/sapporo/" },
+  baristart:      { id:"ChIJL6ONVJspC18Rl9-QN-T7Qh4", name:"BARISTART COFFEE" },
+  mitsuiOutlet:   { id:"ChIJ834CCArVdF8RDYwUTJWGFe8", name:"北廣島三井 Outlet Park", web:"https://mitsui-shopping-park.com/mop/sapporo/" },
+  chikaho:        { id:"ChIJjVcn-5wpC18RAWtxl0nH2Ck", name:"札幌駅前地下歩行空間" },
+  suageSoup:      { id:"ChIJv0HGVIQpC18Rc2m8zsIZwJE", name:"Soup Curry Suage+" },
+  okushibaSoup:   { id:"ChIJn8GXRXQpC18ROE27C3HlsNM", name:"奧芝商店（駅前創成寺店）" },
+  garaku:         { id:"ChIJ15KUHxffdF8ROcshFSryZ-I", q:"スープカレー GARAKU 千歳店", name:"スープカレー GARAKU 千歲店", web:"https://www.s-garaku.com/" },
+  ramai:          { id:"ChIJd0vEoqrYdF8RdKd85wmITBU", q:"RAMAI スープカレー 千歳", name:"アジアンバー RAMAI 千歲店" },
+  workman:        { id:"ChIJLUnIvqnYdF8R7SXB77Zpmig", q:"ワークマン 千歳 新富", name:"Workman（買雪鞋）" },
+  shinatora:      { id:"ChIJXQFZ8GRNc18RfY6Y_OG57ZU", q:"Shinatora 富良野 ラーメン", name:"Shinatora（富良野晚餐）" },
+  ralseMart:      { id:"ChIJmz6t-WRNc18RaR0egh7-72U", q:"Ralse Mart 富良野", name:"Ralse Mart（超市）" },
+  hokurenShop:    { id:"ChIJ982yGWdNc18ROMOJ1yg02B8", q:"ホクレンショップ フォレスト 富良野", name:"Hokuren Shop Forest（超市）" },
+  furanoWinery:   { id:"ChIJq6oa8k5Nc18RdswsqfkY4dE", q:"ふらのワイン工場", name:"富良野酒莊（ふらのワイン工場）" },
+  jigokudani:     { q:"登別地獄谷", name:"登別地獄谷" },
+  tenguyama:      { id:"ChIJNZSPr8LgCl8R_ro2ttgpg7U", q:"小樽天狗山ロープウエイ", name:"小樽天狗山纜車", web:"https://tenguyama.ckk.chuo-bus.co.jp/" },
+  sushidonburi:   { id:"ChIJ4ed1qzgpC18RCmcBG4UhIcU", q:"札幌海鮮丼専門店 すしどんぶり すすきの店", name:"すしどんぶり すすきの店" },
+  sushiTerada:    { id:"ChIJdQVBoWYpC18R9Ew3IdWVH7w", q:"Sushi Terada 札幌", name:"Sushi Terada" },
+  sushiSaikou:    { id:"ChIJ6bhSnYYpC18ReX697qsoM6M", q:"Sushi Saikou 札幌 すすきの", name:"Sushi Saikou" },
+  tachibana:      { id:"ChIJC6r1mO4pC18RxMX7O2rZ0FE", q:"海鮮と北海道和食 海鮮橘 tachibana すすきの", name:"海鮮橘 tachibana" },
+  hareko:         { id:"ChIJexFYUsUpC18RUGwrXrNm0Kk", q:"海鮮牡蠣しゃぶと焼き鳥 個室居酒屋 晴れ子 すすきの店", name:"晴れ子 すすきの店" },
+  ramenYokocho:   { id:"ChIJSyzMXY8pC18R-ecCwIykpC8", q:"元祖さっぽろラーメン横丁", name:"元祖札幌拉麵橫丁" },
+  parfaitPal:     { id:"ChIJ02KmG4QpC18RGdiqVSNFRWY", q:"Parfaiteria Pal 札幌", name:"Parfaiteria Pal" },
+  nanakamadou:    { id:"ChIJq6raB4UpC18RpWprdest2Jc", q:"Parfait Shop NANAKAMADOU 札幌", name:"NANAKAMADOU" },
+  furanoDinner:   { q:"富良野駅前 レストラン", name:"富良野市區晚餐" },
+  ashibetsu:      { q:"芦別駅", name:"芦別（國道 38 號）" },
+  biei:           { q:"美瑛駅", name:"美瑛（國道 237 號）" },
+  ikutora:        { q:"幾寅駅", name:"幾寅（國道 38 號）" },
+  ochiai:         { q:"南富良野町落合", name:"南富良野町落合" },
+  dateSta:        { q:"伊達紋別駅", name:"伊達（道央道 伊達 IC 附近）" },
+  tsukisamu:      { q:"月寒中央駅", name:"月寒中央（國道 36 號）" },
+  siloView:       { q:"サイロ展望台 洞爺湖", name:"サイロ展望台" },
+  usuzanSA:       { q:"有珠山サービスエリア 上り", name:"有珠山 SA（上り）", web:"https://www.driveplaza.com/sapa/1050/1050029/1/" },
+  susukinoBus:    { q:"すしざんまい すすきの店 札幌市中央区南4条西3", name:"すすきの 機場巴士站（すしざんまい前）", web:"https://www.hokto.co.jp/zh_tw/sapporo-chitose/" }
+};
+
+function mapUrl(key){
+  const p = PLACES[key];
+  if(!p) return "#";
+  if(p.url) return p.url;
+  const query = encodeURIComponent(p.q || p.name);
+  return p.id
+    ? `https://www.google.com/maps/search/?api=1&query=${query}&query_place_id=${p.id}`
+    : `https://www.google.com/maps/search/?api=1&query=${query}`;
+}
+
+// ---------- icons ----------
+const PIN_SVG  = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>`;
+const WEB_SVG  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 2.6 4.2 5.8 4.2 9s-1.4 6.4-4.2 9c-2.8-2.6-4.2-5.8-4.2-9S9.2 5.6 12 3z"/></svg>`;
+const BOOK_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="7" y1="2" x2="7" y2="6"/><line x1="17" y1="2" x2="17" y2="6"/></svg>`;
+const MEAL_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 01-18 0zM8 6c0-1.5 1.5-1.5 1.5-3M13 6c0-1.5 1.5-1.5 1.5-3"/></svg>`;
+const CAR_SVG  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-4l2-5h12l2 5v4M3 16h18M7 16v2.5M17 16v2.5"/><circle cx="8" cy="13" r=".8" fill="currentColor"/><circle cx="16" cy="13" r=".8" fill="currentColor"/></svg>`;
+const PEN_SVG  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16.5 4.5a2 2 0 013 3L8 19z"/></svg>`;
+const BED_SVG  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 00-3-3h-7v5"/></svg>`;
+const FLAG_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4M6 5h11l-2 4 2 4H6"/></svg>`;
+const STAR_SVG = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>`;
+
+// ---------- 場景插畫：剪紙層疊山景 ----------
+let sceneN = 0;
+function rng(seed){
+  let s = seed % 2147483647; if(s <= 0) s += 2147483646;
+  return () => (s = s * 16807 % 2147483647) / 2147483647;
+}
+function ridgeFn(seed, base, amp, sharp){
+  const r = rng(seed);
+  const p = [r()*6.28, r()*6.28, r()*6.28];
+  const f = [.011 + r()*.006, .027 + r()*.01, .06 + r()*.02];
+  return x => {
+    const a = Math.sin(x*f[0] + p[0]), b = Math.sin(x*f[1] + p[1]), c = Math.sin(x*f[2] + p[2]);
+    const v = sharp ? (1 - Math.abs(a)) * .9 + b * .25 + c * .1 : a * .6 + b * .3 + c * .1;
+    return base - amp * v;
+  };
+}
+function ridgePath(f){
+  let d = `M0 ${f(0).toFixed(1)}`;
+  for(let x = 6; x <= 600; x += 6) d += `L${x} ${f(x).toFixed(1)}`;
+  return d + 'L600 200L0 200Z';
+}
+function pine(x, y, h){
+  const w = h * .34;
+  return `M${(x-w).toFixed(1)} ${y.toFixed(1)}L${x.toFixed(1)} ${(y-h*.62).toFixed(1)}L${(x+w).toFixed(1)} ${y.toFixed(1)}Z` +
+         `M${(x-w*.78).toFixed(1)} ${(y-h*.34).toFixed(1)}L${x.toFixed(1)} ${(y-h).toFixed(1)}L${(x+w*.78).toFixed(1)} ${(y-h*.34).toFixed(1)}Z`;
+}
+function quad(p0, c, p1, t){
+  const u = 1 - t;
+  return [u*u*p0[0] + 2*u*t*c[0] + t*t*p1[0], u*u*p0[1] + 2*u*t*c[1] + t*t*p1[1]];
+}
+const SCENES = {
+  hero:{h:206, w:24,  seed:7,  kind:'plane',  ox:500, oy:60},
+  d1:{h:205,   w:22,  seed:11, kind:'plane',  ox:510, oy:62},
+  d2:{h:198,   w:36,  seed:23, kind:'gondola',ox:130, oy:52},
+  d3:{h:228,   w:14,  seed:37, kind:'lamps',  ox:480, oy:48},
+  d4:{h:188,   w:30,  seed:41, kind:'lake',   ox:120, oy:46},
+  d5:{h:212,   w:26,  seed:53, kind:'plume',  ox:490, oy:54},
+  d6:{h:238,   w:10,  seed:61, kind:'bokeh',  ox:110, oy:48},
+  d7:{h:262,   w:340, seed:73, kind:'string', ox:490, oy:60},
+  d8:{h:200,   w:28,  seed:89, kind:'plane',  ox:100, oy:58}
+};
+function scene(cfg){
+  const n = sceneN++;
+  const id = k => `${k}${n}`;
+  const far   = ridgeFn(cfg.seed + 1, 100, 54, true);
+  const mid   = ridgeFn(cfg.seed + 2, 130, 38, true);
+  const near  = ridgeFn(cfg.seed + 3, 152, 22, false);
+  const front = ridgeFn(cfg.seed + 4, 172, 12, false);
+  const snow  = ridgeFn(cfg.seed + 5, 188, 6,  false);
+  const layer = (f, cls) => `<path class="${cls} rg" d="${ridgePath(f)}"/>`;
+
+  let px = 300, py = 999;
+  for(let x = 150; x <= 450; x += 3){ const y = far(x); if(y < py){ py = y; px = x; } }
+
+  const r = rng(cfg.seed + 9);
+  let treeD = '';
+  for(let i = 0; i < 26; i++){
+    const x = r() * 600, h = 12 + r() * 16;
+    if(cfg.kind === 'lake' && x > 80 && x < 520) continue;
+    treeD += pine(x, front(x) + 3, h);
+  }
+
+  let skyDetail = '', farDetail = '', frontDetail = '';
+  const bokeh = () => {
+    const rb = rng(cfg.seed + 21);
+    let g = `<g filter="url(#${id('bl')})">`;
+    for(let i = 0; i < 16; i++){
+      const x = rb() * 600, y = 168 + rb() * 30, rr = 2 + rb() * 3.2, o = (.35 + rb() * .45).toFixed(2);
+      g += `<circle class="sc-lamp" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${rr.toFixed(1)}" opacity="${o}"/>`;
+    }
+    return g + '</g>';
+  };
+
+  switch(cfg.kind){
+    case 'plane':
+      skyDetail = `<path class="sc-trail" stroke="url(#${id('tr')})" d="M40 86C170 68 290 54 410 30"/>
+        <g class="sc-plane" transform="translate(410 30) rotate(-16) scale(.55)"><ellipse rx="28" ry="5.5"/><path d="M-4 0L-18 -17H-9L10 0Z"/><path d="M-4 0L-18 17H-9L10 0Z"/><path d="M-24 0L-33 -10H-26L-17 0Z"/></g>`;
+      break;
+    case 'gondola':
+      farDetail = `<path class="sc-line" d="M20 26L580 120"/><path class="sc-line" d="M120 43V118M440 96V140"/><path class="sc-line" d="M278 69.5V78"/>
+        <rect class="sc-cabin" x="270" y="78" width="16" height="12" rx="3"/><rect class="sc-win" x="273" y="81" width="4" height="4" rx="1"/><rect class="sc-win" x="279" y="81" width="4" height="4" rx="1"/>`;
+      break;
+    case 'lamps':
+      frontDetail = [90, 200, 310, 420, 530].map(x =>
+        `<path class="sc-line" d="M${x} 192V172"/><circle cx="${x}" cy="171" r="13" fill="url(#${id('lg')})"/><circle class="sc-lamp" cx="${x}" cy="171" r="2.4"/>`
+      ).join('');
+      break;
+    case 'lake':
+      frontDetail = `<ellipse class="sc-water" cx="300" cy="179" rx="224" ry="13"/>
+        <path class="sc-shimmer" d="M200 177h44M290 183h64M386 175h34M150 182h30"/>`;
+      break;
+    case 'plume':
+      farDetail = `<g filter="url(#${id('bl')})" opacity=".8">
+        <circle class="sc-snow" cx="${px + 3}" cy="${py - 9}" r="6"/><circle class="sc-snow" cx="${px + 12}" cy="${py - 19}" r="8"/>
+        <circle class="sc-snow" cx="${px + 26}" cy="${py - 29}" r="10"/><circle class="sc-snow" cx="${px + 44}" cy="${py - 35}" r="9"/></g>`;
+      break;
+    case 'bokeh':
+      frontDetail = bokeh();
+      break;
+    case 'string': {
+      const seg1 = [[0, 18], [150, 56], [300, 24]], seg2 = [[300, 24], [450, -8], [600, 20]];
+      let bulbs = '';
+      [seg1, seg2].forEach(sg => {
+        [.12, .32, .52, .72, .9].forEach(t => {
+          const [bx, by] = quad(sg[0], sg[1], sg[2], t);
+          bulbs += `<circle cx="${bx.toFixed(1)}" cy="${(by + 3).toFixed(1)}" r="8" fill="url(#${id('lg')})"/><circle class="sc-lamp" cx="${bx.toFixed(1)}" cy="${(by + 3).toFixed(1)}" r="2.2"/>`;
+        });
+      });
+      skyDetail = `<path class="sc-line" d="M0 18Q150 56 300 24T600 20"/>${bulbs}`;
+      frontDetail = bokeh();
+      break;
+    }
+  }
+
+  return `<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="--h:${cfg.h};--w:${cfg.w}">
+    <defs>
+      <linearGradient id="${id('sk')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sc-sk1"/><stop offset="1" class="sc-sk2"/></linearGradient>
+      <radialGradient id="${id('hl')}"><stop offset="0" class="sc-glow" stop-opacity=".95"/><stop offset="1" class="sc-glow" stop-opacity="0"/></radialGradient>
+      <radialGradient id="${id('lg')}"><stop offset="0" class="sc-lampstop" stop-opacity=".9"/><stop offset="1" class="sc-lampstop" stop-opacity="0"/></radialGradient>
+      <linearGradient id="${id('ms')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sc-mist" stop-opacity="0"/><stop offset=".55" class="sc-mist" stop-opacity=".6"/><stop offset="1" class="sc-mist" stop-opacity="0"/></linearGradient>
+      <linearGradient id="${id('tr')}" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="410" y2="0"><stop offset="0" class="sc-planestop" stop-opacity="0"/><stop offset="1" class="sc-planestop" stop-opacity=".95"/></linearGradient>
+      <filter id="${id('bl')}" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2"/></filter>
+      <filter id="${id('gr')}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="${n + 3}"/><feColorMatrix type="saturate" values="0"/></filter>
+    </defs>
+    <rect width="600" height="200" fill="url(#${id('sk')})"/>
+    <circle cx="${cfg.ox}" cy="${cfg.oy}" r="48" fill="url(#${id('hl')})"/>
+    <circle class="sc-orb" cx="${cfg.ox}" cy="${cfg.oy}" r="12"/>
+    ${skyDetail}
+    ${layer(far, 'sc-r1')}
+    ${farDetail}
+    <rect y="92" width="600" height="56" fill="url(#${id('ms')})"/>
+    ${layer(mid, 'sc-r2')}
+    <rect y="122" width="600" height="46" fill="url(#${id('ms')})"/>
+    ${layer(near, 'sc-r3')}
+    ${layer(front, 'sc-r4')}
+    <path class="sc-pine" d="${treeD}"/>
+    ${layer(snow, 'sc-snow')}
+    ${frontDetail}
+    <rect class="grain" width="600" height="200" fill="#000" filter="url(#${id('gr')})"/>
+  </svg>`;
+}
+function addSnow(el, n){
+  const box = document.createElement('div');
+  box.className = 'snow';
+  for(let i = 0; i < n; i++){
+    const s = document.createElement('span');
+    const sz = 2 + Math.random() * 3.5;
+    s.className = 'flake';
+    s.style.cssText = `left:${(Math.random()*100).toFixed(1)}%;width:${sz.toFixed(1)}px;height:${sz.toFixed(1)}px;animation-duration:${(6+Math.random()*7).toFixed(1)}s;animation-delay:${(-Math.random()*10).toFixed(1)}s;--dx:${Math.round(Math.random()*40-20)}px;`;
+    box.appendChild(s);
+  }
+  el.appendChild(box);
+}
+
+// ---------- 行程資料 ----------
+const days = [
+  {
+    id:"d1", label:"12/5", title:"新千歲 → 富良野", sub:"週六", scene:"planePond",
+    stay:"Hotel Munin Furano",
+    hl:"第一天不趕景點，天黑後只開平地國道。取車、買雪靴後走道央道到滝川，再沿國道 38 號經赤平、芦別進富良野，約 17:35 到。先吃晚餐、逛超市，約 19:35 入住。青池改到 12/6 再去。",
+    route:["airport","workman","ashibetsu","shinatora","hokurenShop","hotelMunin"],
+    items:[
+      {t:"12:00", d:"落地新千歲", map:["airport"],
+       n:"入境、領行李、過海關預留約 1 小時。等行李時先換好防寒衣物。"},
+      {meal:true, t:"依時間變通", d:"午餐：入境順利的話，13:30 取車前在機場內吃；時間不夠就買雪靴時，到附近的便利商店買著吃", map:["airport"],
+       n:"機場國內線航廈 3 樓是美食街，拉麵道場也在這層。便利商店的飯糰、熱食可以帶上車，順便買水和路上的零食。"},
+      {t:"13:30", d:"取車出發（先到機場租車櫃台報到，再搭 ORIX 接駁車約 10 分鐘到店）", map:["airport"],
+       n:"取車要帶護照、台灣駕照、日文譯本、駕駛人本人的信用卡。上車前繞車一圈拍照存證，確認是冬季雪胎、車上有刮雪刷。車子是 Toyota Yaris Cross Hybrid 4WD（油電混合、四輪驅動），請店員示範：怎麼發動（踩煞車按 POWER 鍵，沒有引擎聲是正常的）、前後擋風玻璃除霧、加油孔開關、ETC 卡插在哪裡。"},
+      {t:"14:00–14:30", d:"買雪靴（Workman），需要的話順便到附近便利商店買午餐", map:["workman"],
+       n:"14:30 前一定要上路。進店前先想好尺碼，穿著試走一下確認防滑。"},
+      {t:"14:30–17:35", d:"Workman → 道央道 → 滝川 IC → 國道 38 號（經赤平、芦別）→ 富良野（186 公里，Google 約 3 小時 4 分）", map:["shinatora"], safe:["workman","ashibetsu","shinatora"],
+       n:"選這條是因為國道 38 號沿著空知川河谷，一路經過赤平、芦別幾個城鎮，沒有山口，有路燈、加油站和便利商店，車也多。不要走經夕張、桂沢湖的山路，也不要走道東道接國道 237 號（要翻金山峠）。<b>開這段請用綠色的「安全路線導航」按鈕</b>，它加了『芦別』當途經點，Google 才會走這條；旁邊的「導航」只是開到 Shinatora，Google 可能會選山路。12 月約 16:00 日落，滝川之後是夜路，但都是城鎮間的國道。高速公路上可在砂川 SA 休息。Google 的時間沒算下雪，下雪可能多 30 分鐘以上。"},
+      {meal:true, t:"17:35–18:30", d:"晚餐：Shinatora（拉麵）", map:["shinatora"],
+       n:"Google 資料：週一公休，晚餐營業 17:00–20:00，建議 19:15 前入店。有評論提到只收現金。招牌是焦蒜醬油（焦がし塩）和味噌拉麵。"},
+      {t:"18:35–19:30", d:"逛超市買零食、水果、隔天早餐：Ralse Mart（營業到 20:30）→ Hokuren Shop Forest（營業到 21:00，兩店開車約 2 分鐘）", map:["ralseMart","hokurenShop"],
+       n:"Ralse Mart 就在 Shinatora 隔壁，評論提到兩家共用停車場，吃完直接過去。先逛 Ralse，再到 Hokuren 補買。"},
+      {t:"19:35", d:"Check-in Hotel Munin Furano（Hokuren 開車約 3 分鐘）", map:["hotelMunin"],
+       n:"比一般 check-in 時間晚，可以先打電話 +81 167-56-7773 告知預計 19:30 左右抵達。"}
+    ],
+    warn:"第一次在雪地開車，車速放慢、車距拉大；天黑後路面容易結冰，預留緩衝時間"
+  },
+  {
+    id:"d2", label:"12/6", title:"美瑛・富良野 → Tomamu", sub:"週日", scene:"gondola",
+    stay:"星野 Tomamu The Tower",
+    hl:"早上趁天亮開去美瑛看青池和白鬚瀑布，中午回富良野逛市集、精靈露台，13:45 出發，天黑前到 Tomamu。",
+    route:["hotelMunin","biei","bluepond","shirahige","furanoMarche","ningleTerrace","tomamuTower"],
+    items:[
+      {meal:true, t:"07:30", d:"飯店早餐", map:["hotelMunin"],
+       n:"早餐後先把車上的積雪清掉、暖車除霜，08:30 前出發。"},
+      {t:"08:30", d:"退房", map:["hotelMunin"]},
+      {t:"08:30–09:40", d:"Hotel Munin → 國道 237 號 → 美瑛 → 道道 966 號 → 青池（約 50 公里）", map:["bluepond"], safe:["hotelMunin","biei","bluepond"],
+       n:"請用綠色的「安全路線導航」按鈕，它會先帶妳走國道 237 號到美瑛，再轉往白金溫泉方向的道道 966 號，都是有公車行駛、優先除雪的道路。一般導航可能抄田間小路，空曠農地容易有地吹雪，看不清路面。"},
+      {t:"09:40–10:20", d:"青池", must:true, map:["bluepond"],
+       n:"12 月初青池通常已經結冰、積雪，白天看到的多半是白色池面和枯木，不一定是藍色。停車場收費，步道積雪會滑，穿雪靴。"},
+      {t:"10:25–10:45", d:"白鬚瀑布（青池往白金溫泉方向約 5 分鐘）", map:["shirahige"],
+       n:"從白金溫泉的白鬚橋上看。冬天美瑛川的藍色最明顯，這趟藍色的畫面主要靠這裡。橋面可能結冰，慢慢走。"},
+      {t:"10:45–11:55", d:"白鬚瀑布 → 美瑛 → 國道 237 號 → 富良野（原路開回）", map:["furanoMarche"], safe:["shirahige","biei","furanoMarche"],
+       n:"一樣用綠色的安全路線導航，走來時的主要道路回富良野。"},
+      {meal:true, t:"12:00–13:00", d:"フラノマルシェ＋午餐（市集內美食街）", map:["furanoMarche"],
+       n:"Google 標示每日 10:00–18:00。午餐直接在市集吃，省下一站的時間。"},
+      {t:"13:00", d:"⛽ 在富良野市區加滿油（Tomamu 沒有加油站）", must:true,
+       n:"一定要加滿再往 Tomamu！Tomamu 渡假村沒有加油站，往 Tomamu 的山路上也很少，市集附近的國道 38 號沿線就有加油站。Yaris Cross 是油電車，一樣要加滿，加「レギュラー」（一般汽油）。"},
+      {t:"13:10–13:45", d:"精靈露台（新富良野王子飯店內，市區開車約 10 分鐘）", map:["ningleTerrace"],
+       n:"森林裡的小木屋市集，午後營業的木屋比較多。13:45 出發，15:10 左右就能到 Tomamu，離日落還有將近一小時。"},
+      {t:"13:45–15:10", d:"精靈露台 → 國道 38 號 → 幾寅路口左轉 → 落合右轉道道 1117 號 → Tomamu（67.5 公里，Google 約 1 小時 15 分）", map:["tomamuTower"], safe:["ningleTerrace","ikutora","ochiai","tomamuTower"],
+       n:"這是星野 Tomamu 官網建議的冬季路線，請用綠色的安全路線導航。官網提醒不要跟著車上導航走幾寅峠：碎石窄路、沒有路燈、手機收不到訊號。在落合看到寫著「トマム」的藍色路牌就右轉。國道 38 號在西達布到幾寅之間會經過三ノ山峠，下雪時放慢速度。"},
+      {t:"15:10", d:"Check-in 星野 Tomamu The Tower", must:true, map:["tomamuTower"],
+       n:"多數房型 15:00 起可入住。"},
+      {t:"15:30後", d:"霧冰テラス纜車、雪上滑車、溫泉、渡假村內設施自由遊玩", map:["unkaiTerrace"],
+       n:"冬季霧冰テラス的開放期間與運行時間，請看星野官網或打 0167-58-1111 確認。網路上較容易查到的是夏季的雲海テラス。12/6 可能還沒開始營運，備案是溫泉和室內設施。"},
+      {meal:true, t:"晚餐", d:"度假村內餐廳", map:["tomamuTower"],
+       n:"度假村的餐廳和自助餐常需預約，建議入住前先在官網訂好晚餐時段。"}
+    ],
+    warn:"⛽ 離開富良野前一定要加滿油（Tomamu 沒有加油站）；霧冰露台纜車需查當日開放狀況"
+  },
+  {
+    id:"d3", label:"12/7", title:"Tomamu → 小樽", sub:"週一", scene:"canal",
+    stay:"グリッズプレミアムホテル小樽",
+    hl:"今天全程走高速公路最安全：10:15 從 Tomamu 出發，札幌吃壽司、逛 Alpen，15:35 到小樽停好車，之後都用走的。運河藍調時刻、晚餐，晚上再看要不要搭車上天狗山。",
+    route:["tomamuTower","tritonSushi","alpenOutdoors","gridsOtaru","otaruCanal","cafeBaal"],
+    items:[
+      {t:"07:00–08:00", d:"霧冰露台晨間體驗（可選）", map:["unkaiTerrace"],
+       n:"同樣要先確認冬季是否有運行，沒有的話就多睡一點。"},
+      {meal:true, t:"08:30", d:"度假村早餐", map:["tomamuTower"],
+       n:"早餐後清車上積雪、暖車除霜。出發前先查高速公路路況（見下一項）。"},
+      {t:"10:15–13:05", d:"Tomamu → 道東道 → 千歲惠庭 JCT → 道央道 → 札樽道 → 手稲 IC 下 → 寿しトリトン 手稲店（159 公里，Google 2 小時 12 分，冬季估算 2 小時 50 分）", map:["tritonSushi"], safe:["tomamuTower","tritonSushi"],
+       n:"這天的一般道路替代路線都要翻山，高速公路反而最安全。Tomamu 到夕張這段是單向一線道，不能超車，隧道出口容易結冰，車距拉大。出發前查 NEXCO 東日本「ドラぷら」或「北海道地区道路情報」，看道東道有沒有通行止め。如果封閉，不要改走一般道路翻山，先在度假村等開放。前一天在富良野已加滿油，開到札幌沒問題。下交流道是札樽道「手稲 IC」，下來開國道 5 號約 8 分鐘到壽司店，跟著導航走就好。中途會經過札幌西 IC，從這個方向不能下，不要提早出去。"},
+      {meal:true, t:"13:05–14:00", d:"午餐：海鮮寿しトリトン 手稲店", map:["tritonSushi"],
+       n:"Google 標示每日 11:00–21:30。熱門連鎖迴轉壽司，用餐尖峰可能要排隊，到店先抽號碼牌。有評論提到沒有叫號顯示板，要自己注意店員。"},
+      {t:"14:15–15:00", d:"Alpen Outdoors 札幌発寒店（壽司店開車約 15 分鐘）", map:["alpenOutdoors"],
+       n:"Google 標示每日 10:00–21:00，是戶外用品大店，可以補買手套、發熱衣、防滑鞋套。15:00 準時離開，天黑前開到小樽。"},
+      {t:"15:00–15:35", d:"Alpen → 小樽（冬季估算約 35 分鐘）", map:["gridsOtaru"], safe:["alpenOutdoors","gridsOtaru"],
+       n:"跟著導航從札幌西 IC 或手稲 IC 上札樽道（往小樽方向）都可以，小樽 IC 下，過路費約 ¥730–820。都是主要道路，日落前抵達。"},
+      {t:"15:35", d:"Check-in グリッズプレミアムホテル小樽（運河徒步 4 分，頂樓露天風呂）", map:["gridsOtaru"],
+       n:"評論提到飯店停車場很小，15:00 前不能使用，停車費約 ¥1,500 / 晚，滿位時要停到附近的停車場。車停好之後今天就不再開車。入住後先休息或泡頂樓露天風呂。"},
+      {t:"16:15–17:15", d:"小樽運河藍調時刻散步（飯店走路 4 分鐘）", must:true, map:["otaruCanal"],
+       n:"日落前後的藍調時刻最好看，接著街燈亮起轉成夜景。冬季路面結冰，穿防滑鞋，拍照時別靠近護欄邊緣。"},
+      {meal:true, t:"17:30–18:30", d:"晚餐：cafe BAAL（晚餐時段 17:30–19:30）", map:["cafeBaal"],
+       n:"17:30 一開門就入座，吃完還來得及上天狗山。"},
+      {rec:true, t:"19:00 後（可選）", d:"天狗山纜車夜景（搭公車或計程車上山，不要自己開車）", map:["tenguyama"],
+       n:"纜車站在一段陡坡上，晚上不要開雪地陡坡上去。官網冬季營運 11/28 起：上山到 19:48，下山到 20:00，大人來回 ¥2,000，天候不佳會停駛。公車：小樽站前ターミナル 4 號乘車處搭中央巴士⑨「天狗山ロープウエイ線」，約 17–20 分鐘，¥240，每小時 2–3 班；回程末班車官網沒寫，晚了就叫計程車。不想上山的話，就回運河再散一次步。"}
+    ],
+    warn:"出發前查道東道是否通行止め；天狗山纜車上山末班 19:48"
+  },
+  {
+    id:"d4", label:"12/8", title:"小樽 → 洞爺湖", sub:"週二", scene:"lake",
+    stay:"洞爺湖乃之風",
+    hl:"早上掃甜點街，11:00 出發。全程走高速公路，在有珠山 SA 吃午餐。下午看サイロ展望台的湖景、吃 Lake Hill Farm 的牧場冰淇淋，16:00 入住。",
+    route:["gridsOtaru","sakaimachi","usuzanSA","siloView","lakeHillFarm","toyaNonokaze"],
+    items:[
+      {meal:true, t:"08:00", d:"早餐後退房", map:["gridsOtaru"],
+       n:"行李先放上車，車留在飯店停車場。出發前查道央道有沒有通行止め。"},
+      {t:"09:00–10:55", d:"堺町通商店街甜點掃街（北菓楼バウムクーヘン、北一硝子館、音樂盒堂等）", map:["sakaimachi","kitakaro","kitaichiGlass","musicBox"],
+       n:"早上人少好逛。北菓楼本館的年輪蛋糕可以試吃。北一硝子的『北一ホール』咖啡廳用上百盞油燈照明，很有氣氛，適合當點心休息站。午餐會比較晚，這裡可以多吃一點點心。10:55 回飯店取車。"},
+      {t:"11:00–13:30", d:"小樽 → 札樽道 → 道央道（經苫小牧、登別）→ 有珠山 SA（171 公里，Google 約 2 小時 1 分，冬季估算約 2 小時 30 分）", must:true, map:["usuzanSA"], safe:["gridsOtaru","usuzanSA"],
+       n:"全程高速公路，經太平洋側，雪比山區少很多。導航的目的地直接設在有珠山 SA，確保 Google 走高速公路。出發前查 NEXCO 東日本「ドラぷら」看道央道有沒有通行止め。"},
+      {meal:true, t:"13:30–14:10", d:"午餐：有珠山 SA（上り）美食街", map:["usuzanSA"],
+       n:"NEXCO 官網：12–3 月 9:00–19:00。有扇貝鹽味拉麵 ¥1,150、黃金豚薑燒定食 ¥1,100、室蘭咖哩拉麵 ¥1,100 等。往洞爺湖方向是「上り」那一側。天氣好的話看得到內浦灣和有珠山。"},
+      {t:"14:10–14:40", d:"有珠山 SA → 虻田洞爺湖 IC → 國道 230 號 → サイロ展望台（27.4 公里，Google 約 28 分）", map:["siloView"], safe:["usuzanSA","siloView"],
+       n:"下交流道後走國道 230 號往洞爺湖北岸方向，是主要道路。"},
+      {t:"14:40–15:05", d:"サイロ展望台（洞爺湖、中島、有珠山、昭和新山全景）", map:["siloView"],
+       n:"北海道觀光官網：冬季（11–4 月）8:30–17:00，全年無休，免費停車。有名產店（洞爺湖焦糖布丁、牛奶糖）和咖啡廳。"},
+      {t:"15:05–15:20", d:"サイロ展望台 → Lake Hill Farm（冬季估算約 15 分鐘）", map:["lakeHillFarm"]},
+      {meal:true, t:"15:20–15:45", d:"Lake Hill Farm（牧場牛奶義式冰淇淋、點心）", map:["lakeHillFarm"],
+       n:"官網公告：10/1 起是冬季時間 9:00–17:00，17:00 關門。官網主打義式冰淇淋，沒有寫蘋果派，現場不一定買得到。牧場直營，咖啡廳也有咖哩、披薩，天氣好可以看到羊蹄山。"},
+      {t:"15:45–16:00", d:"Lake Hill Farm → 洞爺湖乃之風（9 公里，冬季估算 15–20 分鐘）", map:["toyaNonokaze"], safe:["lakeHillFarm","toyaNonokaze"],
+       n:"16:00 前後日落，這段是最後一段，慢慢開。"},
+      {t:"16:00", d:"Check-in 洞爺湖乃之風", map:["toyaNonokaze"],
+       n:"check-in 時順便確認晚餐 buffet 的入場時段，多數旅館是分時段制。"},
+      {meal:true, t:"晚餐", d:"飯店 buffet", map:["toyaNonokaze"]},
+      {t:"飯後", d:"露天風呂♨️", map:["toyaNonokaze"],
+       n:"晴朗的夜晚可以到湖畔走走看星空，溫泉街一帶也有公共足湯。外面很冷，記得穿厚外套。"}
+    ],
+    warn:"出發前查道央道是否通行止め；如果封閉，不要改走山路，先在小樽等開放"
+  },
+  {
+    id:"d5", label:"12/9", title:"洞爺湖 → 有珠山 → 白老 → 札幌", sub:"週三", scene:"crab",
+    stay:"船舶花園薄野飯店",
+    hl:"有珠山看湖、白老吃蟹，16:15 左右進札幌。還車前先加油，今天是自駕的最後一天。",
+    route:["toyaNonokaze","usuzanRopeway","kanio","mothersPlus","vesselHotel"],
+    items:[
+      {meal:true, t:"07:30–10:00", d:"早餐＋晨間露天風呂♨️", map:["toyaNonokaze"]},
+      {t:"10:00–10:15", d:"退房，飯店 → 有珠山纜車（車程 6 公里，無雪約 8 分，冬季估算 15 分）", map:["usuzanRopeway"],
+       n:"行李放車上，出發前先除霜暖車。"},
+      {t:"10:15–11:30", d:"有珠山纜車（俯瞰洞爺湖全景、火口原展望台；可在 Usuテラス 喝咖啡／吃霜淇淋，多留一些時間看景）", map:["usuzanRopeway"],
+       n:"Google 標示每日 8:15–17:15。強風或能見度差時纜車會停駛，出發前看官網運行資訊。山頂體感很冷，帽子手套別忘了。"},
+      {rec:true, t:"備案", d:"有珠山纜車停駛時：登別地獄谷（順路，登別東 IC 下交流道約 15 分鐘）", map:["jigokudani"], safe:["toyaNonokaze","dateSta","jigokudani","kanio"], safeLabel:"安全路線導航（飯店 → 地獄谷 → かに王）",
+       n:"火山噴氣的山谷，步道走一圈約 20–30 分鐘，停車場 ¥500。從登別東 IC 上山到登別溫泉的路是巴士也走的主要道路，但是一路上坡，下雪時就不要去。選這個的話，10:00 從飯店出發，經伊達上高速公路，11:10–11:40 逛地獄谷，約 12:15 到かに王（全程 75.6 公里，Google 約 1 小時 24 分，不含逛地獄谷）。如果是暴風雪讓纜車停駛，路況通常也不好，就不要去地獄谷，直接提早出發去白老、札幌，多留緩衝最安全。"},
+      {t:"11:30–12:45", d:"有珠山 → 伊達 → 道央道 → かに王（58.5 公里，Google 約 1 小時 1 分，冬季估算 1 小時 15 分）", map:["kanio"], safe:["usuzanRopeway","dateSta","kanio"],
+       n:"請用安全路線導航：先下到伊達市區再上道央道，避免導航帶妳走壯瞥、登別之間的山路。導航會先繞進伊達車站附近再上高速公路，只多幾分鐘。かに王在白老西側的竹浦，不是白老市區。"},
+      {meal:true, t:"12:45–13:45", d:"午餐：かに王（螃蟹料理）", map:["kanio"],
+       n:"Google 標示每日 9:00–17:00。評論提到螃蟹現場秤重現煮，煮熟約 20–25 分鐘，所以要預留用餐時間。價位偏高，有評論提到價格依重量計算，點之前先確認單價與總價。"},
+      {t:"13:45–14:05", d:"かに王 → mother's Plus（車程 16 公里，無雪約 12 分，冬季估算 20 分）", map:["mothersPlus"]},
+      {meal:true, t:"14:05–14:30", d:"mother's Plus（布丁、泡芙）", map:["mothersPlus"],
+       n:"Google 資料：週二公休，其他日 10:00–17:00。12/9 是週三有營業。評論提到泡芙 10:00 才開賣。"},
+      {t:"14:30–16:15", d:"mother's Plus → 道央道 → 札幌薄野（92.5 公里，Google 約 1 小時 25 分，冬季估算 1 小時 45 分）", map:["vesselHotel"], safe:["mothersPlus","tsukisamu","vesselHotel"],
+       n:"Google 另外會列出經國道 453 號、支笏湖的路線，那是山路，不要選。14:30 出發，日落前後進札幌，避開傍晚尖峰和天黑後的市區雪路。札幌市區開車注意：① 安全路線導航：札幌南 IC 下交流道 → 大谷地西 2 左轉南郷通（3.3 公里）→ 南郷通 7 南左轉水源池通（1.7 公里）→ 月寒中央通 7 右轉國道 36 號（接著導航會帶妳在月寒中央站旁繞一小段再回到國道 36 號，那是中途點，照導航開就好，不用自己判斷）→ 直行約 5 公里穿過薄野路口 → 南 4 西 6 左轉 → 南 5 西 5 右轉到飯店。一般導航會從北郷 IC 下來，市區約 7.8 公里要轉 7–8 次彎，不建議。盡量走中間車道，少變換車道；② 雪多時看不到車道線，跟著前車的車轍走，車距拉大；③ 路口前的路面最容易結冰，提早慢慢減速；④ 薜野一帶有路面電車，不要開上軌道（會滑），右轉前先看有沒有電車；⑤ 薜野行人多，轉彎時留意穿越馬路的人。"},
+      {t:"16:15–16:45", d:"抵達薄野，先到飯店卸行李，留 30 分鐘緩衝時間", map:["vesselHotel"]},
+      {t:"16:45", d:"Check-in 船舶花園薄野飯店", must:true, map:["vesselHotel"],
+       n:"評論提到飯店有停車場。"},
+      {t:"17:00–18:00前", d:"⛽ 加滿油後到 Orix Rent-a-car 札幌南6条店還車（南 6 條西 10 丁目）", must:true, map:["gasNearOrix","orixRentacar"],
+       n:"還車前要先加滿油，預留 15 分鐘。點「還車點附近的加油站」會在 Google 地圖列出 ORIX 附近的加油站，選一間順路、在路左邊（不用右轉進出）的。最保險的做法：當天出發前打給札幌南 6 條店 011-531-0543，或 12/5 在新千歲空港店取車時請櫃台幫忙問，用日文說「札幌南6条店に返却する前に給油したいです。近くのおすすめのガソリンスタンドを教えてください」。官網營業時間：11–3 月 8:00–19:00，行程上抓 18:00 前是保守時間。隨身物品和車內垃圾都帶走。"},
+      {meal:true, t:"晚餐", d:"成吉思汗烤肉：羊座（16:00–23:00，全年無休，約¥5,000–6,000/人；目前 Tabelog 尚未開放線上訂位，建議現場或電話詢問）", map:["youza"],
+       n:"Google 評論提到店裡有免費置物櫃，可以把外套鎖起來，避免沾上烤肉煙味。也有評論表示可在 Google 地圖上訂位，可先到店家的 Google 頁面確認。"},
+      {t:"飯後", d:"大通公園白色燈節夜景✨", map:["odoriPark"],
+       n:"大通會場開放期間為 2026/11/20–12/25，點燈時間請看官網（white-illumination.jp）。"}
+    ]
+  },
+  {
+    id:"d6", label:"12/10", title:"札幌市區", sub:"週四", scene:"tower",
+    stay:"LIGHT BOOKS HOTEL",
+    hl:"不用開車的一天。以電車和步行移動，北大的咖啡廳只營業到 16:00，所以放在午餐後第一個去。",
+    items:[
+      {meal:true, t:"07:00", d:"飯店豐盛早餐、泡湯", map:["vesselHotel"]},
+      {t:"11:00–11:10", d:"退房，步行到 LIGHT BOOKS HOTEL 寄放行李（兩家飯店相距約 300 公尺）", map:["lightBooks"],
+       n:"行李寄放時間通常早於 check-in，建議出發前先確認飯店可接受的寄放時段。"},
+      {t:"11:15–11:50", d:"搭地鐵東西線到圓山公園站，再步行約 10–15 分鐘到北海道神宮（全程約 35 分鐘，為估算值）", map:["hokkaidoJingu"]},
+      {t:"11:50–12:50", d:"北海道神宮", map:["hokkaidoJingu"],
+       n:"Google 標示每日 6:00–17:00。冬季日照短，境內積雪路滑，穿防滑鞋。境內有六花亭的茶屋，可以嚐烤麻糬『判官さま』，營業時間以現場為準。"},
+      {must:true, t:"（神宮內）", d:"🍶 買御神酒「神宮の梅」梅酒（授与所，穿過神門後右手邊）", map:["hokkaidoJingu"],
+       n:"札幌酒精工業以神宮境內梅樹命名的梅酒。授与所版是 360ml 白色瓶子，印有神宮社紋，約 ¥900（2022 年資料，價格可能調整），酒精約 12%。另有 500ml 一般玻璃瓶的市售版，但市區不一定買得到，想要就在神宮買。授与所的時間通常比參拜時間短，中午去最保險。回台灣每人酒類免稅 1.5 公升，放託運行李要包好。"},
+      {t:"12:50–13:30", d:"搭地鐵回札幌站（圓山公園站 → 大通換乘南北線，約 35 分鐘，為估算值）", map:["tokujuKplace"]},
+      {meal:true, t:"13:30–14:30", d:"焼肉 徳寿 K-place（白老牛燒肉，札幌駅前10樓，可看夜景／市景；目前尚未訂位）", map:["tokujuKplace"],
+       n:"Google 資料：週四午餐 11:30–14:30，建議訂 13:30 左右的位子。有評論提到這家要預約。電話 011-210-8929。"},
+      {t:"14:40–15:00", d:"步行到北海道大學（札幌站北口到南門約 1.2 公里，約 15 分鐘）", map:["hokkaidoUni"]},
+      {t:"15:00–16:15", d:"北大 Marche Café & Labo、校園散步", map:["hokkaidoUni","hokudaiCafe"],
+       n:"Marche Café 營業到 16:00，建議 15:00–15:30 入內，點牛奶霜淇淋或布丁。12 月日落約 16:00，之後校園就暗了，積雪的校園很適合散步。"},
+      {rec:true, t:"16:35–17:15", d:"北海道廳舊本廳舍（赤れんが庁舎）——就在札幌站旁，北大步行約 15–20 分鐘；開館 8:45–21:00（最終入館20:30），入館¥300，1樓店鋪可免費逛", map:["redBrick"]},
+      {t:"17:15–17:45", d:"沿路走逛地下街往大通公園方向", map:["chikaho"],
+       n:"札幌駅前地下歩行空間連接札幌站與大通站，全長約 500 公尺，下雪天不用走地面。"},
+      {rec:true, t:"（可選）", d:"札幌市時計台——離大通站步行約4分鐘；內部開放至17:10（最終入館17:00），這條動線抵達時已過最終入館時間，看外觀拍照即可", map:["clockTower"]},
+      {t:"17:45–18:30", d:"大通公園白色燈節散步", map:["odoriPark"],
+       n:"大通會場 2026/11/20–12/25 期間點燈；附近的駅前通會場一直到 2027/2/11。"},
+      {meal:true, t:"晚餐", d:"逛街時隨意吃，不特別安排。下面幾家是附近可以參考的選擇，想吃海鮮或壽司的話可以看看。", map:["odoriPark"]},
+      {rec:true, meal:true, t:"參考 A", d:"海鮮丼：札幌海鮮丼專門店 すしどんぶり すすきの店——想輕鬆吃海鮮，不用預約高級 omakase 的話選這家", map:["sushidonburi"],
+       n:"Google 資料：每日 11:00–22:30，評分 4.9（約 340 則評論）。店面小、座位不多，尖峰可能要等位。"},
+      {rec:true, meal:true, t:"參考 B", d:"高級壽司 omakase：Sushi Terada 或 Sushi Saikou——想好好吃一頓北海道海鮮的話選這類，價位偏高", map:["sushiTerada","sushiSaikou"],
+       n:"兩家都建議事先預約。Terada 每日 17:00–23:00；Saikou 週四 17:30–23:00，週日公休，評論提到採預約制。"},
+      {rec:true, meal:true, t:"參考 C", d:"個室居酒屋：海鮮橘 tachibana（蝦子涮涮鍋）或 晴れ子（牡蠣涮涮鍋、烤雞串）——有包廂，適合慢慢吃、可以喝一杯", map:["tachibana","hareko"],
+       n:"橘 11:00–23:00，Google 評分 4.2，可在 Tabelog 或 Hot Pepper 訂位。晴れ子週四 17:00–24:00，評分 4.7。"},
+      {rec:true, meal:true, t:"參考 D", d:"拉麵：元祖札幌拉麵橫丁——十幾家小店擠在一條巷子，想簡單吃一碗札幌味噌拉麵的話選這裡", map:["ramenYokocho"],
+       n:"傍晚後才熱鬧，熱門店家要排隊，各家營業時間不同，建議先看店門口的公告。"},
+      {rec:true, t:"飯後（宵夜）", d:"札幌的〆パフェ（收尾聖代）文化——晚餐後來一份晚上才開的聖代：Parfaiteria Pal 或 Parfait Shop NANAKAMADOU", map:["parfaitPal","nanakamadou"],
+       n:"兩家週四都是 18:00–24:00 營業。Pal 評論提到旺季約等 20 分鐘以上；NANAKAMADOU 評論提到晚上要排 1 小時，並有 90 分鐘用餐限制。"}
+    ]
+  },
+  {
+    id:"d7", label:"12/11", title:"札幌 + 北廣島 Outlet", sub:"週五", scene:"bag",
+    stay:"LIGHT BOOKS HOTEL",
+    hl:"BARISTART 和 Outlet 都是 10:00 開，咖啡買完就到すすきの搭機場巴士直達 Outlet，不用轉車。下午回市區逛街，晚上吃湯咖哩。",
+    route:["lightBooks","mitsuiOutlet"], mode:"transit", routeLabel:"開啟前往 Outlet 的電車導航",
+    items:[
+      {meal:true, t:"08:30", d:"早餐", map:["lightBooks"]},
+      {meal:true, t:"10:00–10:20", d:"BARISTART COFFEE（外帶咖啡），接著出發前往北廣島三井 Outlet Park", map:["baristart"],
+       n:"Google 標示每日 10:00–18:00。店很小，評論提到只能外帶、沒有內用座位。可以選不同種類的北海道牛奶搭配咖啡豆。"},
+      {t:"10:20–11:10", d:"步行到すすきの（南4西3）搭機場巴士，在「三井アウトレットパーク入口」下車（車程約 40 分，一人 ¥1,400，免轉車）", map:["susukinoBus","mitsuiOutlet"],
+       n:"就是 12/12 去機場的同一個站牌。北都交通官網的站名表有這一站，但不確定每班都停，上車前先問司機「三井アウトレット？」。下車後依指標步行到 Outlet。車程是依官網的所需時間推算的估算值。"},
+      {t:"11:10–13:00", d:"北廣島三井 Outlet Park", map:["mitsuiOutlet"],
+       n:"Google 標示每日 10:00–20:00。有評論提到內部全為室內店鋪，約 160–180 家。多數品牌可辦退稅（1 樓有免稅櫃台），記得帶護照。冬季折扣期間人潮多，熱門品牌建議先逛。"},
+      {meal:true, tbd:true, t:"13:00–14:00", d:"Outlet 午餐（尚未決定）", map:["mitsuiOutlet"],
+       n:"Outlet 內有美食街和多家餐廳，到現場再選也可以。"},
+      {t:"14:00–14:30", d:"再逛一圈，14:30 前離開 Outlet", map:["mitsuiOutlet"]},
+      {t:"14:30–15:30", d:"在同一站搭往札幌的機場巴士回市區，在「南3条すすきの」下車（約 40 分，約 ¥1,400）", map:["lightBooks"],
+       n:"官網的回程站名表也有這一站，但沒寫明能不能上車、每班是否都停。去程下車時先看站牌上的往札幌時刻表；如果不能搭，就改搭 JR（北広島站→札幌站約 20 分，從 Outlet 到北広島站要搭公車）。"},
+      {t:"15:30–18:00", d:"札幌市區自由購物（札幌駅地下街、ESTA、アピア）", map:["chikaho"]},
+      {meal:true, t:"18:30", d:"晚餐：🍛 湯咖哩（Soup Curry Suage+ 或 奧芝商店）", map:["suageSoup","okushibaSoup"],
+       n:"兩家都是熱門店，晚餐時段可能排隊，建議提早到或先抽號碼牌。"},
+      {rec:true, t:"20:00後", d:"（可選，取代下一行的大通公園）藻岩山纜車夜景——日本新三大夜景之一。搭市電到「ロープウェイ入口」站，再轉免費接駁巴士（平日17:15起、約15分一班）到山麓站；纜車＋迷你纜車往復¥2,100，冬季營業至22:00、上行最終21:30，天候不佳會停駛，出發前看官網運行狀況。大通公園燈節12/9、12/10已經看過兩晚", map:["moiwa"]},
+      {t:"飯後", d:"大通公園燈節最後夜景✨", map:["odoriPark"]}
+    ]
+  },
+  {
+    id:"d8", label:"12/12", title:"札幌 → 新千歲 → 回台", sub:"週六", scene:"plane",
+    stay:null,
+    hl:"從すすきの搭機場巴士，不用拖行李走到札幌站。約 11:05 抵達機場，先逛巧克力工廠，12:30 前掛好行李。",
+    route:["susukinoBus","airport"], mode:"transit", routeLabel:"開啟前往機場的大眾運輸導航",
+    items:[
+      {meal:true, t:"08:30", d:"早餐", map:["lightBooks"]},
+      {t:"09:30–09:45", d:"退房，步行到すすきの的機場巴士站（飯店到すすきの站一帶約 10 分鐘）", map:["susukinoBus"],
+       n:"上車處在地鐵すすきの站 4 號出口附近，過馬路到「すしざんまい」大樓前（對面是 Nikka 大招牌）。下車和上車的站牌不同，要找寫著「新千歳空港行き」的那支。"},
+      {t:"09:45–11:05", d:"搭機場巴士到新千歲機場（中央巴士／北都交通，免預約，上午約 5–10 分鐘一班；站名「すすきの（南4西3）」）", map:["airport"],
+       n:"票價一人 ¥1,500（北都交通官網 2026/4/1 版），下車時付。紅色的中央巴士可刷 IC 卡或信用卡感應；綠色的北都交通不收 IC 卡，可用現金、信用卡感應或 PayPay。車程約 70–80 分鐘：經札幌巨蛋的班次約 70 分，直達班會先繞札幌站約 77 分。下雪時高速公路可能塞車，所以排早一點出發。大件行李放車底行李箱。班次請在前一天用 Google 地圖或中央巴士官網確認。"},
+      {rec:true, t:"11:05–11:45", d:"Royce' Chocolate World——3樓，隔著玻璃免費看巧克力工廠製作過程與小博物館，時間短、約30分鐘就夠；建議在掛行李、過安檢前先逛", map:["royceWorld"]},
+      {t:"12:00", d:"機場伴手禮採購🛍️、掛行李", map:["airport"],
+       n:"多數航空公司的國際線櫃檯在起飛前約 1 小時截止，建議 12:30 前完成掛行李。果醬、醬料等液體或膏狀伴手禮要託運，需保冷的生巧克力先買好保冷袋。"},
+      {meal:true, tbd:true, t:"午餐", d:"機場美食街（尚未決定）", map:["airport"],
+       n:"機場 3 樓的北海道拉麵道場集合了多家拉麵名店，想吃最後一碗拉麵可以挑一家。"},
+      {t:"14:00", d:"起飛✈️", map:["airport"]},
+      {t:"17:55", d:"抵達台北🏠"}
+    ]
+  }
+];
+
+const COSTS = [
+  ["12/5–12/6","富良野 Hotel Munin Furano 北欧デザイナーズホテル",2497,"含早餐","樂天",1],
+  ["12/6–12/7","星野度假村 TOMAMU",6771,"含早餐","官網",1],
+  ["12/7–12/8","小樽格里茲頂級飯店 グリッズプレミアムホテル小樽",2334,"含早餐","樂天",1],
+  ["12/8–12/9","乃之風洞爺湖",8642,"一泊二食（晚餐＋早餐）","官網",1],
+  ["12/9–12/10","Vessel Hotel Campana 札幌薄野",3960,"含早餐","Trip",1],
+  ["12/10–12/12","LAMP LIGHT BOOKS HOTEL 札幌（2 晚）",6234,"含早餐","booking",2]
+];
+const FLIGHT = 21342, CAR_JPY = 50380;
+const fmt = n => n.toLocaleString('en-US');
+
+const MEALS = [
+  ["12/5",["午：機場或便利商店（依時間變通）","晚：Shinatora 拉麵"]],
+  ["12/6",["早：飯店","午：フラノマルシェ 美食街","晚：度假村內餐廳"]],
+  ["12/7",["早：度假村","午：寿しトリトン（握壽司）","晚：cafe BAAL"]],
+  ["12/8",["早：飯店","點心：堺町通甜點","午：有珠山 SA 美食街","點心：Lake Hill Farm 義式冰淇淋","晚：飯店（一泊二食，已含）"]],
+  ["12/9",["早：飯店","午：かに王（螃蟹）","點心：mother's Plus","晚：羊座（成吉思汗烤肉）"]],
+  ["12/10",["早：飯店","午：徳寿 K-place（燒肉）","晚：逛街時隨意吃"]],
+  ["12/11",["早：飯店","咖啡：BARISTART","午：Outlet（尚未決定）","晚：湯咖哩 Suage+ 或 奧芝商店"]],
+  ["12/12",["早：飯店","午：機場美食街（尚未決定）"]]
+];
+const QUICK = [
+  ["airport", "12/5 抵達・12/12 出發"],
+  ["hotelMunin", "12/5 住宿"],
+  ["tomamuTower", "12/6 住宿"],
+  ["gridsOtaru", "12/7 住宿"],
+  ["toyaNonokaze", "12/8 住宿"],
+  ["orixRentacar", "12/9 還車（12/5 在新千歲空港店取車）"],
+  ["vesselHotel", "12/9 住宿"],
+  ["lightBooks", "12/10–12 住宿"]
+];
+
+// 多點導航連結：第一點出發、最後一點目的地、中間為途經點
+function buildDirectionsUrl(keys, mode){
+  const label = k => {
+    const p = PLACES[k];
+    if (p.q) return p.q;
+    if (p.url) { const m = p.url.match(/query=([-\d.,]+)/); if (m) return m[1]; }
+    return p.name;
+  };
+  const enc = encodeURIComponent;
+  const tm = mode || 'driving';
+  const first = keys[0], last = keys[keys.length - 1];
+  const mids = tm === 'transit' ? [] : keys.slice(1, -1);
+  let url = `https://www.google.com/maps/dir/?api=1&origin=${enc(label(first))}&destination=${enc(label(last))}&travelmode=${tm}`;
+  if (mids.length) url += `&waypoints=${mids.map(k => enc(label(k))).join('|')}`;
+  if (PLACES[first].id) url += `&origin_place_id=${PLACES[first].id}`;
+  if (PLACES[last].id) url += `&destination_place_id=${PLACES[last].id}`;
+  if (mids.length && mids.every(k => PLACES[k].id)) url += `&waypoint_place_ids=${mids.map(k => PLACES[k].id).join('|')}`;
+  return url;
+}
+
+// ---------- 總覽頁 ----------
+
+(function(){
+  const lodging = COSTS.reduce((a, c) => a + c[2], 0);
+  
+  document.getElementById('costSum').innerHTML =
+    `<div class="c"><small>機票＋住宿（NT$）</small><b>${fmt(FLIGHT + lodging)}</b></div>` +
+    `<div class="c y"><small>取車當天刷卡（日圓）</small><b>¥${fmt(CAR_JPY)}</b></div>`;
+  const row = (w, n, amt, tags) => `<div class="crow"><span class="when">${w}</span><span class="nm">${n}</span><span class="amt">${amt}</span><div class="tags">${tags}</div></div>`;
+  const rows = [];
+  rows.push('<div class="cost-sub">機票與租車</div>');
+  rows.push(row("12/5–12/12", "來回機票（台北 ⇄ 新千歲）", "NT$" + fmt(FLIGHT), '<span class="tg">2 人合計</span>'));
+  rows.push(row("12/5–12/9", "租車（Yaris Cross Hybrid 4WD，新千歲空港店取車、札幌南6条店還車）", "¥" + fmt(CAR_JPY), '<span class="tg unpaid">尚未付款</span><span class="tg">12/5 取車當天刷卡</span>'));
+  rows.push('<div class="cost-sub">住宿（共 NT$' + fmt(lodging) + '）</div>');
+  COSTS.forEach(c => {
+    const meal = `<span class="tg meal">${c[3]}</span>`;
+    const st = c[5] === 1 ? '<span class="tg paid">已付款</span>' : '<span class="tg unpaid">出發前自動扣款</span>';
+    rows.push(row(c[0], c[1], "NT$" + fmt(c[2]), meal + `<span class="tg">${c[4]}</span>` + st));
+  });
+  document.getElementById('hotelList').innerHTML = rows.join('');
+})();
+
+document.getElementById('quickMaps').innerHTML = QUICK.map(([key, note]) => {
+  const p = PLACES[key];
+  const web = p.web ? `<a class="qbtn web" href="${p.web}" target="_blank" rel="noopener" aria-label="${p.name} 官網">${WEB_SVG}</a>` : '';
+  return `<div class="qrow">
+    <a class="qmain" href="${mapUrl(key)}" target="_blank" rel="noopener"><span class="nm">${p.name}</span><span class="nt">${note}</span></a>
+    ${web}<a class="qbtn" href="${mapUrl(key)}" target="_blank" rel="noopener" aria-label="${p.name} 導航">${PIN_SVG}</a>
+  </div>`;
+}).join('');
+
+const SOS = [
+  ["110", "報警（警察）", "車禍一定要報警"],
+  ["119", "救護車・火警", ""],
+  ["#8139", "JAF 道路救援", "ORIX 打不通時再用；非 JAF 會員要付費"],
+  ["0123-22-0543", "ORIX 新千歲空港店", "取車店・事故故障先打這支"],
+  ["011-531-0543", "ORIX 札幌南6条店", "12/9 還車店・營業 8:00–19:00"],
+  ["050-3816-2787", "Japan Visitor Hotline", "日本觀光局 24 小時，有中文"],
+  ["011-222-2930", "台北駐日經濟文化代表處 札幌分處", "上班時間"],
+  ["080-1460-2568", "札幌分處 急難救助專線", "護照遺失、重大事故等緊急狀況才打"]
+];
+const TEL_SVG = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z"/></svg>`;
+document.getElementById('sosList').innerHTML = SOS.map(([num, name, note]) => {
+  const href = 'tel:' + num.replace(/-/g, '').replace('#', '%23');
+  return `<div class="qrow">
+    <a class="qmain" href="${href}"><span class="nm">${name}</span>${note ? `<span class="nt">${note}</span>` : ''}</a>
+    <a class="num" href="${href}">${num}</a>
+    <a class="qbtn tel" href="${href}" aria-label="撥打 ${name}">${TEL_SVG}</a>
+  </div>`;
+}).join('');
+
+document.getElementById('mealList').innerHTML = MEALS.map(([d, list]) =>
+  `<div class="meal-day"><span class="dl">${d}</span><ul>` + list.map(s => {
+    const i = s.indexOf('：');
+    const k = s.slice(0, i), v = s.slice(i + 1);
+    const tbd = v.includes('尚未決定') ? ' class="tbd"' : '';
+    return `<li><span class="k">${k}</span><span${tbd}>${v}</span></li>`;
+  }).join('') + `</ul></div>`
+).join('');
+
+// 起訖時間 → 「約 1.5h」
+function durOf(t){
+  const m = String(t).match(/(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})/);
+  if(!m) return '';
+  const mins = (+m[3] * 60 + +m[4]) - (+m[1] * 60 + +m[2]);
+  if(mins <= 0) return '';
+  let s;
+  if(mins < 60) s = `${mins}m`;
+  else if(mins % 30 === 0) s = `${mins / 60}h`;
+  else s = `${Math.floor(mins / 60)}h${mins % 60}m`;
+  return `<span class="dur">約 ${s}</span>`;
+}
+
+// ---------- 拍攝模式 ----------
+// match：行程描述包含這段文字就掛在該項目下；開頭是 = 代表描述要完全相同
+const SHOTS = {
+  d1:[
+    ["落地新千歲","★","飛機窗外北海道雪景、落地"],
+    ["取車出發","★","取車、第一次看到雪胎／刮雪刷"],
+    ["午餐：入境","☆","機場或便利商店午餐"],
+    ["買雪靴（Workman）","☆","Workman 試穿雪靴"],
+    ["Workman → 道央道","☆","雪路開往富良野（天還亮的那段）"],
+    ["晚餐：Shinatora","☆","Shinatora 拉麵"],
+    ["逛超市","☆","超市掃貨"],
+    ["Check-in Hotel Munin","★","Hotel Munin 入住"]
+  ],
+  d2:[
+    ["飯店早餐","☆","早上清車上積雪"],
+    ["=青池","★","青池（全片最可能當封面背景的一段）"],
+    ["白鬚瀑布（青池","☆","白鬚瀑布、美瑛川的藍色"],
+    ["フラノマルシェ","★","フラノマルシェ"],
+    ["精靈露台（新","★","精靈露台小木屋（白天就有氛圍，雪景最美）"],
+    ["Check-in 星野","★","Tomamu The Tower 外觀、入住"],
+    ["霧冰テラス纜車","★","霧冰テラス纜車（沒開就拍溫泉／室內設施）"],
+    ["霧冰テラス纜車","☆","雪上滑車"]
+  ],
+  d3:[
+    ["霧冰露台晨間","☆","霧冰テラス晨間"],
+    ["午餐：海鮮寿しトリトン","☆","寿しトリトン 迴轉壽司"],
+    ["Check-in グリッズ","☆","頂樓露天風呂（只拍空景）"],
+    ["小樽運河藍調","★","小樽運河藍調時刻到夜景（16:00–17:00 最好看）"],
+    ["天狗山纜車夜景","☆","天狗山夜景（如果選這個）"],
+    ["cafe BAAL","☆","cafe BAAL"]
+  ],
+  d4:[
+    ["堺町通","★","堺町通甜點掃街（早上人少）：北菓楼年輪蛋糕、北一硝子油燈咖啡廳、音樂盒堂"],
+    ["小樽 → 札樽道","★","開往洞爺湖的雪路（擋風玻璃前 10–20 秒）"],
+    ["午餐：有珠山 SA","☆","休息站午餐、內浦灣景色"],
+    ["サイロ展望台（洞爺湖","☆","サイロ展望台 洞爺湖全景"],
+    ["Lake Hill Farm（牧場","☆","Lake Hill Farm 冰淇淋、點心"],
+    ["Check-in 洞爺湖乃之風","★","乃之風入住、湖景"],
+    ["飯店 buffet","☆","buffet"],
+    ["露天風呂","☆","露天風呂空景、湖畔星空"]
+  ],
+  d5:[
+    ["有珠山纜車（俯瞰","★","有珠山纜車上升、洞爺湖全景"],
+    ["午餐：かに王","★","かに王 現煮螃蟹"],
+    ["mother's Plus（布丁","☆","mother's Plus 布丁泡芙"],
+    ["還車","★","還車（第 1 集的結尾）"],
+    ["還車","🎙","還車前後一句話總結五天自駕"],
+    ["羊座","★","羊座成吉思汗（第 2 集從這裡開始）"],
+    ["白色燈節夜景","★","大通公園白色燈節第一晚"]
+  ],
+  d6:[
+    ["=北海道神宮","★","北海道神宮雪中鳥居、烤麻糬"],
+    ["焼肉 徳寿","☆","徳寿 K-place 窗外市景"],
+    ["北大 Marche","★","北大雪中校園、Marche Café 霜淇淋"],
+    ["赤れんが","☆","赤れんが庁舎外觀"],
+    ["札幌市時計台","☆","時計台外觀"],
+    ["逛街時隨意吃","☆","逛街隨意吃的晚餐"],
+    ["〆パフェ","☆","〆パフェ"]
+  ],
+  d7:[
+    ["BARISTART","☆","BARISTART 咖啡"],
+    ["搭機場巴士，在「三井","☆","機場巴士去 Outlet"],
+    ["=北廣島三井 Outlet Park","☆","Outlet 戰利品"],
+    ["湯咖哩","★","湯咖哩"],
+    ["燈節最後夜景","★","燈節最後一晚或藻岩山夜景"]
+  ],
+  d8:[
+    ["搭機場巴士到新千歲","☆","すすきの機場巴士車窗"],
+    ["Royce'","☆","Royce' 巧克力工廠"],
+    ["機場伴手禮","★","機場伴手禮"],
+    ["起飛","★","起飛，收尾"]
+  ]
+};
+const EPISODE = {d1:1, d2:1, d3:1, d4:1, d5:1, d6:2, d7:2, d8:2};
+const CAM_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"/><path d="M16 11l6-3v9l-6-3"/></svg>`;
+const markCls = m => m === '★' ? 'must' : (m === '🎙' ? 'talk' : 'opt');
+
+function shotsFor(dayId, it){
+  return (SHOTS[dayId] || []).filter(([m]) => m[0] === '=' ? it.d === m.slice(1) : it.d.includes(m));
+}
+function shotsHtml(dayId, it){
+  const list = shotsFor(dayId, it);
+  if(!list.length) return '';
+  return `<div class="shots">${list.map(([, mk, txt]) =>
+    `<div class="shot"><span class="sm ${markCls(mk)}">${mk}</span><span>${txt}</span></div>`).join('')}</div>`;
+}
+function dayShotHtml(dayId){
+  const ep = EPISODE[dayId];
+  const epText = dayId === 'd5'
+    ? '第 1 集・自駕篇（還車為止）→ 晚上起是第 2 集・札幌篇'
+    : (ep === 1 ? '第 1 集・自駕篇' : '第 2 集・札幌篇');
+  const n = (SHOTS[dayId] || []).filter(s => s[1] === '★').length;
+  return `<div class="shots day-shots"><div class="shot"><span class="sm cam">${CAM_SVG}</span><span><b>${epText}</b>　今天必拍 ${n} 個</span></div>
+    <div class="shot"><span class="sm must">★</span><span>每日固定：開場（窗外或早餐）、長途車程擋風玻璃前 10–20 秒、住宿進房第一眼與窗景</span></div></div>`;
+}
+function setShoot(on){
+  document.body.classList.toggle('shoot', on);
+  const b = document.getElementById('shootToggle');
+  if(b) b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  try { localStorage.setItem('shootMode', on ? '1' : '0'); } catch(e) {}
+}
+
+// ---------- 分頁與每日頁 ----------
+const scroller = document.getElementById('dayScroll');
+const panels = document.getElementById('panels');
+const order = ['overview', ...days.map(d => d.id)];
+
+function makeTab(id, big, small){
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.dataset.tab = id;
+  b.innerHTML = `<b>${big}</b><small>${small}</small>`;
+  b.onclick = () => showPanel(id);
+  scroller.appendChild(b);
+}
+makeTab('overview', '總覽', 'PLAN');
+
+function pagerHtml(id){
+  const i = order.indexOf(id);
+  const labelOf = k => k === 'overview' ? '總覽' : days.find(d => d.id === k).label;
+  const prev = i > 0 ? `<button type="button" data-go="${order[i-1]}">← ${labelOf(order[i-1])}</button>` : `<span class="sp"></span>`;
+  const next = i < order.length - 1 ? `<button type="button" data-go="${order[i+1]}">${labelOf(order[i+1])} →</button>` : `<span class="sp"></span>`;
+  return prev + next;
+}
+
+days.forEach((day, idx) => {
+  makeTab(day.id, day.label, day.sub);
+
+  const section = document.createElement('section');
+  section.className = 'panel';
+  section.dataset.panel = day.id;
+
+  const navShown = new Set([{d2:'hotelMunin', d3:'tomamuTower', d4:'gridsOtaru', d5:'toyaNonokaze'}[day.id]]);
+  const itemsHtml = day.items.map((it, n) => {
+    const drive = /車程/.test(it.d);
+    const cls = ['stop', it.must ? 'must' : '', it.rec ? 'rec' : '', it.meal ? 'meal' : '', it.tbd ? 'tbd' : '', drive ? 'drive' : ''].filter(Boolean).join(' ');
+    let nodeIcon = '<span class="node dot"></span>';
+    if(it.must) nodeIcon = `<span class="node">${FLAG_SVG}</span>`;
+    else if(drive) nodeIcon = `<span class="node">${CAR_SVG}</span>`;
+    else if(it.meal) nodeIcon = `<span class="node">${MEAL_SVG}</span>`;
+    else if(it.rec) nodeIcon = `<span class="node">${STAR_SVG}</span>`;
+    const tag = it.must ? '<span class="stamp">必須</span>' : (it.tbd ? '<span class="stamp tbd-s">待定</span>' : (it.rec ? '<span class="tape-tag">推薦</span>' : ''));
+    const note = it.n ? `<p class="note">${PEN_SVG}<span>${it.n}</span></p>` : '';
+    const mapLinks = (it.map || []).map(key => {
+      const p = PLACES[key];
+      if(!p) return '';
+      const label = (it.map.length > 1) ? p.name : '導航';
+      let html = `<a href="${mapUrl(key)}" target="_blank" rel="noopener">${PIN_SVG}${label}</a>`;
+      if(p.web)  html += `<a class="web" href="${p.web}" target="_blank" rel="noopener">${WEB_SVG}官網</a>`;
+      if(p.book) html += `<a class="book" href="${p.book}" target="_blank" rel="noopener">${BOOK_SVG}訂位</a>`;
+      return html;
+    }).join('');
+    const safeLink = it.safe ? `<a class="safe" href="${buildDirectionsUrl(it.safe)}" target="_blank" rel="noopener">${CAR_SVG}${it.safeLabel || '安全路線導航'}</a>` : '';
+    const mapRow = (mapLinks || safeLink) ? `<div class="maprow">${safeLink}${mapLinks}</div>` : '';
+    const navKey = [...(it.map || []), ...(it.safe ? [it.safe[it.safe.length-1]] : [])].find(k => CARNAV[k] && !navShown.has(k));
+    let carNav = '';
+    if(navKey && day.id <= 'd5'){
+      navShown.add(navKey);
+      const c = CARNAV[navKey];
+      const parts = [];
+      if(c.mc) parts.push(`MapCode <b>${c.mc}</b>`);
+      if(c.tel) parts.push(`電話 <b>${c.tel}</b>`);
+      if(c.addr) parts.push(`地址 <b>${c.addr}</b>`);
+      carNav = `<p class="carnav">🚗 車上導航（${PLACES[navKey].name}）：${parts.join('・')}</p>`;
+    }
+    return `<li class="${cls}" style="--i:${Math.min(n, 12)}">
+      <div class="tm">${it.t}${durOf(it.t)}</div>
+      <div class="rail">${nodeIcon}</div>
+      <div class="body">${tag}<p class="desc">${it.d}</p>${note}${mapRow}${carNav}${shotsHtml(day.id, it)}</div>
+    </li>`;
+  }).join('');
+
+  const routeLink = (day.route && day.route.length > 1)
+    ? `<a class="route-btn" href="${buildDirectionsUrl(day.route, day.mode)}" target="_blank" rel="noopener">${PIN_SVG} ${day.routeLabel || '開啟本日全路線導航'}</a>`
+    : '';
+  const dayNum = String(idx + 1).padStart(2, '0');
+
+  section.innerHTML = `
+    <div class="day-hero sheet taped${idx % 2 ? '-b' : ''}">
+      <div class="scene-wrap">
+        <span class="day-no">DAY ${dayNum}</span>
+        <span class="day-date">${day.label}</span>
+        ${scene(SCENES[day.id])}
+      </div>
+      <div class="day-body">
+        <p class="wk">${day.sub}</p>
+        <h2>${day.title}</h2>
+        <p class="hl">${day.hl}</p>
+        <div class="day-actions">${routeLink}<a class="live-btn" href="https://hokkaidolive.pages.dev/" target="_blank" rel="noopener">${CAM_SVG}即時影像</a><span class="chip">${BED_SVG}${day.stay ? '今晚住 ' + day.stay : '返程日'}</span></div>
+        ${dayShotHtml(day.id)}
+      </div>
+    </div>
+    <ol class="timeline">${itemsHtml}</ol>
+    ${day.warn ? `<div class="warn-block"><b>注意</b>　${day.warn}</div>` : ''}
+    <p class="navtip">建議行前在 Google 地圖收藏本日地點，或下載離線地圖以防山區、湖區訊號不穩。</p>
+    <div class="pager" id="pager-${day.id}"></div>
+  `;
+  panels.appendChild(section);
+  addSnow(section.querySelector('.scene-wrap'), 10);
+});
+
+order.forEach(id => {
+  const el = document.getElementById('pager-' + id);
+  if(el) el.innerHTML = pagerHtml(id);
+});
+document.querySelectorAll('.pager button').forEach(b => { b.onclick = () => showPanel(b.dataset.go); });
+
+function showPanel(id, silent){
+  const target = document.querySelector(`section[data-panel="${id}"]`);
+  if(!target) return;
+  document.querySelectorAll('nav.days button').forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+  document.querySelectorAll('section.panel').forEach(p => p.classList.remove('active'));
+  target.classList.add('active');
+  const tab = document.querySelector(`nav.days button[data-tab="${id}"]`);
+  if(tab && tab.scrollIntoView){ tab.scrollIntoView({inline:'center', block:'nearest'}); }
+  if(!silent){
+    try { history.replaceState(null, '', '#' + id); } catch(e) {}
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+}
+
+(function init(){
+  let h = '';
+  try { h = location.hash.slice(1); } catch(e) {}
+  showPanel(order.includes(h) ? h : 'overview', true);
+  let on = false;
+  try { on = localStorage.getItem('shootMode') === '1'; } catch(e) {}
+  setShoot(on);
+  document.getElementById('shootToggle').onclick = () => setShoot(!document.body.classList.contains('shoot'));
+})();
+</script>
+
+</body></html>
