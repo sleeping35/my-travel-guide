@@ -672,7 +672,7 @@
           <li>十勝岳 2026/9/12 曾升到噴火警戒等級 3，10/16 已降回等級 2。白金地區（青池、白鬚瀑布）不在管制範圍，道道 966 號只有白金往上山的白銀～望岳台段冬季封閉，12/6 的路線不會經過。出發前再看一次氣象廳的等級</li>
           <li>12/5 的順序已改成先吃晚餐、逛完超市，最後才入住 Hotel Munin（約 19:35），請先打電話告知飯店</li>
           <li>12/10 晚餐逛街時隨意吃，Day 6 附了幾家可以參考的店；12/11、12/12 的午餐還沒決定，頁面上以黃色「待定」標示</li>
-          <li>付款提醒：LAMP LIGHT BOOKS HOTEL（12/10–12）會在出發前自動扣款，記得確認信用卡額度；租車費用 ¥50,380 於 12/5 取車當天刷卡</li>
+          <li>付款提醒：<b>Vessel Hotel Campana 札幌薄野（12/9）還沒付款</b>，請到 Trip.com 訂單確認是要線上付款還是到飯店付；LAMP LIGHT BOOKS HOTEL（12/10–12）會在出發前自動扣款，記得確認信用卡額度；租車費用 ¥50,380 於 12/5 取車當天刷卡</li>
           <li>泡湯：只有 12/8 乃之風是真正的洞爺湖溫泉（大浴場、露天風呂、可貸切）。Munin（半露天，看不到景）、Tomamu（木林の湯，要搭園區巴士）、Grids（11 樓展望露天風呂，15:00–25:00、5:30–10:00）、Vessel（大浴場＋三溫暖）都有大浴場但不是溫泉；LAMP LIGHT BOOKS 只有房內淋浴</li>
           <li>飯店備品：六家都有毛巾、浴巾、洗髮精、潤髮乳、沐浴乳、吹風機。牙刷牙膏 Munin、Tomamu、乃之風、Vessel 放在房間；<b>Grids 小樽和 LAMP LIGHT BOOKS 房間沒有，要到櫃台旁或櫃台拿</b>。Munin、Grids、Vessel、LAMP LIGHT 提供睡衣；Tomamu、乃之風是浴衣（資料來源：じゃらん）</li>
           <li>12/8 乃之風是一泊二食，晚餐與隔天早餐都已包含</li>
@@ -1201,7 +1201,7 @@ const COSTS = [
   ["12/6–12/7","星野度假村 TOMAMU",6771,"含早餐","官網",1],
   ["12/7–12/8","小樽格里茲頂級飯店 グリッズプレミアムホテル小樽",2334,"含早餐","樂天",1],
   ["12/8–12/9","乃之風洞爺湖",8642,"一泊二食（晚餐＋早餐）","官網",1],
-  ["12/9–12/10","Vessel Hotel Campana 札幌薄野",3960,"含早餐","Trip",1],
+  ["12/9–12/10","Vessel Hotel Campana 札幌薄野",3960,"含早餐","Trip",3],
   ["12/10–12/12","LAMP LIGHT BOOKS HOTEL 札幌（2 晚）",6234,"含早餐","booking",2]
 ];
 const FLIGHT = 21342, CAR_JPY = 50380;
@@ -1264,7 +1264,7 @@ function buildDirectionsUrl(keys, mode){
   rows.push('<div class="cost-sub">住宿（共 NT$' + fmt(lodging) + '）</div>');
   COSTS.forEach(c => {
     const meal = `<span class="tg meal">${c[3]}</span>`;
-    const st = c[5] === 1 ? '<span class="tg paid">已付款</span>' : '<span class="tg unpaid">出發前自動扣款</span>';
+    const st = c[5] === 1 ? '<span class="tg paid">已付款</span>' : c[5] === 3 ? '<span class="tg unpaid">尚未付款</span>' : '<span class="tg unpaid">出發前自動扣款</span>';
     rows.push(row(c[0], c[1], "NT$" + fmt(c[2]), meal + `<span class="tg">${c[4]}</span>` + st));
   });
   document.getElementById('hotelList').innerHTML = rows.join('');
