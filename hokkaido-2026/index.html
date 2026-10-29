@@ -229,7 +229,8 @@
   .ticket.rose .stub{background:var(--rose-wash); color:var(--rose-deep);}
   .ticket .main{padding:10px 14px; font-size:14px; min-width:0;}
   .ticket .main .big{font-family:var(--f-hand); font-size:16px; font-weight:600; line-height:1.5;}
-  .ticket .main .sm{font-size:12px; color:var(--ink-soft);}
+  .ticket .main .sm{font-size:12px; line-height:1.55; color:var(--ink-soft); margin-top:2px; overflow-wrap:anywhere;}
+  .ticket .main .sm{display:block !important; height:auto !important; min-width:0 !important; border-radius:0 !important;}
 
   .hotel-row{
     display:flex; align-items:center; gap:12px; padding:9px 0;
@@ -425,6 +426,7 @@
   .maprow a:active{opacity:.7;}
   .carnav{margin-top:6px; font-size:12px; line-height:1.5; color:var(--ink-soft, #555); user-select:all;}
   .carnav b{font-weight:700; letter-spacing:.02em; white-space:nowrap;}
+  .carnav b.addr{white-space:normal;}
 
   .warn-block{
     position:relative; margin-top:26px; padding:20px 18px 16px;
@@ -1488,7 +1490,7 @@ days.forEach((day, idx) => {
       const parts = [];
       if(c.mc) parts.push(`MapCode <b>${c.mc}</b>`);
       if(c.tel) parts.push(`電話 <b>${c.tel}</b>`);
-      if(c.addr) parts.push(`地址 <b>${c.addr}</b>`);
+      if(c.addr) parts.push(`地址 <b class="addr">${c.addr}</b>`);
       carNav = `<p class="carnav">🚗 車上導航（${PLACES[navKey].name}）：${parts.join('・')}</p>`;
     }
     return `<li class="${cls}" style="--i:${Math.min(n, 12)}">
