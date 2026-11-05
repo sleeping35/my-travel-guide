@@ -265,6 +265,7 @@
   .crow .tg.meal{color:var(--rose-deep); border-color:var(--rose-deep); background:transparent; font-weight:700;}
   .crow .tg.paid{color:var(--leaf); background:var(--leaf-wash); border-color:transparent; font-weight:700;}
   .crow .tg.unpaid{color:var(--note-ink); background:var(--note); border-color:transparent; font-weight:700;}
+  .crow .cnote{display:block; margin-top:3px; font-size:12px; line-height:1.55; color:var(--ink-soft);}
   .cost-foot{font-size:12px; color:var(--ink-soft); margin:10px 0 0; line-height:1.6;}
   .qbtn.tel{background:var(--rose-wash); color:var(--rose-deep);}
   .qrow .num{flex:0 0 auto; font-family:var(--f-hand); font-weight:600; font-size:15px; font-variant-numeric:tabular-nums; color:var(--ink); text-decoration:none; white-space:nowrap;}
@@ -586,15 +587,15 @@
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15l18-6M8 11l-3-5 3-1 5 4M13 17l-2 4 2 1 4-4"/></svg>交通總覽</h3>
         <div class="ticket">
           <div class="stub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 14l9-3V5l2-2 2 2v6l7 3v2l-7-1.5V19l2 1.5V22l-4-1-4 1v-1.5L11 19v-4.5L2 16z"/></svg><span>去程</span></div>
-          <div class="main"><div class="big">07:15 台北 → 12:00 新千歲</div></div>
+          <div class="main"><div class="big">07:15 台北 → 12:00 新千歲</div><div class="sm">12/5（六）AirAsia・桃園機場 T1 → 新千歲機場國際線</div></div>
         </div>
         <div class="ticket rose">
           <div class="stub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 14l9-3V5l2-2 2 2v6l7 3v2l-7-1.5V19l2 1.5V22l-4-1-4 1v-1.5L11 19v-4.5L2 16z"/></svg><span>回程</span></div>
-          <div class="main"><div class="big">14:00 新千歲 → 17:55 台北</div></div>
+          <div class="main"><div class="big">14:00 新千歲 → 17:55 台北</div><div class="sm">12/12（六）AirAsia・新千歲機場國際線 → 桃園機場 T1</div></div>
         </div>
         <div class="ticket">
           <div class="stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V11l2-5h10l2 5v5M3 16h18M7 16v3M17 16v3"/><circle cx="8" cy="13" r="1"/><circle cx="16" cy="13" r="1"/></svg><span>租車</span></div>
-          <div class="main"><div class="big">12/5 13:30 取車</div><div class="sm">Toyota Yaris Cross Hybrid 4WD・新千歲空港店取車，12/9 18:00 前於 Orix Rent-a-car 札幌南6条店還車</div></div>
+          <div class="main"><div class="big">12/5 13:30 取車</div><div class="sm">Toyota Yaris Cross Hybrid 4WD・新千歲空港店取車，12/9 18:00 前於 Orix Rent-a-car 札幌南6条店還車・已加入 ETC 卡、事故免責險、安心方案</div></div>
         </div>
       </div>
 
@@ -1044,7 +1045,7 @@ const days = [
        n:"Google 標示每日 10:00–21:00，是戶外用品大店，可以補買手套、發熱衣、防滑鞋套。15:00 準時離開，天黑前開到小樽。"},
       {t:"15:00–15:35", d:"Alpen → 小樽（冬季估算約 35 分鐘）", map:["gridsOtaru"], safe:["alpenOutdoors","gridsOtaru"],
        n:"跟著導航從札幌西 IC 或手稲 IC 上札樽道（往小樽方向）都可以，小樽 IC 下，過路費約 ¥730–820。都是主要道路，日落前抵達。"},
-      {t:"15:35", d:"Check-in グリッズプレミアムホテル小樽（運河徒步 4 分，頂樓露天風呂）", map:["gridsOtaru"],
+      {t:"15:35", d:"抵達グリッズプレミアムホテル小樽（16:00 起才能入住，先停車、寄放行李；運河徒步 4 分，頂樓露天風呂）", map:["gridsOtaru"],
        n:"評論提到飯店停車場很小，15:00 前不能使用，停車費約 ¥1,500 / 晚，滿位時要停到附近的停車場。車停好之後今天就不再開車。入住後先休息或泡頂樓露天風呂。"},
       {t:"16:15–17:15", d:"小樽運河藍調時刻散步（飯店走路 4 分鐘）", must:true, map:["otaruCanal"],
        n:"日落前後的藍調時刻最好看，接著街燈亮起轉成夜景。冬季路面結冰，穿防滑鞋，拍照時別靠近護欄邊緣。"},
@@ -1211,12 +1212,12 @@ const days = [
 ];
 
 const COSTS = [
-  ["12/5–12/6","富良野 Hotel Munin Furano 北欧デザイナーズホテル",2497,"含早餐","樂天",1],
-  ["12/6–12/7","星野度假村 TOMAMU",6771,"含早餐","官網",1],
-  ["12/7–12/8","小樽格里茲頂級飯店 グリッズプレミアムホテル小樽",2334,"含早餐","樂天",1],
-  ["12/8–12/9","乃之風洞爺湖",8642,"一泊二食（晚餐＋早餐）","官網",1],
-  ["12/9–12/10","Vessel Hotel Campana 札幌薄野",3960,"含早餐","Trip",3],
-  ["12/10–12/12","LAMP LIGHT BOOKS HOTEL 札幌（2 晚）",6234,"含早餐","booking",2]
+  ["12/5–12/6","富良野 Hotel Munin Furano 北欧デザイナーズホテル",2497,"含早餐","樂天",1,"精緻雙床房・入住 15:00–23:30、退房 10:00・已備註需要停車位・住宿稅 ¥300 現場付"],
+  ["12/6–12/7","星野度假村 TOMAMU",6771,"含早餐","官網",1,"The Tower 標準雙床房・入住 15:00 起、退房 11:00・晚餐不含，要另外訂・取消費：11/15 起 10%，12/3 起全額"],
+  ["12/7–12/8","小樽格里茲頂級飯店 グリッズプレミアムホテル小樽",2334,"含早餐","樂天",1,"高級雙床房・入住 16:00 起（15:35 到先停車寄放行李）、退房 11:00・住宿稅 ¥300、停車約 ¥1,500 現場付"],
+  ["12/8–12/9","乃之風洞爺湖",8642,"一泊二食（晚餐＋早餐）","官網",1,"雙床大窗房・入住 15:00 起・12/1 前免費取消，12/2 起收 20%・住宿稅或入湯稅可能現場收"],
+  ["12/9–12/10","Vessel Hotel Campana 札幌薄野",3960,"含早餐","Trip",3,"標準雙床房・入住 14:00 起、退房 11:00・Trip.com 線上預付・12/5 22:00 前免費取消・住宿稅入住時現場收"],
+  ["12/10–12/12","LAMP LIGHT BOOKS HOTEL 札幌（2 晚）",6234,"含早餐","booking",2,"高級雙人房（一張大床）・入住 15:00 起、退房 10:00・12/8 23:59 前免費取消"]
 ];
 const FLIGHT = 21342, CAR_JPY = 50380;
 const fmt = n => n.toLocaleString('en-US');
@@ -1279,7 +1280,7 @@ function buildDirectionsUrl(keys, mode){
   COSTS.forEach(c => {
     const meal = `<span class="tg meal">${c[3]}</span>`;
     const st = c[5] === 1 ? '<span class="tg paid">已付款</span>' : c[5] === 3 ? '<span class="tg unpaid">尚未付款</span>' : '<span class="tg unpaid">出發前自動扣款</span>';
-    rows.push(row(c[0], c[1], "NT$" + fmt(c[2]), meal + `<span class="tg">${c[4]}</span>` + st));
+    rows.push(row(c[0], c[1] + (c[6] ? `<small class="cnote">${c[6]}</small>` : ""), "NT$" + fmt(c[2]), meal + `<span class="tg">${c[4]}</span>` + st));
   });
   document.getElementById('hotelList').innerHTML = rows.join('');
 })();
