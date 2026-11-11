@@ -526,7 +526,7 @@
     .stop .tm{font-size:14px;}
   }
 
-  /* ---------- hero route map + countdown ---------- */
+  /* ---------- hero countdown ---------- */
   .countdown{
     display:inline-flex; align-items:center; gap:6px; margin:12px 0 0; padding:5px 12px 4px;
     font-family:var(--f-round); font-size:12.5px; font-weight:700; letter-spacing:.04em;
@@ -535,23 +535,6 @@
   }
   button.countdown{cursor:pointer;}
   .countdown b{font-family:var(--f-hand); font-size:17px; font-weight:600; line-height:1; font-variant-numeric:tabular-nums;}
-  .route-map{border-top:1.5px dashed var(--line-strong); padding:10px 0 14px;}
-  .route-map svg{display:block; width:100%; height:auto; max-width:460px; margin:0 auto; overflow:visible;}
-  .rm-road{fill:none; stroke:var(--ice-deep); stroke-width:2; stroke-linecap:round; stroke-dasharray:1 7;}
-  .rm-draw{fill:none; stroke:var(--ice); stroke-width:5; stroke-linecap:round; opacity:.45;
-    stroke-dasharray:1; stroke-dashoffset:1; animation:rmDraw 2.6s .3s ease-out forwards;}
-  .rm-bus{fill:none; stroke:var(--ink-soft); stroke-width:1.4; stroke-linecap:round; stroke-dasharray:3 5; opacity:.7;}
-  .rm-stop circle{fill:var(--card); stroke:var(--ink); stroke-width:1.6;}
-  .rm-stop text.no{font-family:var(--f-round); font-size:9px; font-weight:700; fill:var(--ink); text-anchor:middle;}
-  .rm-stop text.nm{font-family:var(--f-hand); font-size:12px; font-weight:600; fill:var(--ink);}
-  .rm-stop text.dt{font-family:var(--f-round); font-size:8.5px; font-weight:500; fill:var(--ink-soft); letter-spacing:.04em;}
-  .rm-stop{opacity:0; animation:rmPop .45s ease-out forwards; animation-delay:calc(.35s + var(--k) * .38s);}
-  .rm-car circle.halo{fill:var(--rose); opacity:.55;}
-  .rm-car circle.dot{fill:var(--rose-deep); stroke:var(--card); stroke-width:1.5;}
-  .rm-compass{font-family:var(--f-script); font-size:13px; font-weight:700; fill:var(--ice-deep);}
-  .rm-compass-line{stroke:var(--ice-deep); stroke-width:1.2; stroke-linecap:round; fill:none;}
-  @keyframes rmDraw{ to{ stroke-dashoffset:0; } }
-  @keyframes rmPop{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
   .stamp-round{animation:stampIn .5s cubic-bezier(.2,1.4,.4,1) both; animation-delay:calc(var(--k, 0) * 90ms + .1s);}
   @keyframes stampIn{ from{opacity:0; scale:1.35;} to{opacity:1; scale:1;} }
 
@@ -582,7 +565,6 @@
   @media (prefers-reduced-motion: reduce){
     *, *::before, *::after{animation:none !important; transition:none !important;}
     .snow{display:none;}
-    .rm-stop{opacity:1;} .rm-draw{stroke-dashoffset:0;} .rm-car{display:none;}
   }
 </style>
 
@@ -595,16 +577,9 @@
         <p class="subline">夫妻二人・2026 年 12 月 5 日–12 日・自駕五天</p>
         <p class="countdown" id="countdown" hidden></p>
       </div>
-<div class="route-map">
-        <svg viewBox="0 0 340 172" role="img" aria-label="路線圖：新千歲、富良野、Tomamu、小樽、洞爺湖、札幌，最後從札幌搭巴士回新千歲機場">
-          <path class="rm-bus" d="M118 82Q120 110 155 109"/>
-          <path class="rm-draw" pathLength="1" d="M162 109Q196 62 252 40Q284 50 285 75Q190 30 72 58Q34 96 53 131Q128 142 118 75"/>
-          <path class="rm-road" id="rmRoad" d="M162 109Q196 62 252 40Q284 50 285 75Q190 30 72 58Q34 96 53 131Q128 142 118 75"/>
-          <g class="rm-car"><circle class="halo" r="7"/><circle class="dot" r="3.6"/><animateMotion dur="16s" repeatCount="indefinite" begin="2.6s" calcMode="linear"><mpath href="#rmRoad"/></animateMotion></g>
-          <g class="rm-stop" style="--k:0"><circle cx="162" cy="109" r="7"/><text class="no" x="162" y="112.2">1</text><text class="nm" x="162" y="130" text-anchor="middle">新千歲</text><text class="dt" x="162" y="140" text-anchor="middle">12/5 出發</text></g><g class="rm-stop" style="--k:1"><circle cx="252" cy="40" r="7"/><text class="no" x="252" y="43.2">2</text><text class="nm" x="252" y="19" text-anchor="middle">富良野</text><text class="dt" x="252" y="29" text-anchor="middle">12/5</text></g><g class="rm-stop" style="--k:2"><circle cx="285" cy="75" r="7"/><text class="no" x="285" y="78.2">3</text><text class="nm" x="285" y="96" text-anchor="middle">Tomamu</text><text class="dt" x="285" y="106" text-anchor="middle">12/6</text></g><g class="rm-stop" style="--k:3"><circle cx="72" cy="58" r="7"/><text class="no" x="72" y="61.2">4</text><text class="nm" x="72" y="37" text-anchor="middle">小樽</text><text class="dt" x="72" y="47" text-anchor="middle">12/7</text></g><g class="rm-stop" style="--k:4"><circle cx="53" cy="131" r="7"/><text class="no" x="53" y="134.2">5</text><text class="nm" x="53" y="152" text-anchor="middle">洞爺湖</text><text class="dt" x="53" y="162" text-anchor="middle">12/8</text></g><g class="rm-stop" style="--k:5"><circle cx="118" cy="75" r="7"/><text class="no" x="118" y="78.2">6</text><text class="nm" x="130" y="76">札幌</text><text class="dt" x="130" y="86">12/9–12</text></g>
-          <path class="rm-compass-line" d="M316 34V14M311 19l5-5 5 5"/><text class="rm-compass" x="316" y="48" text-anchor="middle">N</text>
-        </svg>
-      </div>
+<ul class="route-chips">
+        <li>新千歲</li><li>富良野</li><li>Tomamu</li><li>小樽</li><li>洞爺湖</li><li>札幌</li>
+      </ul>
     </div>
   </div>
 </header>
@@ -1652,7 +1627,6 @@ function showPanel(id, silent){
     const tb = document.querySelector(`nav.days button[data-tab="${todayId}"]`);
     if(tb) tb.classList.add('today');
   }
-  try { if(matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('.rm-car animateMotion').forEach(a => a.remove()); } catch(e) {}
   showPanel(order.includes(h) ? h : (todayId || 'overview'), true);
   let on = false;
   try { on = localStorage.getItem('shootMode') === '1'; } catch(e) {}
