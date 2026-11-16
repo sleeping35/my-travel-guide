@@ -355,25 +355,6 @@
   .live-grid a.main{background:var(--ice-deep); color:var(--card); font-size:15px;}
   .live-grid a svg{width:20px; height:20px; flex:0 0 auto;}
   .live-grid a small{display:block; font-weight:500; font-size:12px; opacity:.85;}
-  details.day-live{margin-top:12px; border:1.5px solid var(--ice); border-radius:16px; background:var(--card); overflow:hidden;}
-  details.day-live > summary{
-    list-style:none; cursor:pointer; display:flex; align-items:center; gap:8px; padding:10px 14px;
-    background:var(--ice-wash); color:var(--ice-deep); font-size:13.5px; font-weight:700;
-  }
-  details.day-live > summary::-webkit-details-marker{display:none;}
-  details.day-live > summary svg{width:16px; height:16px; flex:0 0 auto;}
-  details.day-live > summary .cnt{margin-left:auto; font-size:12px; font-weight:600; opacity:.8; white-space:nowrap;}
-  details.day-live > summary .cnt::after{content:" ▾";}
-  details.day-live[open] > summary .cnt::after{content:" ▴";}
-  .day-live-body{padding:10px 12px 12px;}
-  .day-live-body h4{margin:12px 2px 6px; font-size:12.5px; font-weight:700; color:var(--rose-deep); letter-spacing:.04em;}
-  .day-live-body h4:first-child{margin-top:2px;}
-  .day-live-body .live-grid a{padding:10px 12px; font-size:13.5px;}
-  .day-live-body .live-grid a svg{width:18px; height:18px;}
-  .live-grid a .kind{display:inline-block; margin-left:6px; padding:1px 6px; border-radius:6px; font-size:10.5px; font-weight:700; vertical-align:1px; background:var(--card); color:var(--ice-deep); border:1px solid var(--ice);}
-  .live-grid a .kind.yt{background:#C4302B; color:#fff; border-color:#C4302B;}
-  .day-live-body .none{margin:6px 0 0; padding:8px 10px; border-radius:10px; border:1.5px dashed var(--ice); background:transparent; font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
-  .day-live-body .foot{margin:10px 2px 0; font-size:11.5px; line-height:1.7; color:var(--ink-soft);}
 
   ol.timeline{list-style:none; margin:0; padding:0;}
   .stop{
@@ -1194,9 +1175,9 @@ const days = [
        n:"行李寄放時間通常早於 check-in，建議出發前先確認飯店可接受的寄放時段。"},
       {t:"11:15–11:50", d:"搭地鐵東西線到圓山公園站，再步行約 10–15 分鐘到北海道神宮（全程約 35 分鐘，為估算值）", map:["hokkaidoJingu"]},
       {t:"11:50–12:50", d:"北海道神宮", map:["hokkaidoJingu"],
-       n:"Google 標示每日 6:00–17:00。冬季日照短，境內積雪路滑，穿防滑鞋。境內有六花亭的茶屋，可以嚐烤麻糬『判官さま』，營業時間以現場為準。"},
-      {must:true, t:"（神宮內）", d:"🍶 買御神酒「神宮の梅」梅酒（授与所，穿過神門後右手邊）", map:["hokkaidoJingu"],
-       n:"札幌酒精工業以神宮境內梅樹命名的梅酒。授与所版是 360ml 白色瓶子，印有神宮社紋，約 ¥900（2022 年資料，價格可能調整），酒精約 12%。另有 500ml 一般玻璃瓶的市售版，但市區不一定買得到，想要就在神宮買。授与所的時間通常比參拜時間短，中午去最保險。回台灣每人酒類免稅 1.5 公升，放託運行李要包好。"},
+       n:"Google 標示每日 6:00–17:00。冬季日照短，境內積雪路滑，穿防滑鞋。境內有六花亭的茶屋，下一項有說明。"},
+      {t:"（神宮內）", d:"🍦 神宮茶屋（六花亭）：霜淇淋和和菓子", map:["hokkaidoJingu"],
+       n:"神宮境內的茶屋，營業 9:00–16:00、全年無休，霜淇淋 ¥380（杯裝或甜筒），也有北海道伴手禮點心（2019 年的資料，價格可能調整）。冬天吃霜淇淋是北海道的樂趣，可以拿著熱飲配著吃。用餐時間走一圈參拜完再來，12 點前後最保險。"},
       {t:"12:50–13:30", d:"搭地鐵回札幌站（圓山公園站 → 大通換乘南北線，約 35 分鐘，為估算值）"},
       {meal:true, t:"13:30–14:30", d:"午餐：札幌站周邊隨意吃（建議逛札幌らーめん共和国，エスタ 10F）",
        n:"原本訂的徳寿 K-place 中午時段已滿，改到 12/11。這裡吃就在札幌站旁，吃完直接去 JINS。札幌ら～めん共和國是 JR 札幌站前エスタ大樓 10 樓的拉麵街，我沒查到現在的營業時間，去之前看一下エスタ官網；ステラプレイス、アピア也有不少餐廳，哪家排隊少就吃哪家。"},
@@ -1500,108 +1481,6 @@ function dayShotHtml(dayId){
   return `<div class="shots day-shots"><div class="shot"><span class="sm cam">${CAM_SVG}</span><span><b>${epText}</b>　今天必拍 ${n} 個</span></div>
     <div class="shot"><span class="sm must">★</span><span>每日固定：開場（窗外或早餐）、長途車程擋風玻璃前 10–20 秒、住宿進房第一眼與窗景</span></div></div>`;
 }
-// ---------- 每日即時影像 ----------
-// k: yt＝YouTube 直播；wn＝Weathernews 定點照片（10 分鐘更新，可往回看 24 小時）；site＝官網資訊
-const INFO_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>`;
-const WN = 'https://weathernews.jp/onebox/livecam/hokkaido/';
-const CAM = {
-  // ch:true＝頻道每天重開直播，連到頻道的「直播」分頁，點最上面標示直播中的那一支
-  ctsHTB:  {k:'yt', n:'新千歲機場　跑道與天空', s:'HTB 北海道電視台，看落地前後的雪和雲', u:'https://www.youtube.com/watch?v=Azbdr5jbN6o'},
-  ctsSTV:  {k:'yt', n:'新千歲機場　航廈・停機坪', s:'STV 札幌電視台，看停機坪積雪', u:'https://www.youtube.com/watch?v=uvNVpMKG8rw'},
-  ctsFLT:  {k:'yt', n:'新千歲機場　即時航班疊圖', s:'畫面上直接標出起降班機，回程日看航班狀況', u:'https://www.youtube.com/watch?v=kGTykjiuPXw'},
-  chitose: {k:'wn', n:'千歲市', s:'機場所在的千歲市天空', u:WN+'douou/7CDDE907B0FC/'},
-  ashibetsu:{k:'wn', n:'芦別市', s:'國道 38 號沿線，今天傍晚開過的路段', u:WN+'douou/7CDDE9068864/'},
-  furano:  {k:'wn', n:'富良野市　東雲町', s:'富良野市區天氣', u:WN+'douhoku/7CDDE9068968/'},
-  nakafura:{k:'wn', n:'中富良野町', s:'富良野往美瑛的國道 237 號沿線', u:WN+'douhoku/7CDDE9068758/'},
-  bieiTok: {k:'yt', ch:true, n:'美瑛　大雪山連峰・十勝岳方向', s:'青池、白鬚瀑布就在十勝岳山腳，看山那邊有沒有在下雪', u:'https://www.youtube.com/channel/UC-a2ihKN-SYxUBsKPdH7MVw/streams'},
-  bieiTwr: {k:'yt', ch:true, n:'美瑛　四季之塔', s:'美瑛市區，今天往返青池都會經過', u:'https://www.youtube.com/channel/UCzjRAMVvFtTp_20sLDv2OUA/streams'},
-  biei:    {k:'wn', n:'美瑛町', s:'美瑛町天空', u:WN+'douhoku/7CDDE906EEC2/'},
-  tomamuInfo:{k:'site', n:'星野 Tomamu　本日の営業情報', s:'官網每天更新的氣溫、山頂／山麓積雪（不是影像）', u:'https://www.snowtomamu.jp/winter/'},
-  teineYama:{k:'wn', n:'手稻山（從札幌西區望過去）', s:'壽司 Triton、Alpen 都在手稻山腳下', u:WN+'douou/7CDDE90645EF/'},
-  teineRd: {k:'yt', ch:true, n:'手稻區　前田五条 14 丁目路口', s:'手稻 IC 下來的市區路面，看是乾的還是壓雪', u:'https://www.youtube.com/channel/UC7FrwA-BfBivch7mClwiE4A/streams'},
-  tengu:   {k:'yt', ch:true, n:'小樽天狗山纜車　市區全景', s:'纜車官方鏡頭，不是 24 小時都開播；沒畫面時改看下面的小樽港', u:'https://www.youtube.com/channel/UC8NuNbL1frrbS4sQcFSClvQ/streams'},
-  marina:  {k:'yt', n:'小樽港　marina', s:'港邊定點，看海面和天色', u:'https://www.youtube.com/watch?v=O4Lr6EdXZqY'},
-  otaru:   {k:'wn', n:'小樽市', s:'小樽市區天空', u:WN+'douou/7CDDE906428E/'},
-  noboribetsu:{k:'wn', n:'登別市', s:'道央道登別一帶，往有珠山 SA 途中', u:WN+'dounan/7CDDE9067F8E/'},
-  windsor: {k:'yt', n:'洞爺湖　溫莎飯店屋頂', s:'從湖邊山頂高處看整個洞爺湖和中島', u:'https://www.youtube.com/watch?v=YY2XmgR-tjI'},
-  geoToya: {k:'yt', n:'洞爺湖溫泉　湖畔', s:'GeoView 洞爺，洞爺湖溫泉街湖畔，乃之風就在這一帶', u:'https://www.youtube.com/watch?v=f25Mib6JY98'},
-  sobetsu: {k:'wn', n:'壯瞥町', s:'有珠山纜車、昭和新山所在的町', u:WN+'dounan/7CDDE906B6A0/'},
-  takeura: {k:'yt', ch:true, n:'白老町竹浦　國道 36 號', s:'かに王就在竹浦，看午餐前後的路面', u:'https://www.youtube.com/channel/UClV6SY39eqyCzPQhTIWv80g/streams'},
-  susukino:{k:'yt', n:'札幌　薄野十字路口', s:'HTB，飯店就在附近，看街上積雪和人潮', u:'https://www.youtube.com/watch?v=wRYonRnKsKw'},
-  rt36:    {k:'yt', n:'札幌　國道 36 號・創成川', s:'薄野往南的主要道路，進市區、還車前看路況', u:'https://www.youtube.com/watch?v=6DhFMy_i8bg'},
-  odori:   {k:'yt', n:'札幌　大通公園・電視塔', s:'朝日新聞，白色燈節就在這個畫面裡', u:'https://www.youtube.com/watch?v=RBHsITnIoI0'},
-  sapSTV:  {k:'yt', n:'札幌　中央區全景', s:'STV，札幌市中心全景', u:'https://www.youtube.com/watch?v=z3OUPSoABJk'},
-  jrSap:   {k:'yt', n:'JR 札幌站　站前', s:'HTB，札幌站、JINS、大丸都在這一帶', u:'https://www.youtube.com/watch?v=gaNLXSEUVRw'},
-  tanuki8: {k:'yt', n:'狸小路 8 丁目　路口雪道', s:'專拍路面，判斷走路好不好走', u:'https://www.youtube.com/watch?v=TPIzbMwlrOI'},
-  escon:   {k:'yt', n:'北廣島　ES CON FIELD', s:'HTB，和 Outlet 同在北廣島市（不是 Outlet 本身），看當地天氣', u:'https://www.youtube.com/watch?v=oCf6wCvsVIo'},
-  moiwa:   {k:'yt', n:'藻岩山　山頂展望台', s:'纜車官方鏡頭，上山前先看夜景能見度', u:'https://www.youtube.com/watch?v=MmOom49Vsco'},
-};
-const LIVECAMS = {
-  d1:{groups:[
-    {t:'新千歲機場（12:00 落地、取車）', cams:[CAM.ctsHTB, CAM.ctsSTV, CAM.chitose]},
-    {t:'沿路：道央道 → 滝川 → 國道 38 號', cams:[CAM.ashibetsu]},
-    {t:'富良野（晚餐、超市、今晚住 Munin）', cams:[CAM.furano, CAM.nakafura],
-     none:'富良野市區查不到穩定的 YouTube 直播（hokkaidolive 也這樣註明），所以這裡用 Weathernews 的定點照片。'},
-  ]},
-  d2:{groups:[
-    {t:'美瑛・青池・白鬚瀑布（上午）', cams:[CAM.bieiTok, CAM.bieiTwr, CAM.biei],
-     none:'青池、白鬚瀑布本身沒有直播鏡頭，用美瑛市區和十勝岳方向的畫面判斷天氣。'},
-    {t:'富良野（精靈露台、市集、加油）', cams:[CAM.furano, CAM.nakafura]},
-    {t:'Tomamu（今晚住 The Tower）', cams:[CAM.tomamuInfo],
-     none:'星野 Tomamu 和占冠村一帶找不到任何 YouTube 直播或 Weathernews 鏡頭，官網也沒有網路攝影機，只能看官網的積雪數字。'},
-  ]},
-  d3:{groups:[
-    {t:'Tomamu 出發（10:15）', cams:[CAM.tomamuInfo],
-     none:'Tomamu 沒有直播鏡頭；道東道路況請看北の道ナビ。'},
-    {t:'札幌手稻（Triton 午餐、Alpen 発寒）', cams:[CAM.teineYama, CAM.teineRd]},
-    {t:'小樽（運河藍調時刻、BAAL、天狗山）', cams:[CAM.tengu, CAM.marina, CAM.otaru],
-     none:'小樽運河本身目前沒有 YouTube 直播，天狗山鏡頭往下看得到運河所在的市區。'},
-  ]},
-  d4:{groups:[
-    {t:'小樽（上午堺町通）', cams:[CAM.tengu, CAM.otaru]},
-    {t:'沿路：道央道（登別、有珠山 SA）', cams:[CAM.noboribetsu]},
-    {t:'洞爺湖（サイロ展望台、Lake Hill Farm、今晚住乃之風）', cams:[CAM.windsor, CAM.geoToya, CAM.sobetsu]},
-  ]},
-  d5:{groups:[
-    {t:'洞爺湖・有珠山纜車（上午）', cams:[CAM.geoToya, CAM.windsor, CAM.sobetsu],
-     none:'有珠山纜車沒有直播鏡頭；壯瞥町就是纜車所在地，可以看那裡的天空。'},
-    {t:'白老竹浦（かに王午餐）', cams:[CAM.takeura]},
-    {t:'札幌（還車、羊座、大通燈節）', cams:[CAM.rt36, CAM.susukino, CAM.odori]},
-  ]},
-  d6:{groups:[
-    {t:'北海道神宮（上午）', cams:[],
-     none:'北海道神宮本身沒有直播鏡頭（hokkaidolive 上的「頓宮」是市區的分社，不是妳要去的本宮）。'},
-    {t:'札幌站・北大・赤れんが・大丸', cams:[CAM.jrSap, CAM.sapSTV]},
-    {t:'大通公園燈節・狸小路・薄野（晚上）', cams:[CAM.odori, CAM.tanuki8, CAM.susukino]},
-  ]},
-  d7:{groups:[
-    {t:'札幌站（燒肉、搭機場巴士）', cams:[CAM.jrSap]},
-    {t:'北廣島三井 Outlet', cams:[CAM.escon],
-     none:'Outlet 本身沒有直播鏡頭。'},
-    {t:'晚上（湯咖哩、藻岩山或大通燈節）', cams:[CAM.moiwa, CAM.odori]},
-  ]},
-  d8:{groups:[
-    {t:'薄野出發（搭機場巴士）', cams:[CAM.susukino]},
-    {t:'新千歲機場（Royce、伴手禮、14:00 起飛）', cams:[CAM.ctsFLT, CAM.ctsHTB, CAM.ctsSTV]},
-  ]},
-};
-function dayLiveHtml(dayId){
-  const L = LIVECAMS[dayId];
-  if(!L) return '';
-  const seen = new Set();
-  L.groups.forEach(g => g.cams.forEach(c => { if(c.k !== 'site') seen.add(c.u); }));
-  const n = seen.size;
-  const KIND = {yt:'YouTube 直播', wn:'定點照片・10 分鐘更新', site:'官網資訊'};
-  const body = L.groups.map(g => {
-    const cams = g.cams.map(c => `<a href="${c.u}" target="_blank" rel="noopener">${c.k === 'site' ? INFO_SVG : CAM_SVG}<span>${c.n}<span class="kind ${c.k === 'yt' ? 'yt' : ''}">${KIND[c.k]}</span><small>${c.s}${c.ch ? '。會開到頻道的直播列表，點最上面標「直播中」的那一支' : ''}</small></span></a>`).join('');
-    const none = g.none ? `<p class="none">${g.none}</p>` : '';
-    return `<h4>${g.t}</h4>${cams ? `<div class="live-grid">${cams}</div>` : ''}${none}`;
-  }).join('');
-  return `<details class="day-live"><summary>${CAM_SVG}今天沿路的即時影像<span class="cnt">${n} 個鏡頭</span></summary>
-    <div class="day-live-body">${body}
-      <p class="foot">YouTube 直播是頻道主自己開的，偶爾會停播或重開；如果點進去看到的是舊錄影或沒有畫面，點頻道名稱再選「直播中」的那一支。更多地點：<a href="https://hokkaidolive.pages.dev/" target="_blank" rel="noopener">北海道各地即時影像</a>。封路以 NEXCO 和北の道ナビ為準。</p>
-    </div></details>`;
-}
 function setShoot(on){
   document.body.classList.toggle('shoot', on);
   const b = document.getElementById('shootToggle');
@@ -1695,8 +1574,7 @@ days.forEach((day, idx) => {
         <p class="wk">${day.sub}</p>
         <h2>${day.title}</h2>
         <p class="hl">${day.hl}</p>
-        <div class="day-actions">${routeLink}<span class="chip">${BED_SVG}${day.stay ? '今晚住 ' + day.stay : '返程日'}</span></div>
-        ${dayLiveHtml(day.id)}
+        <div class="day-actions">${routeLink}<a class="live-btn" href="https://hokkaidolive.pages.dev/" target="_blank" rel="noopener">${CAM_SVG}即時影像</a><span class="chip">${BED_SVG}${day.stay ? '今晚住 ' + day.stay : '返程日'}</span></div>
         ${dayShotHtml(day.id)}
       </div>
     </div>
