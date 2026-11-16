@@ -1512,20 +1512,20 @@ const CAM = {
   ashibetsu:{k:'wn', n:'芦別市', s:'國道 38 號沿線，今天傍晚開過的路段', u:WN+'douou/7CDDE9068864/'},
   furano:  {k:'wn', n:'富良野市　東雲町', s:'富良野市區天氣', u:WN+'douhoku/7CDDE9068968/'},
   nakafura:{k:'wn', n:'中富良野町', s:'富良野往美瑛的國道 237 號沿線', u:WN+'douhoku/7CDDE9068758/'},
-  bieiTok: {k:'yt', n:'美瑛　大雪山連峰・十勝岳方向', s:'青池、白鬚瀑布就在十勝岳山腳，看山那邊有沒有在下雪', u:'https://www.youtube.com/watch?v=tUytxDgfp4E'},
-  bieiTwr: {k:'yt', n:'美瑛　四季之塔', s:'美瑛市區，今天往返青池都會經過', u:'https://www.youtube.com/watch?v=lTTKEkELOc4'},
+  bieiTok: {k:'yt', n:'美瑛　大雪山連峰・十勝岳方向', s:'青池、白鬚瀑布就在十勝岳山腳，看山那邊有沒有在下雪', u:'https://www.youtube.com/channel/UC-a2ihKN-SYxUBsKPdH7MVw/live'},
+  bieiTwr: {k:'yt', n:'美瑛　四季之塔', s:'美瑛市區，今天往返青池都會經過', u:'https://www.youtube.com/channel/UCzjRAMVvFtTp_20sLDv2OUA/live'},
   biei:    {k:'wn', n:'美瑛町', s:'美瑛町天空', u:WN+'douhoku/7CDDE906EEC2/'},
   tomamuInfo:{k:'site', n:'星野 Tomamu　本日の営業情報', s:'官網每天更新的氣溫、山頂／山麓積雪（不是影像）', u:'https://www.snowtomamu.jp/winter/'},
   teineYama:{k:'wn', n:'手稻山（從札幌西區望過去）', s:'壽司 Triton、Alpen 都在手稻山腳下', u:WN+'douou/7CDDE90645EF/'},
-  teineRd: {k:'yt', n:'手稻區　前田五条 14 丁目路口', s:'手稻 IC 下來的市區路面，看是乾的還是壓雪', u:'https://www.youtube.com/watch?v=L7wFu0e_12E'},
-  tengu:   {k:'yt', n:'小樽天狗山纜車　市區全景', s:'纜車官方鏡頭，晚上決定要不要上山看夜景', u:'https://www.youtube.com/watch?v=4SW9YQI4lXQ'},
+  teineRd: {k:'yt', n:'手稻區　前田五条 14 丁目路口', s:'手稻 IC 下來的市區路面，看是乾的還是壓雪', u:'https://www.youtube.com/channel/UC7FrwA-BfBivch7mClwiE4A/live'},
+  tengu:   {k:'yt', n:'小樽天狗山纜車　市區全景', s:'纜車官方鏡頭，不是 24 小時都開播；沒畫面時改看下面的小樽港', u:'https://www.youtube.com/channel/UC8NuNbL1frrbS4sQcFSClvQ/live'},
   marina:  {k:'yt', n:'小樽港　marina', s:'港邊定點，看海面和天色', u:'https://www.youtube.com/watch?v=O4Lr6EdXZqY'},
   otaru:   {k:'wn', n:'小樽市', s:'小樽市區天空', u:WN+'douou/7CDDE906428E/'},
   noboribetsu:{k:'wn', n:'登別市', s:'道央道登別一帶，往有珠山 SA 途中', u:WN+'dounan/7CDDE9067F8E/'},
   windsor: {k:'yt', n:'洞爺湖　溫莎飯店屋頂', s:'從湖邊山頂高處看整個洞爺湖和中島', u:'https://www.youtube.com/watch?v=YY2XmgR-tjI'},
   geoToya: {k:'yt', n:'洞爺湖溫泉　湖畔', s:'GeoView 洞爺，洞爺湖溫泉街湖畔，乃之風就在這一帶', u:'https://www.youtube.com/watch?v=f25Mib6JY98'},
   sobetsu: {k:'wn', n:'壯瞥町', s:'有珠山纜車、昭和新山所在的町', u:WN+'dounan/7CDDE906B6A0/'},
-  takeura: {k:'yt', n:'白老町竹浦　國道 36 號', s:'かに王就在竹浦，看午餐前後的路面', u:'https://www.youtube.com/watch?v=6iXiGPTFqio'},
+  takeura: {k:'yt', n:'白老町竹浦　國道 36 號', s:'かに王就在竹浦，看午餐前後的路面', u:'https://www.youtube.com/channel/UClV6SY39eqyCzPQhTIWv80g/live'},
   susukino:{k:'yt', n:'札幌　薄野十字路口', s:'HTB，飯店就在附近，看街上積雪和人潮', u:'https://www.youtube.com/watch?v=wRYonRnKsKw'},
   rt36:    {k:'yt', n:'札幌　國道 36 號・創成川', s:'薄野往南的主要道路，進市區、還車前看路況', u:'https://www.youtube.com/watch?v=6DhFMy_i8bg'},
   odori:   {k:'yt', n:'札幌　大通公園・電視塔', s:'朝日新聞，白色燈節就在這個畫面裡', u:'https://www.youtube.com/watch?v=RBHsITnIoI0'},
@@ -1598,7 +1598,7 @@ function dayLiveHtml(dayId){
   }).join('');
   return `<details class="day-live"><summary>${CAM_SVG}今天沿路的即時影像<span class="cnt">${n} 個鏡頭</span></summary>
     <div class="day-live-body">${body}
-      <p class="foot">YouTube 直播是頻道主自己開的，偶爾會停播或換網址；點進去無法播放時，點頻道名稱通常能找到新的直播。更多地點：<a href="https://hokkaidolive.pages.dev/" target="_blank" rel="noopener">北海道各地即時影像</a>。封路以 NEXCO 和北の道ナビ為準。</p>
+      <p class="foot">YouTube 直播是頻道主自己開的，偶爾會停播或重開；如果點進去看到的是舊錄影或沒有畫面，點頻道名稱再選「直播中」的那一支。更多地點：<a href="https://hokkaidolive.pages.dev/" target="_blank" rel="noopener">北海道各地即時影像</a>。封路以 NEXCO 和北の道ナビ為準。</p>
     </div></details>`;
 }
 function setShoot(on){
