@@ -581,6 +581,26 @@
     content:"今天"; position:absolute; top:-7px; right:-6px; padding:1px 5px; border-radius:999px;
     font-size:9px; font-weight:700; letter-spacing:.04em; background:var(--rose-deep); color:var(--card);
   }
+
+  /* ---------- 必帶清單 ---------- */
+  .pack-prog{margin:0 0 10px; font-size:12.5px; color:var(--ink-soft);}
+  .pack-prog b{font-family:var(--f-hand); font-size:15px; color:var(--rose-deep); font-variant-numeric:tabular-nums;}
+  .pack-list{list-style:none; margin:0; padding:0;}
+  .pack-list li{border-bottom:1px dotted var(--line-strong);}
+  .pack-list li:last-child{border-bottom:none;}
+  .pack-list label{display:flex; align-items:flex-start; gap:12px; padding:11px 0; cursor:pointer; min-width:0;}
+  .pack-list input{position:absolute; opacity:0; width:1px; height:1px;}
+  .pack-list .bx{
+    flex:0 0 24px; width:24px; height:24px; margin-top:1px; border:2px solid var(--ice-deep); border-radius:7px;
+    background:var(--card); display:grid; place-items:center; color:transparent;
+  }
+  .pack-list .bx svg{width:15px; height:15px;}
+  .pack-list input:checked + .bx{background:var(--leaf); border-color:var(--leaf); color:var(--card);}
+  .pack-list input:focus-visible + .bx{outline:2px solid var(--ice-deep); outline-offset:2px;}
+  .pack-list .tx{min-width:0; font-size:14.5px; line-height:1.6; overflow-wrap:anywhere;}
+  .pack-list .tx small{display:block; font-size:12px; color:var(--ink-soft); line-height:1.6;}
+  .pack-list input:checked ~ .tx{color:var(--ink-soft); text-decoration:line-through; text-decoration-color:var(--line-strong);}
+  .pack-reset{margin-top:8px; padding:5px 12px; border-radius:999px; border:1.5px solid var(--line-strong); background:var(--card); color:var(--ink-soft); font-size:12px; font-weight:700; cursor:pointer;}
   @media (prefers-reduced-motion: reduce){
     *, *::before, *::after{animation:none !important; transition:none !important;}
     .snow{display:none;}
@@ -695,6 +715,13 @@
       <div class="block sheet taped-b">
         <h3><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>快速導航（機場・飯店・租車）</h3>
         <div id="quickMaps"></div>
+      </div>
+
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="14" rx="3"/><path d="M9 7V5a3 3 0 016 0v2M4 13h16"/></svg>必帶清單</h3>
+        <p class="pack-prog" id="packProg"></p>
+        <ul class="pack-list" id="packList"></ul>
+        <button type="button" class="pack-reset" id="packReset">全部取消勾選</button>
       </div>
 
       <div class="block sheet taped">
@@ -1383,6 +1410,36 @@ document.getElementById('sosList').innerHTML = SOS.map(([num, name, note]) => {
     <a class="qbtn tel" href="${href}" aria-label="撥打 ${name}">${TEL_SVG}</a>
   </div>`;
 }).join('');
+
+// ---------- 必帶清單 ----------
+const PACK = [
+  {t:'電源線', n:'要放在車上'},
+  {t:'Pocket'},
+  {t:'保冷袋'},
+  {t:'壓縮袋'}
+];
+(function(){
+  const KEY = 'packChecked';
+  let done = [];
+  try { done = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(e) {}
+  const list = document.getElementById('packList'), prog = document.getElementById('packProg');
+  const CHK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(done)); } catch(e) {} }
+  function count(){ prog.innerHTML = `已準備 <b>${done.filter(t => PACK.some(p => p.t === t)).length} / ${PACK.length}</b>`; }
+  list.innerHTML = PACK.map((p, i) =>
+    `<li><label><input type="checkbox" id="pack${i}" data-t="${p.t}"${done.includes(p.t) ? ' checked' : ''}><span class="bx">${CHK}</span><span class="tx">${p.t}${p.n ? `<small>${p.n}</small>` : ''}</span></label></li>`
+  ).join('');
+  list.addEventListener('change', e => {
+    const t = e.target.dataset.t;
+    done = done.filter(x => x !== t);
+    if(e.target.checked) done.push(t);
+    save(); count();
+  });
+  document.getElementById('packReset').onclick = () => {
+    done = []; list.querySelectorAll('input').forEach(c => { c.checked = false; }); save(); count();
+  };
+  count();
+})();
 
 document.getElementById('mealList').innerHTML = MEALS.map(([d, list]) =>
   `<div class="meal-day"><span class="dl">${d}</span><ul>` + list.map(s => {
