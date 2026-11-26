@@ -601,6 +601,29 @@
   .pack-list .tx small{display:block; font-size:12px; color:var(--ink-soft); line-height:1.6;}
   .pack-list input:checked ~ .tx{color:var(--ink-soft); text-decoration:line-through; text-decoration-color:var(--line-strong);}
   .pack-reset{margin-top:8px; padding:5px 12px; border-radius:999px; border:1.5px solid var(--line-strong); background:var(--card); color:var(--ink-soft); font-size:12px; font-weight:700; cursor:pointer;}
+  /* ---------- 付款 ---------- */
+  .paynote{margin-top:6px; display:flex; gap:6px; align-items:flex-start; font-size:12.5px; line-height:1.6;
+    padding:5px 10px; border-radius:10px; background:var(--card-2); color:var(--ink); border:1px dashed var(--line-strong);}
+  .paynote .ic{flex:0 0 auto;}
+  .paynote span:last-child{min-width:0; overflow-wrap:anywhere;}
+  .paynote b{font-weight:700; color:var(--ice-deep);}
+  .pay-rule{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;}
+  .pay-rule li{display:grid; grid-template-columns:auto minmax(0,1fr); gap:10px; align-items:start; padding:9px 12px; border-radius:12px; background:var(--card-2); font-size:14px; line-height:1.65;}
+  .pay-rule .k{font-family:var(--f-hand); font-weight:600; font-size:13px; color:var(--card); background:var(--ice-deep); border-radius:8px; padding:1px 8px; white-space:nowrap;}
+  .pay-rule li.cash .k{background:var(--rose-deep);}
+  .pay-card{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:2px 10px; padding:10px 0; border-bottom:1px dotted var(--line-strong);}
+  .pay-card:last-child{border-bottom:none;}
+  .pay-card .nm{font-family:var(--f-hand); font-weight:600; font-size:15px;}
+  .pay-card .nw{font-size:11px; font-weight:700; color:var(--ice-deep); background:var(--ice-wash); border-radius:6px; padding:1px 7px; align-self:start;}
+  .pay-card .ds{grid-column:1 / span 2; font-size:13px; color:var(--ink-soft); line-height:1.65;}
+  .scen{border-bottom:1px dotted var(--line-strong); padding:12px 0;}
+  .scen:last-child{border-bottom:none;}
+  .scen .h{display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 10px; align-items:baseline;}
+  .scen .h b{font-family:var(--f-hand); font-weight:600; font-size:15px;}
+  .scen .h small{font-size:12px; color:var(--ink-soft);}
+  .scen p{margin:4px 0 0; font-size:13.5px; line-height:1.75;}
+  .scen .pick{margin-top:6px; padding:6px 10px; border-radius:10px; background:var(--ice-wash); font-size:13.5px;}
+  .scen .pick b{color:var(--ice-deep);}
   @media (prefers-reduced-motion: reduce){
     *, *::before, *::after{animation:none !important; transition:none !important;}
     .snow{display:none;}
@@ -771,6 +794,78 @@
       </div>
       <div class="pager" id="pager-overview"></div>
     </section>
+    <section class="panel" data-panel="pay" id="payPanel">
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>結帳時照這個順序</h3>
+        <ul class="pay-rule">
+          <li><span class="k">指定店</span><span>7-Eleven、全家、Lawson、札幌三越、AEON、唐吉訶德、BIC CAMERA、Yodobashi → <b>吉鶴</b>（2.5%＋3%＝5.5%，實體卡或 Apple Pay 都可以）</span></li>
+          <li><span class="k">能感應</span><span>其他店收銀台有感應 → <b>Apple Pay 吉鶴</b>（2.5%＋1.5%＝4%）。結帳說「JCB のタッチで」</span></li>
+          <li><span class="k">只能插卡</span><span>不支援 Apple Pay 或 JCB 感應 → 直接刷 <b>Richart</b>（玩旅刷 3.3%，比插吉鶴的 2.5% 高）</span></li>
+          <li><span class="k">被拒刷</span><span>不收 JCB 或機器拒絕 → <b>CUBE</b>（Visa），再不行 <b>旅人卡</b>（Visa）</span></li>
+          <li class="cash"><span class="k">現金</span><span>拉麵店券售機、投幣停車場、小店、寺社、入湯稅。每人身上留約 ¥30,000，含 ¥1,000 鈔和 ¥100 硬幣</span></li>
+          <li><span class="k">Suica</span><span>Apple 錢包的 Suica 用 <b>Richart</b> 儲值（JCB 儲值比 Visa 穩，也算 3.3%）。地鐵、公車、超商小額都用它</span></li>
+        </ul>
+        <p class="cost-foot">刷卡機或 ATM 問要付日圓還是台幣時，一律選<b>日圓（JPY）</b>；選台幣會被多收約 3–5% 匯差，海外回饋也可能不算。各卡在日本消費多會收約 1.5% 國外交易手續費，上面的回饋是扣手續費前的數字。</p>
+      </div>
+
+      <div class="block sheet taped-b">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="10" rx="2"/><rect x="7" y="10" width="14" height="10" rx="2"/></svg>四張卡</h3>
+        <div class="pay-card"><span class="nm">聯邦 吉鶴卡</span><span class="nw">JCB</span>
+          <span class="ds">日圓消費 2.5% 無上限。指定店加碼 3%，活動期間上限 NT$600（約刷 NT$20,000 才會滿）。行動支付（Apple Pay）加碼 1.5% 要先登錄，每月上限 NT$600，約刷 NT$40,000（約 ¥190,000）才會滿，這趟都在 12 月，應該用不完；另有前月帳單滿 NT$30,000 再加 1%（上限 NT$200）。加碼至 2026/12/31。</span></div>
+        <div class="pay-card"><span class="nm">台新 Richart 卡</span><span class="nw">JCB</span>
+          <span class="ds">切「玩旅刷」日本 3.3% 無上限，Suica 儲值也算。要設好台新帳戶自動扣款，出發前一天在 App 切到玩旅刷（每天只能切一次）。至 2027/3/31。</span></div>
+        <div class="pay-card"><span class="nm">國泰 CUBE 卡</span><span class="nw">Visa</span>
+          <span class="ds">切「趣旅行」2–3.3%（依 Level）。秋季日本加碼只到 11/30。不收 JCB 時的第一張備用卡，出發前切到趣旅行。</span></div>
+        <div class="pay-card"><span class="nm">滙豐 旅人卡</span><span class="nw">Visa</span>
+          <span class="ds">海外 NT$10／15／20＝1 哩（無限／御璽／輕旅），沒有 12 月日本加碼。第二張 Visa 備用；如果機票是刷這張，旅平險、班機延誤和行李延誤險會自動生效（含配偶）。</span></div>
+        <p class="cost-foot">兩人分開帶，每人一張 JCB＋一張 Visa（例如 Richart＋旅人卡、吉鶴＋CUBE），一人掉錢包另一人還能付。租車要刷駕駛人本人的卡。回饋數字整理自 2026 年 11 月的比較文章（CashFeel、小氣少年、Roo.Cash）和你提供的資訊，以銀行官網為準。</p>
+      </div>
+
+      <div class="block sheet taped">
+        <h3><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>這趟行程，每個場景怎麼付</h3>
+        <div class="scen"><div class="h"><b>🚗 取車（ORIX 新千歲）</b><small>12/5</small></div>
+          <p>租車費在取車時刷卡，一定要用駕駛人本人名下的信用卡。HEP 高速公路通票和 ETC 卡租借費依 ORIX 規定在取車或還車時結算，以店員說明為準。</p>
+          <p class="pick">💳 <b>Richart</b>（如果駕駛人是 Richart 的持卡人）；店員問付款幣別選日圓</p></div>
+        <div class="scen"><div class="h"><b>⛽ 加油</b><small>12/6 富良野・12/9 還車前</small></div>
+          <p>自助加油機（セルフ）流程：選「レギュラー」→「満タン」→ 選付款方式（クレジット）→ 插卡。外國卡偶爾會被機器拒絕，就換卡或找有店員的加油站。12/6 往 Tomamu 前一定要加滿。</p>
+          <p class="pick">💳 <b>Richart</b> → 被拒換 <b>CUBE</b>／<b>旅人卡</b> → 再不行用現金</p></div>
+        <div class="scen"><div class="h"><b>🏨 飯店</b><small>12/5–12/12</small></div>
+          <p>已預付的不用再刷；入住時可能要付入湯稅、住宿稅（每人每晚幾百日圓，有些只收現金），停車費（小樽約 ¥1,500／晚）多在櫃台付。Tomamu 度假村內消費可記房帳，退房時一起付。</p>
+          <p class="pick">💳 櫃台能感應用 <b>Apple Pay 吉鶴</b>，不行就 <b>Richart</b>；入湯稅備零錢</p></div>
+        <div class="scen"><div class="h"><b>🍜 餐廳</b><small>每天</small></div>
+          <p>連鎖店、度假村、札幌市區大多可刷卡；郊區拉麵店、食堂常只收現金，用券售機點餐的店幾乎都是現金。門口沒貼卡片標誌就先問「カード使えますか？」。Shinatora（12/5）評論說只收現金。</p>
+          <p class="pick">💳 能感應 <b>Apple Pay 吉鶴</b>；只能插卡 <b>Richart</b>；不收卡用現金</p></div>
+        <div class="scen"><div class="h"><b>🏪 便利商店</b><small>每天</small></div>
+          <p>北海道最多的是 Seicomart，不在吉鶴指定店裡。小額也可以直接刷 Suica。</p>
+          <p class="pick">💳 7-Eleven、全家、Lawson → <b>吉鶴</b>（5.5%）；Seicomart → <b>Apple Pay 吉鶴</b>（4%）</p></div>
+        <div class="scen"><div class="h"><b>🅿️ 停車場、景點門票</b><small>自駕期間</small></div>
+          <p>投幣停車場和郊區景點停車場常只收現金，例如青池停車場、登別地獄谷 ¥500。纜車售票處大多可刷卡。</p>
+          <p class="pick">💵 停車用現金；纜車票能感應用 <b>Apple Pay 吉鶴</b>，不行 <b>Richart</b></p></div>
+        <div class="scen"><div class="h"><b>🛍️ 大丸化妝品、JINS、藥妝、Outlet</b><small>12/10–12/11</small></div>
+          <p>這趟最大筆的消費。大丸、Outlet 不在吉鶴指定店裡。<b>11/1 起免稅新制</b>：同店同日稅前滿 ¥5,000，結帳時先付含稅價、出示本人護照，店家登錄退稅方式；12/12 出境時給海關確認後才退稅，化妝品不用封袋，但在日本拆開用掉就不能退。夫妻各買各的，用各自的護照。</p>
+          <p class="pick">💳 唐吉訶德、BIC、札幌三越 → <b>吉鶴</b>；大丸、JINS、Outlet、其他藥妝 → 能感應 <b>Apple Pay 吉鶴</b>，只能插卡 <b>Richart</b>；帶護照</p></div>
+        <div class="scen"><div class="h"><b>🚌 札幌市區交通、機場巴士</b><small>12/10–12/12</small></div>
+          <p>地鐵、市電、中央巴士都能用 Suica。機場巴士：紅色中央巴士收 IC 卡和信用卡感應；綠色北都交通不收 IC 卡，要用現金、信用卡感應或 PayPay。小樽往天狗山的中央巴士也能用 IC 卡。</p>
+          <p class="pick">💳 <b>Suica</b>（Richart 儲值）；北都交通用 <b>Apple Pay 吉鶴</b>感應或現金</p></div>
+        <div class="scen"><div class="h"><b>✈️ 新千歲機場</b><small>12/12</small></div>
+          <p>有免稅商品的話，<b>先帶著商品和護照到海關做免稅確認（自助機刷護照，或用 Visit Japan Web），確認完才去掛行李</b>。剩下的日圓硬幣在超商或 Suica 用掉。</p>
+          <p class="pick">💳 機場 7-Eleven、Lawson → <b>吉鶴</b>；伴手禮店、美食街 → 能感應 <b>Apple Pay 吉鶴</b>，只能插卡 <b>Richart</b></p></div>
+      </div>
+
+      <div class="block sheet taped-b">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>出發前要做</h3>
+        <ul class="sos-steps">
+          <li>Richart App 切到「玩旅刷」、CUBE App 切到「趣旅行」（出發前一天切）。</li>
+          <li>吉鶴登錄行動支付加碼，截圖存證；Apple Pay 綁好吉鶴，設成預設卡。</li>
+          <li>吉鶴、Richart 兩張 JCB 各自到 JCB 日本活動頁看 12 月活動並登錄（札幌三越滿 ¥50,000 的活動，刷吉鶴）。</li>
+          <li>iPhone 錢包新增 Suica，用 Richart 儲值一次測試。</li>
+          <li>在台灣先換好日圓現金，兩人合計約 ¥50,000–60,000；不夠用 7-Eleven ATM 提款（ATM 問要不要換算台幣，選不要）。</li>
+          <li>記下各銀行海外掛失電話，存在手機裡（不要存卡號）。</li>
+        </ul>
+      </div>
+      <div class="pager" id="pager-pay"></div>
+    </section>
+
   </div>
 </main>
 
@@ -1235,7 +1330,7 @@ const days = [
        n:"Marche Café 營業到 16:00，到了先進咖啡廳（最晚 15:30 入內），點牛奶霜淇淋或布丁，再去校園散步。12 月日落約 16:00，之後校園就暗了，積雪的校園很適合散步。"},
       {rec:true, t:"16:35–17:15", d:"北海道廳舊本廳舍（赤れんが庁舎）——就在札幌站旁，北大步行約 15–20 分鐘；開館 8:45–21:00（最終入館20:30），入館¥300，1樓店鋪可免費逛", map:["redBrick"]},
       {must:true, t:"17:15–18:05", d:"🛍 大丸札幌店 1F 化妝品樓層：肌膚之鑰（クレ・ド・ポー ボーテ）專櫃", map:["daimaru"],
-       n:"從赤れんが庁舎走過去約 5 分鐘（大丸在札幌站南口旁，北 5 條西 4 丁目）。專櫃營業 10:00–20:00，電話 011-222-0199。記得帶護照，同一天在大丸買滿 ¥5,000（未稅）可以辦免稅，化妝品免稅會裝在密封袋裡，在日本境內不能拆。結完帳到免稅櫃台辦理，傍晚免稅櫃台可能要排隊，所以這一站留了 50 分鐘。🎟 記得結帳前先出示大丸的 5% 優惠券（手機畫面或紙本都可以，部分品牌可能不適用，結帳時先問櫃姐）。💛 Bobbi Brown 維他命乳霜：大丸 3F 的 Amuse Beaute（KiKiYOCOCHO 內）有賣 Bobbi Brown。2026/7/3 起是新版「ビタエンリッチド クリーム＆フェイスベース プラス」，50ml ¥10,450、15ml ¥3,740（含稅）。先問有沒有聖誕限定「ビタエンリッチド クリーム＆フェイスベース プラス デュオ」：50ml×2 共 ¥16,500（10/31 發售，賣完就沒了），比單買兩罐便宜 ¥4,400。跟肌膚之鑰在同一天的大丸買，金額可以合併算免稅。"},
+       n:"從赤れんが庁舎走過去約 5 分鐘（大丸在札幌站南口旁，北 5 條西 4 丁目）。專櫃營業 10:00–20:00，電話 011-222-0199。記得帶護照，同一天在大丸買滿 ¥5,000（未稅）可以辦免稅。11/1 起是免稅新制：結帳時先付含稅價，店家登錄護照和退稅方式，12/12 在新千歲機場出境前給海關確認後才退稅；化妝品不用再封密封袋，但在日本拆開用掉就不能退。辦手續可能要排隊，所以這一站留了 50 分鐘。🎟 記得結帳前先出示大丸的 5% 優惠券（手機畫面或紙本都可以，部分品牌可能不適用，結帳時先問櫃姐）。💛 Bobbi Brown 維他命乳霜：大丸 3F 的 Amuse Beaute（KiKiYOCOCHO 內）有賣 Bobbi Brown。2026/7/3 起是新版「ビタエンリッチド クリーム＆フェイスベース プラス」，50ml ¥10,450、15ml ¥3,740（含稅）。先問有沒有聖誕限定「ビタエンリッチド クリーム＆フェイスベース プラス デュオ」：50ml×2 共 ¥16,500（10/31 發售，賣完就沒了），比單買兩罐便宜 ¥4,400。跟肌膚之鑰在同一天的大丸買，金額可以合併算免稅。"},
       {must:true, t:"18:05–18:15", d:"👓 到大丸隔壁的札幌ステラプレイス（センター 4F）JINS 取眼鏡", map:["jinsStellar"],
        n:"下午配的眼鏡，現在來拿（營業到 21:00）。ステラプレイス和大丸都在札幌站南口，室內就能走過去。取件時試戴一下，鼻墊和鏡腳不舒服可以請店員當場調整。"},
       {t:"18:15–18:30", d:"走札幌駅前地下歩行空間到大通（約 500 公尺，下雪天不用走地面）", map:["chikaho"]},
@@ -1276,7 +1371,7 @@ const days = [
       {t:"13:00–13:45", d:"搭機場巴士，在「三井アウトレットパーク入口」下車（札幌站出發，估算 35–45 分，約 ¥1,400）", map:["mitsuiOutlet"],
        n:"官網站名表有這一站，但不確定每班都停，上車前先問司機「三井アウトレット？」。官網沒列札幌站到這一站的票價，¥1,400 是從同價位的站推估的。下車後依指標步行到 Outlet。"},
       {t:"13:45–17:15", d:"北廣島三井 Outlet Park", map:["mitsuiOutlet"],
-       n:"Google 標示每日 10:00–20:00。有評論提到內部全為室內店鋪，約 160–180 家。多數品牌可辦退稅（1 樓有免稅櫃台），記得帶護照。冬季折扣期間人潮多，熱門品牌建議先逛。午餐已經在徳寿吃過，餓了買點心就好，Outlet 內有美食街。"},
+       n:"Google 標示每日 10:00–20:00。有評論提到內部全為室內店鋪，約 160–180 家。多數品牌可辦免稅，記得帶護照（11/1 起新制：先付含稅價，12/12 出境時在機場海關確認後才退稅）。冬季折扣期間人潮多，熱門品牌建議先逛。午餐已經在徳寿吃過，餓了買點心就好，Outlet 內有美食街。"},
       {t:"17:15–18:00", d:"在同一站搭往札幌的機場巴士回市區，在「南3条すすきの」下車，走回飯店（約 40 分，約 ¥1,400）", map:["lightBooks"],
        n:"官網的回程站名表也有這一站，但沒寫明能不能上車、每班是否都停。去程下車時先看站牌上的往札幌時刻表；如果不能搭，就改搭 JR（北広島站→札幌站約 20 分，從 Outlet 到北広島站要搭公車）。"},
       {t:"18:00–18:40", d:"回飯店放戰利品、休息", map:["lightBooks"]},
@@ -1667,10 +1762,74 @@ function setShoot(on){
   try { localStorage.setItem('shootMode', on ? '1' : '0'); } catch(e) {}
 }
 
+// ---------- 每站刷卡建議（規則見「付款」頁籤）----------
+const AP = '能感應用 <b>Apple Pay 吉鶴</b>，只能插卡刷 <b>Richart</b>';
+const PAY = {
+  d1:{1:'機場餐廳 '+AP+'；便利商店是 7-Eleven、全家、Lawson 就刷 <b>吉鶴</b>',
+      2:'租車費刷 <b>Richart</b>（要是駕駛人本人的卡），幣別選日圓',
+      3:AP,
+      5:'評論說只收現金，準備好 <b>現金</b>',
+      6:'超市 '+AP,
+      7:'入湯稅、住宿稅可能只收現金，備零錢'},
+  d2:{3:'停車場收費，用 <b>現金</b>',
+      6:'小木屋商店 '+AP+'，小額可用現金',
+      7:'加油刷 <b>Richart</b>；被機器拒絕換 <b>CUBE</b>／<b>旅人卡</b>，再不行用現金',
+      8:AP+'；部分小攤只收現金',
+      10:AP,
+      12:'度假村內消費可記房帳，退房時一起付：'+AP,
+      13:'纜車票、設施 '+AP,
+      14:AP},
+  d3:{3:AP, 4:AP,
+      6:'停車費約 ¥1,500／晚：'+AP+'，或付現金',
+      8:AP,
+      9:'公車用 <b>Suica</b>（約 ¥240）；纜車票 '+AP},
+  d4:{1:'北菓楼、北一硝子、音樂盒堂 '+AP+'；小店備現金',
+      3:'美食街多是券售機，準備 <b>現金</b>',
+      7:AP+'；不收卡用現金',
+      9:'入湯稅可能只收現金，備零錢'},
+  d5:{2:'纜車票 '+AP,
+      3:'停車場 ¥500，用 <b>現金</b>',
+      5:AP, 7:AP,
+      10:'房費如果是到飯店付，'+AP,
+      11:'加油刷 <b>Richart</b>；還車時 ORIX 如果要結算 ETC 卡、HEP 等費用，'+AP,
+      13:AP,
+      14:'路邊攤 '+AP+'；小攤多收現金'},
+  d6:{2:'地鐵用 <b>Suica</b>',
+      4:'小額用 <b>Suica</b> 或現金',
+      5:'地鐵用 <b>Suica</b>',
+      6:AP,
+      7:AP+'；滿 ¥5,000 可辦免稅（帶護照）',
+      9:AP+'，或用 <b>Suica</b>',
+      10:'入館 ¥300，用 <b>Suica</b> 或現金',
+      11:'大丸不在吉鶴指定店裡：'+AP+'；結帳先出示 5% 優惠券和護照',
+      12:'取件時補款：'+AP,
+      16:AP,
+      18:AP, 19:AP, 20:AP,
+      21:'拉麵橫丁的小店多收現金，準備 <b>現金</b>',
+      22:AP},
+  d7:{1:AP+'，或用 <b>Suica</b>',
+      2:'地鐵用 <b>Suica</b>',
+      3:AP,
+      5:'紅色中央巴士用 <b>Suica</b>；綠色北都交通不收 IC 卡，用 <b>Apple Pay 吉鶴</b>感應或現金',
+      6:AP+'；帶護照，滿 ¥5,000 可辦免稅',
+      7:'紅色中央巴士用 <b>Suica</b>；綠色北都交通用 <b>Apple Pay 吉鶴</b>感應或現金',
+      9:AP+'；不收卡用現金',
+      10:'市電用 <b>Suica</b>；纜車票 '+AP,
+      11:'路邊攤 '+AP+'；小攤多收現金'},
+  d8:{2:'紅色中央巴士用 <b>Suica</b>（¥1,500）；綠色北都交通不收 IC 卡，用 <b>Apple Pay 吉鶴</b>感應或現金',
+      3:'看完要買巧克力：'+AP,
+      4:'有免稅商品：<b>先到海關做免稅確認，再掛行李</b>。伴手禮 '+AP+'；機場 7-Eleven、Lawson 刷 <b>吉鶴</b>',
+      5:AP+'；剩下的硬幣在超商用掉'}
+};
+function payHtml(dayId, n){
+  const t = (PAY[dayId] || {})[n];
+  return t ? `<p class="paynote"><span class="ic">💳</span><span>${t}</span></p>` : '';
+}
+
 // ---------- 分頁與每日頁 ----------
 const scroller = document.getElementById('dayScroll');
 const panels = document.getElementById('panels');
-const order = ['overview', ...days.map(d => d.id)];
+const order = ['overview', ...days.map(d => d.id), 'pay'];
 
 function makeTab(id, big, small){
   const b = document.createElement('button');
@@ -1684,7 +1843,7 @@ makeTab('overview', '總覽', 'PLAN');
 
 function pagerHtml(id){
   const i = order.indexOf(id);
-  const labelOf = k => k === 'overview' ? '總覽' : days.find(d => d.id === k).label;
+  const labelOf = k => k === 'overview' ? '總覽' : k === 'pay' ? '付款' : days.find(d => d.id === k).label;
   const prev = i > 0 ? `<button type="button" data-go="${order[i-1]}">← ${labelOf(order[i-1])}</button>` : `<span class="sp"></span>`;
   const next = i < order.length - 1 ? `<button type="button" data-go="${order[i+1]}">${labelOf(order[i+1])} →</button>` : `<span class="sp"></span>`;
   return prev + next;
@@ -1733,7 +1892,7 @@ days.forEach((day, idx) => {
     return `<li class="${cls}" style="--i:${Math.min(n, 12)}">
       <div class="tm">${it.t}${durOf(it.t)}</div>
       <div class="rail">${nodeIcon}</div>
-      <div class="body">${tag}<p class="desc">${it.d}</p>${note}${mapRow}${carNav}${shotsHtml(day.id, it)}</div>
+      <div class="body">${tag}<p class="desc">${it.d}</p>${note}${mapRow}${carNav}${payHtml(day.id, n)}${shotsHtml(day.id, it)}</div>
     </li>`;
   }).join('');
 
@@ -1766,6 +1925,9 @@ days.forEach((day, idx) => {
   panels.appendChild(section);
   addSnow(section.querySelector('.scene-wrap'), 10);
 });
+
+makeTab('pay', '付款', 'PAY');
+panels.appendChild(document.getElementById('payPanel'));
 
 order.forEach(id => {
   const el = document.getElementById('pager-' + id);
