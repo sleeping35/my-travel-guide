@@ -837,7 +837,7 @@
           <p class="pick">💳 能用 Apple Pay 就用 <b>Apple Pay 吉鶴</b>（4%），只能插卡就刷 <b>Richart</b>（3.3%）；不收卡用現金</p></div>
         <div class="scen"><div class="h"><b>🏪 便利商店</b><small>每天</small></div>
           <p>北海道最多的是 Seicomart，不在吉鶴指定店裡，但一樣用 Apple Pay 吉鶴就好。</p>
-          <p class="pick">💳 都用 <b>Apple Pay 吉鶴</b>：7-Eleven、全家、Lawson 7%（2.5%＋3%＋1.5%），Seicomart 4%（2.5%＋1.5%）</p></div>
+          <p class="pick">💳 都用 <b>Apple Pay 吉鶴</b>：7-Eleven、全家、Lawson 4%＋熱門商店 3%＝7%，Seicomart 4%</p></div>
         <div class="scen"><div class="h"><b>🅿️ 停車場、景點門票</b><small>自駕期間</small></div>
           <p>投幣停車場和郊區景點停車場常只收現金，例如青池停車場、登別地獄谷 ¥500。纜車售票處大多可刷卡。</p>
           <p class="pick">💵 停車用現金；纜車票能用 Apple Pay 就用 <b>Apple Pay 吉鶴</b>（4%），只能插卡就刷 <b>Richart</b>（3.3%）</p></div>
@@ -1763,7 +1763,7 @@ function setShoot(on){
 }
 
 // ---------- 每站刷卡建議（規則見「付款」頁籤）----------
-const APJ = '<b>Apple Pay 吉鶴</b>（4%）', RCH = '<b>Richart</b>（3.3%）', CVS = '<b>Apple Pay 吉鶴</b>（7-Eleven、全家、Lawson 7%，Seicomart 4%）';
+const APJ = '<b>Apple Pay 吉鶴</b>（4%）', RCH = '<b>Richart</b>（3.3%）', CVS = '<b>Apple Pay 吉鶴</b>（7-Eleven、全家、Lawson 4%＋熱門商店 3%＝7%，Seicomart 4%）';
 const ap = (w) => `${w}能用 Apple Pay 就用 ${APJ}，只能插卡就刷 ${RCH}`;
 const PAY = {
   d1:{1:ap('機場餐廳')+'；便利商店用 '+CVS,
