@@ -811,7 +811,7 @@
 
       <div class="block sheet taped-b">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="10" rx="2"/><rect x="7" y="10" width="14" height="10" rx="2"/></svg>五張卡</h3>
-        <div class="pay-card"><span class="nm">中信 uniopen 聯名卡</span><span class="nw">先刷滿</span>
+        <div class="pay-card"><span class="nm">中信 uniopen 聯名卡</span><span class="nw">Mastercard</span>
           <span class="ds">國外 2%＋國外實體 1%＋國外實體加碼 8%，最高 11%，不用登錄，至 2026/12/31。8% 加碼每月上限 500 點 OPENPOINT（1 點折 NT$1），約刷 NT$6,250（約 ¥30,000）就滿，這趟都在 12 月，所以只有一次。實體卡、Apple Pay 在實體店都算；網購、條碼支付（PayPay）、第三方支付不算加碼。要先在 App 完成 uniopen 會員連結才拿得到點數。</span></div>
         <div class="pay-card"><span class="nm">聯邦 吉鶴卡</span><span class="nw">JCB</span>
           <span class="ds">日圓消費 2.5% 無上限。指定店加碼 3%，活動期間上限 NT$600（約刷 NT$20,000 才會滿）。行動支付（Apple Pay）加碼 1.5% 要先登錄，每月上限 NT$600，約刷 NT$40,000（約 ¥190,000）才會滿，這趟都在 12 月，應該用不完；另有前月帳單滿 NT$30,000 再加 1%（上限 NT$200）。加碼至 2026/12/31。</span></div>
@@ -828,7 +828,7 @@
         <h3><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>這趟行程，每個場景怎麼付</h3>
         <div class="scen"><div class="h"><b>🚗 取車（ORIX 新千歲）</b><small>12/5</small></div>
           <p>租車費在取車時刷卡，一定要用駕駛人本人名下的信用卡。HEP 高速公路通票和 ETC 卡租借費依 ORIX 規定在取車或還車時結算，以店員說明為準。</p>
-          <p class="pick">💳 先用 <b>uniopen</b>（11%，實體卡或 Apple Pay），一筆刷滿 8% 加碼；駕駛人沒有 uniopen 的話，能用 Apple Pay 就用 <b>Apple Pay 吉鶴</b>（4%），只能插卡就刷 <b>Richart</b>（3.3%）。卡片都要是駕駛人本人的，幣別選日圓</p></div>
+          <p class="pick">💳 先用 Lilly 的 <b>uniopen</b>（Mastercard，11%，實體卡或 Apple Pay），一筆刷滿 8% 加碼。Lilly 要登記為駕駛人，報到時先問店員能不能用她的卡付；不行的話改用先生名下的卡。幣別選日圓</p></div>
         <div class="scen"><div class="h"><b>⛽ 加油</b><small>12/6 富良野・12/9 還車前</small></div>
           <p>自助加油機（セルフ）流程：選「レギュラー」→「満タン」→ 選付款方式（クレジット）→ 插卡。外國卡偶爾會被機器拒絕，就換卡或找有店員的加油站。12/6 往 Tomamu 前一定要加滿。</p>
           <p class="pick">💳 加油機只能插卡，刷 <b>Richart</b>（3.3%）；被拒換 <b>CUBE</b>（Visa），再不行 <b>旅人卡</b>（Visa）或現金；幣別選日圓</p></div>
@@ -1771,7 +1771,7 @@ const APJ = '<b>Apple Pay 吉鶴</b>（4%）', RCH = '<b>Richart</b>（3.3%）',
 const ap = (w) => `${w}能用 Apple Pay 就用 ${APJ}，只能插卡就刷 ${RCH}`;
 const PAY = {
   d1:{1:ap('機場餐廳')+'；便利商店用 '+CVS,
-      2:'租車費：<b>先用 uniopen</b>（11%，實體卡或 Apple Pay 都可以），一筆就把 8% 加碼刷滿；駕駛人不是 uniopen 持卡人的話，櫃台能用 Apple Pay 就用 '+APJ+'，只能插卡就刷 '+RCH+'。都要是駕駛人本人的卡，幣別選日圓',
+      2:'租車費：<b>先用 Lilly 的 uniopen</b>（Mastercard，11%，實體卡或 Apple Pay 都可以），一筆就把 8% 加碼刷滿。Lilly 要登記為駕駛人，報到時先問店員「妻のカードで払えますか？私も運転者として登録します」（可以用太太的卡付嗎？我也會登記駕駛）；不行的話改用先生名下的卡。幣別選日圓',
       3:ap('Workman 收銀台')+'；附近便利商店用 '+CVS,
       5:'評論說只收現金，準備好 <b>現金</b>（兩人約 ¥3,000）',
       6:ap('超市收銀台')+'；不收卡的話用現金',
